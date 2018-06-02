@@ -69,7 +69,7 @@
 		<h3>Kontakt</h3>
 <b>Sagen Sie uns Ihre Meinung:</b>
 
-<form action="#" method="post">
+<form action="#" enctype="multipart/form-data" method="post">
         <fieldset>
 				Anrede: 
                 <select name="anrede">
@@ -86,6 +86,8 @@
 				Ihre Nachricht:<br>
 				<textarea required name="nachricht" maxlength="800" placeholder="Ihre Nachricht an uns.."></textarea><br>
 				
+				Eine Datei senden: (nur .txt, .odt, .doc, .docx)<br>
+				<input required type="file" name="datei" id="datei" accept=".txt, .odt, .doc, .docx"><br>
 				<input type="submit"> <input type="reset">
         </fieldset>
 </form>
