@@ -170,6 +170,7 @@ label:hover{cursor:pointer}
  
 figure{display:inline-block; width:15%;}
 
+
 img{display:inline-block; width:40%; margin: 4%}
 
 
@@ -244,10 +245,12 @@ textarea{height: 7rem;
 						
 						
 #html_css_links{float:none; width:auto}
+
+	
+img{display:inline-block; width:80%; margin: 8%}
+
 }
 
-
-img{display:inline-block; width:80%; margin: 8%}
 
 @media screen and (max-width:479px){
 
