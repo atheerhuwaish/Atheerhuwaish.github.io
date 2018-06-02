@@ -247,7 +247,7 @@ textarea{height: 7rem;
 #html_css_links{float:none; width:auto}
 
 	
-img{width:80%; margin: 10%}
+img{width:60%; margin: 20%}
 
 }
 
@@ -265,4 +265,5 @@ nav li{padding: 0.1% 0.5%}
 
 .button{padding: 0.2em 0.1em;}
 
+img{width:80%; margin: 10%}
 }
