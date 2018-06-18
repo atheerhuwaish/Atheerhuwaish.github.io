@@ -171,7 +171,7 @@ label:hover{cursor:pointer}
 figure{display:inline-block; width:15%;}
 
 
-img{display:inline-block; max-width:240px; margin: 2% 4%}
+img{display:inline-block; max-width:260px; margin: 2% 4%}
 
 
 #html_css_links{float:left; width:23%;}
@@ -247,7 +247,7 @@ textarea{height: 7rem;
 #html_css_links{float:none; width:auto}
 
 	
-img{max-width:220px; margin: 2% 20%}
+img{max-width:240px; margin: 2% 20%}
 
 }
 
@@ -265,5 +265,5 @@ nav li{padding: 0.1% 0.5%}
 
 .button{padding: 0.2em 0.1em;}
 
-img{max-width:200px; margin: 2% 10%}
+img{max-width:220px; margin: 2% 10%}
 }
