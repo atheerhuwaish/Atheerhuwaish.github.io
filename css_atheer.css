@@ -177,7 +177,9 @@ img{display:inline-block; max-width:260px; margin: 2% 4%}
 #html_css_links{float:left; width:23%;}
 #main{float:right}
 
-
+img.rotate180 {-webkit-transform: rotate(180deg);
+	transform: rotate(180deg)
+}
 	
 @media screen and (max-width: 750px) {
 
