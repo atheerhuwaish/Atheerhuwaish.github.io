@@ -177,7 +177,7 @@ img{display:inline-block; max-width:260px; margin: 2% 4%}
 #html_css_links{float:left; width:23%;}
 #main{float:right}
 
-.rotate180 {-webkit-transform: rotate(180deg);
+.rotate180 {-webkit-transform: rotate(0deg);
 	transform: rotate(180deg)
 }
 	
