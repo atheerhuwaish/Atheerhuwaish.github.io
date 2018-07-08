@@ -1,0 +1,54 @@
+	
+#container
+{ display: flex;
+  }
+  
+ .col_1
+ {
+   background-color:#cac;
+   order: 1;
+   width: 20%;
+   height: 400px
+     }
+.col_2 
+{    background-color:#ccc;
+	order: 2;
+	width:50%;
+	height: 400px	
+  }
+.col_3 
+{
+  background-color:#ccf;
+  order: 3;
+  width:30%;
+  height: 400px
+  }
+  
+@media (max-width: 600px)
+{
+#container 
+{
+  flex-wrap: wrap;
+}
+.col_1 
+{ height: 50px;
+  order: 1;
+     width:48%;
+	 text-align: center;
+	 margin:1%;
+	 border-radius: 5px
+}
+.col_2
+{ height: 400px;
+  order: 3;
+  width:100%
+  }
+.col_3 
+{ height: 50px;
+  order: 2;
+  width:48%;
+  text-align: center;
+  margin:1%;
+  border-radius: 5px
+}
+}
