@@ -19,6 +19,9 @@ body{background-image: url(background_image_full_hd.jpg);
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
+	width:90%;
+	max-width: 1100px;
+	margin: 0 auto;
 	}
 
 
@@ -30,10 +33,10 @@ body{background-image: url(background_image_full_hd.jpg);
 	max-width: 1100px;  
 	}
 
-	a:link{color:rgb(96,100,148)}
-	a:visited{color:rgb(96,100,148)}
-	a:focus{color:rgb(96,100,148)}
-	a:hover{color:rgb(106,0,128); font-weight:bold}
+a:link{color:rgb(96,100,148)}
+a:visited{color:rgb(96,100,148)}
+a:focus{color:rgb(96,100,148)}
+a:hover{color:rgb(106,0,128); font-weight:bold}
 	
 header{
 	line-height:250%;
@@ -49,12 +52,13 @@ nav{
 	background-color:#ddddee;
 	text-align: center;
 	font-weight: bold;
-	padding: 0.5%;
-	margin:0 auto 10px auto;
-	width:95%
+	padding: 0.8%;
+	margin: 0 auto 2%;
+	width:100%
 }
 
-nav li{padding:0.7%; display: inline-block;
+nav li{padding:0.4%; 
+	display: inline-block;
 	list-style: none;}
 
 
@@ -167,12 +171,11 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 		
 label:hover{cursor:pointer}
 
- 
 figure{display:inline-block; width:15%;}
 
-
-img{display:inline-block; max-width:260px; margin: 2% 4%}
-
+img{display:inline-block; 
+	max-width:260px; 
+	margin: 2% 4%}
 
 #html_css_links{float:left; width:23%;}
 #main{float:right}
@@ -181,17 +184,17 @@ img.rotate180 {-webkit-transform: rotate(179.9deg);
 	transform: rotate(179.9deg)
 }
 	
-@media screen and (max-width: 750px) {
-
+@media screen and (max-width: 750px) 
+{
 
 nav {padding: 1% 0.5%;
 	width:90%;
 	font-size: 95%}
 	
 #container1{padding: 1%;
-				margin:0 auto;
-				width:100%
-				}
+	margin:0 auto;
+	width:100%
+}
 
 aside ul li ul {visibility:hidden;
 				opacity:0;
