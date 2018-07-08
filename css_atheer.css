@@ -174,7 +174,7 @@ label:hover{cursor:pointer}
 figure{display:inline-block; width:15%;}
 
 img{display:inline-block; 
-	max-width:260px; 
+	width:40%;
 	margin: 2% 4%}
 
 #html_css_links{float:left; width:23%;}
