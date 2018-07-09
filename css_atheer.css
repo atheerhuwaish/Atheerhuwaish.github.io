@@ -179,9 +179,7 @@ img{display:inline-block;
 #html_css_links{float:left; width:23%;}
 #main{float:right}
 
-img.rotate90cw {-webkit-transform: rotate(89.9deg);
-	transform: rotate(89.9deg);
-	margin-top:7%}
+
 
 
 @media screen and (max-width: 650px) {
