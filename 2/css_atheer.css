@@ -181,6 +181,10 @@ width: 100%;
 max-width: 310px;
 margin: 2% auto}
 
+img.rotate90cw {
+	-webkit-transform: rotate(89.9deg);
+	transform: rotate(89.9deg)}
+
 
 @media screen and (max-width: 650px) {
 
