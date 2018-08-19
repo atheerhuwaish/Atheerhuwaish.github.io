@@ -38,6 +38,7 @@ a:focus{color:rgb(96,100,148)}
 a:hover{color:rgb(106,0,128)}
 	
 
+		
 header{order:1;
 	width: 100%;
 	line-height:250%;
@@ -47,7 +48,6 @@ header{order:1;
 	color: white;
 	}
 
-a header{color: white}
 
 
 nav{order:2;
