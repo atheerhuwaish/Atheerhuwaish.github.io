@@ -54,7 +54,8 @@ nav{
 	width:100%
 }
 
-nav li{padding:0.7%; display: inline-block;
+nav li{padding:0.7%; 
+	display: inline-block;
 	list-style: none;}
 
 
@@ -205,23 +206,17 @@ img.rotate90 {
 
 @media screen and (max-width: 650px) {
 
-#html_css_links{display:block; float:none; width:100%; margin: auto}
-
-aside.aside1{float:left; width:48%;}
-aside.aside2{float:right;  width:48%;}
+#html_css_links, aside{display:block; float:none; width:100%; margin: 1% 0%}
+aside{width:100%}
+aside.aside1{float:left; width:48%; margin-left:1%;}
+aside.aside2{float:right; width:48%; margin-right:0%;}
 
 main{float:none; position:relative; z-index:10;
 	display:inline-block; width:99%; margin-top:5px}
 
-nav {padding: 1% 0.5%;
+nav {padding: 1% 0%;
 	width:100%;
 	font-size: 95%}
-	
-
-
-
-
-
 
 
 /*begin aside menu*/
@@ -258,7 +253,7 @@ aside ul ul {
 }
 
 aside ul ul li {
-	width: 98%;   
+	width: 98%;  
 }
 
 aside ul li:hover ul {   
@@ -276,13 +271,14 @@ img{width:86%; margin: 1% 7%; transition:.6s}
 
 img:hover{width:108%; margin: -4%}
 
-nav li.bis650none {display:none}
-
 fieldset, input, select{width: 99%;}
 						
 textarea{height: 7rem;
 		width: 99%;}
-						
+
+/*
+nav li.bis650none {display:none}
+*/	
 }
 
 
