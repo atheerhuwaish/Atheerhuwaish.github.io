@@ -14,7 +14,7 @@
 
 }
 
-body{background-image: url(background_image_full_hd.jpg);
+body{background-image: url(../background_image_full_hd.jpg);
 	background-attachment: fixed;
 	-ms-background-size: cover;
 	-moz-background-size: cover;
@@ -47,6 +47,7 @@ header{order:1;
 	color: white;
 	}
 
+a header{color: white}
 
 
 nav{order:2;
@@ -70,7 +71,7 @@ h1,h2,h3,h4,nav,aside{text-align: center;
 
 aside{height: 100%}
 	
-aside#aside1{order:3;
+aside.aside1{order:3;
 	background-color:rgba(244,244,255,0.9);
 	width:20%;
 	padding:10px;
@@ -93,14 +94,14 @@ main{order:4;
 	text-align:justify;
 }
 
-main p{text-indent: 15%;
+main p{
 		padding: 2%;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;}
 		
 
-aside#aside2{order: 5;
+aside.aside2{order: 5;
 	padding:10px;
 	background-color:rgba(244,244,255,0.9);
 	width: 20%;
@@ -176,81 +177,127 @@ label:hover{cursor:pointer}
 
 figure{display:inline-block; width:15%;}
 
-img {display:block;
-width: 100%;
-max-width: 310px;
-margin: 2% auto}
+img{display:inline-block; 
+	width:70%; 
+	margin: 1% 15%;
+	transition:.6s}
 
-img.rotate90cw {
-	-webkit-transform: rotate(89.9deg);
-	transform: rotate(89.9deg)}
+img:hover{width:112%;
+		position:relative;
+		margin:-6%;
+		z-index:10}
+		
+img:active{width:150%;
+		position:relative;
+		margin:-25%;
+		z-index:10}
+		
 
+img.rotate180 {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg)}
+
+	
+img.rotate90 {
+	-webkit-transform: rotate(90deg);
+	margin-top:15%;
+	margin-bottom:15%;
+	transform: rotate(90deg)}
+
+	
+	
 
 @media screen and (max-width: 650px) {
 
-	
-nav {padding: 0.8% 0.5%;
-	font-size: 90%}
-	
-body{padding: 1%;
-				margin:0 auto;
-				width:100%
-				}
 
-aside ul li ul {visibility:hidden;
-				opacity:0;
-				position:absolute;
-				cursor: pointer;
-				background-color:rgba(244,244,255,.9);}
+aside{width:100%}
+aside.aside1{float:left; width:48%; margin-left:0%; padding:2%}
+aside.aside2{float:right; width:48%; margin-left:4%; margin-right:0%; padding:2%}
 
-aside ul:hover ul {visibility: visible;
-					transition: 1s;
-					width:42%;
-					cursor:pointer;
-					text-decoration:none;
-					opacity:1
-					}
 
-aside ul li li:hover a{background-color:rgb(96,100,148);
-				text-decoration:none;
-				color: white;
-				visibility:visible;
-				opacity:1				
-				}
-
-aside li {padding:3%;}
-
-aside#aside1{/*display: inline-block;*/
-			width: 50%;
-			background-color:rgba(244,244,255,0.9);
-			padding:0.5%;
-			}
-			
-	
 main{order: 5;
 		width: 100%;
 		padding: 2%;
 		margin: 3% auto}
+		
+nav {padding: 1%;
+	font-size: 90%}
+	
 
 
-aside#aside2{order:4;
-					width: 50%;
-					background-color:rgba(244,244,255,0.9);
-					padding:0.5%;}
 
-					
-					
-aside li {padding: 2%;}
+/*begin aside menu*/
 
-aside b {margin-bottom:0%;}
-					
+aside ul li {
+	position: relative;   
+	float: left;
+	width: 98%;
+	list-style: none;
+}
+
+aside ul li a {
+	font-weight:bold;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 2px;
+}
+
+aside ul li {
+	background-color: #dde;
+}
+
+aside ul li a:hover {
+	background-color: #eef;
+}
+
+aside ul ul {
+	visibility: hidden;  
+	position: absolute;
+	width: 98%;
+	opacity: 0;
+	transition: opacity 1s; 
+}
+
+aside ul ul li {
+	width: 98%;   
+}
+
+aside ul li:hover ul {   
+	visibility: visible;
+	opacity: 1;
+	z-index:20;
+	background-color:#dde
+}
+		
+/*End aside menu*/
+
+
+	
+img{width:86%; margin: 1% 7%; transition:.6s}
+
+img:hover{width:104%; margin: -2%}
+
 					
 fieldset, input, select{width: 99%;}
 						
 textarea{height: 7rem;
 		width: 99%;}
-						
+		
+
+		
+aside{				width: 55%;
+					background-color:rgba(244,244,255,0.9);
+			}
+
+aside.aside2{	order:4;}					
+			
+/*
+nav li.bis650none {display:none}
+*/
 }
+
+
 
 
 
@@ -267,4 +314,6 @@ nav li{padding: 0.1% 0.5%}
 
 .button{padding: 0.2em 0.1em;}
 
+
+img{width:80%; margin: 2% 10%}
 }
