@@ -194,24 +194,38 @@ img.rotate90 {
 
 	
 
-aside b{background-color: #eae7ee;
-		color:#000;
+aside{
+	background-color:rgba(244,244,255,0.9);
+	padding:3% 0;
+	margin: 0;
+	height:100%;
+	width: 20%}
+
+		
+aside li {text-align:center;
+		padding: 4% 0;
+		margin: 4% 0}
+
+aside b{color:#000;
 		border:1px solid grey;
-		padding: 3%}
+		padding: 2% 0}		
 
-
-
+		
+		
+		
+		
 @media screen and (max-width: 650px) {
 	
-aside b{	background-color: #eae7ee;
-		color:#000;
+aside.aside1{float:left; width:48%; margin:0; padding: 1%}
+aside.aside2{float:left; width:48%; margin: 0 0 1% 4%; padding: 1%}	
+
+aside li {text-align:center;
+		padding: 2%;
+		margin: 1%}
+		
+aside b{color:#000;
 		border:none;
-		padding: 0%}
-
-aside{width:100%;}
-aside.aside1{float:left; width:49%; margin-left:0%; padding: 1.5%}
-aside.aside2{float:right; width:49%; margin-left:2%; margin-right:0%; padding: 1.5%}
-
+		padding: 0}
 
 main{order: 5;
 		width: 100%;
