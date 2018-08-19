@@ -202,7 +202,7 @@ img.rotate90 {
 
 
 
-aside b{background-color: #eee;
+aside b{background-color: #eae7ee;
 		color:#000;
 		border:1px solid grey;
 		padding: 3%}
@@ -211,7 +211,7 @@ aside b{background-color: #eee;
 
 @media screen and (max-width: 650px) {
 	
-aside b{
+aside b{	background-color: #eae7ee;
 		color:#000;
 		border:none;
 		padding: 0%}
