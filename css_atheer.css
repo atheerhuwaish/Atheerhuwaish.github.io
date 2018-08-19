@@ -19,15 +19,16 @@ body{background-image: url(background_image_full_hd.jpg);
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
+	width:94%;
+	max-width: 1100px;
+	margin: 0 auto;
 	}
 
 
 
 #container1{
 	margin: 1% auto;
-	padding: 10px;
-	width: 90%;
-	max-width: 1100px;  
+	padding: 1%;
 	}
 
 	a:link{color:rgb(96,100,148)}
@@ -35,7 +36,7 @@ body{background-image: url(background_image_full_hd.jpg);
 	a:focus{color:rgb(96,100,148)}
 	a:hover{color:rgb(106,0,128); font-weight:bold}
 	
-header{
+header{width: 100%;
 	line-height:250%;
 	background-color:rgba(79,79,105,0.7);
 	margin: 2% auto;
@@ -65,9 +66,8 @@ h1,h2,h3,h4,nav,aside{text-align: center;
 
 
 .container2{
-	padding:10px;
 	display: block;
-	width:96%;
+	width:100%;
 	margin: 0 auto
 	}
 
@@ -80,11 +80,8 @@ aside{
 aside li {text-align:center;
 		padding: 1%;
 		margin: 3% 1%}
-
-aside b {background-color:#cde;
-		margin-bottom:4%;
-		display:inline-block;
-		width:100%}
+		
+		
 		
 main{float: right;
 	padding: 4%;
@@ -145,7 +142,7 @@ ul li {	list-style: none;}
 
 form{width:100%}
 
-fieldset{width:98%;
+fieldset{width:98%;1
 		padding: 4%;
 		margin: 1%;}
 						
@@ -194,6 +191,7 @@ img.rotate180 {
 
 	
 img.rotate90 {
+	
 	margin-top:15%;
 	margin-bottom:15%;
 	-webkit-transform: rotate(90deg);
@@ -207,13 +205,17 @@ img.rotate90 {
 
 @media screen and (max-width: 650px) {
 
+
 #html_css_links, aside{display:block; float:none; width:100%; margin: 1% 0%}
 aside{width:100%}
 aside.aside1{float:left; width:48%; margin-left:1%;}
 aside.aside2{float:right; width:48%; margin-right:0%;}
 
-main{float:none; position:relative; z-index:10;
-	display:inline-block; width:99%; margin-top:5px}
+main{float:none; 
+	position:relative;
+	display:inline-block; 
+	width:99%; 
+	margin-top:5px}
 
 nav {padding: 1% 0%;
 	width:100%;
