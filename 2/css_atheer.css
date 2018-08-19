@@ -193,10 +193,21 @@ img.rotate90 {
 	transform: rotate(90deg)}
 
 	
-	
+
+aside b{background-color: #eee;
+		color:#000;
+		border:1px solid grey;
+		padding: 3%}
+
+
+
 
 @media screen and (max-width: 650px) {
-
+	
+aside b{
+		color:#000;
+		border:none;
+		padding: 0%}
 
 aside{width:100%;}
 aside.aside1{float:left; width:49%; margin-left:0%; padding: 1.5%}
