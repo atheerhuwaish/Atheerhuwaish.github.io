@@ -188,8 +188,13 @@ img:active{width:150%;
 		
 
 img.rotate180 {
-	-webkit-transform: rotate(179.9deg);
-	transform: rotate(179.9deg)}
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg)}
+
+	
+img.rotate90 {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg)}
 
 #html_css_links{float:left; width:23%;}
 
