@@ -72,21 +72,7 @@ h1,h2,h3,h4,nav,aside{text-align: center;
 aside.aside1{order:3;}
 aside.aside2{order: 5;}
 
-aside{
-	background-color:rgba(244,244,255,0.9);
-	width:20%;
-	padding:10px;
-	height:100%}
 
-aside li {text-align:center;
-		padding: 1%;
-		margin: 3% 1%}
-
-aside b {background-color:#cde;
-		margin-bottom:4%;
-		display:inline-block;
-		width:100%}
-		
 main{order:4;
 	padding:4%;
 	width: 58%;
@@ -191,8 +177,6 @@ img.rotate90 {
 	margin-bottom:15%;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg)}
-
-	
 
 aside{
 	background-color:rgba(244,244,255,0.9);
