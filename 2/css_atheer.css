@@ -190,9 +190,8 @@ aside li {text-align:center;
 		padding: 4% 0;
 		margin: 4% 0}
 
-aside b{color:#000;
-		border:1px solid grey;
-		padding: 2% 0}		
+aside li b{background-color: #c9c9dd;
+		padding: 4% 1%}		
 
 		
 		
@@ -207,7 +206,7 @@ aside li {text-align:center;
 		padding: 2%;
 		margin: 1%}
 		
-aside b{color:#000;
+aside li b{color:#000;
 		border:none;
 		padding: 0}
 
