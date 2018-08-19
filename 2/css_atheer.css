@@ -6,12 +6,9 @@
 
 *{	padding:0;
 	margin:0;
-
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	
-
 }
 
 body{background-image: url(../background_image_full_hd.jpg);
@@ -28,8 +25,11 @@ body{background-image: url(../background_image_full_hd.jpg);
 	}
 
 
-#container{display:flex;
+#container{
+	display:flex;
 	flex-wrap: wrap;
+	margin: 1% auto;
+	padding: 1%;
 	}
 	
 a:link{color:rgb(96,100,148)}
@@ -68,14 +68,15 @@ nav li{padding:0.4%;
 h1,h2,h3,h4,nav,aside{text-align: center;
 		font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
-
-aside{height: 100%}
 	
-aside.aside1{order:3;
+aside.aside1{order:3;}
+aside.aside2{order: 5;}
+
+aside{
 	background-color:rgba(244,244,255,0.9);
 	width:20%;
 	padding:10px;
-	}
+	height:100%}
 
 aside li {text-align:center;
 		padding: 1%;
@@ -101,19 +102,6 @@ main p{
 		hyphens: auto;}
 		
 
-aside.aside2{order: 5;
-	padding:10px;
-	background-color:rgba(244,244,255,0.9);
-	width: 20%;
-	}
-
-
-/* Clear floats after the columns 
-#container:after {
-    content: "";
-    display: table;
-    clear: both;
-}*/
 
 footer{order:6;
 	background-color:rgba(79,79,105,.8);
@@ -210,21 +198,20 @@ img.rotate90 {
 @media screen and (max-width: 650px) {
 
 
-aside{width:100%}
-aside.aside1{float:left; width:48%; margin-left:0%; padding:2%}
-aside.aside2{float:right; width:48%; margin-left:4%; margin-right:0%; padding:2%}
+aside{width:100%;}
+aside.aside1{float:left; width:49%; margin-left:0%; padding: 1.5%}
+aside.aside2{float:right; width:49%; margin-left:2%; margin-right:0%; padding: 1.5%}
 
 
 main{order: 5;
 		width: 100%;
 		padding: 2%;
-		margin: 3% auto}
+		margin: 5px 0 0 0}
 		
-nav {padding: 1%;
+nav {padding: 1% 0%;
+	width:100%;
 	font-size: 90%}
 	
-
-
 
 /*begin aside menu*/
 
@@ -240,7 +227,7 @@ aside ul li a {
 	display: block;
 	text-decoration: none;
 	text-align: center;
-	padding: 2px;
+	
 }
 
 aside ul li {
@@ -285,10 +272,9 @@ textarea{height: 7rem;
 		width: 99%;}
 		
 
-		
-aside{				width: 55%;
-					background-color:rgba(244,244,255,0.9);
-			}
+aside{	width: 55%;
+		background-color:rgba(244,244,255,0.9);
+		}
 
 aside.aside2{	order:4;}					
 			
