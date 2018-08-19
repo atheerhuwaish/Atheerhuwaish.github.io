@@ -196,7 +196,7 @@ img.rotate180 {
 img.rotate90 {
 	-webkit-transform: rotate(90deg);
 	margin-top:10%;
-	margin-bottom:10%;
+	margin-bottom:15%;
 	transform: rotate(90deg)}
 	
 
