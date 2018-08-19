@@ -218,7 +218,7 @@ aside li {text-align:center;
 		padding: 2%;
 		margin: 1%}
 		
-aside b{padding: 0}
+aside li b{padding: 0}
 		
 
 #html_css_links, aside{display:block; float:none; width:100%; margin: 1% 0%}
