@@ -206,9 +206,7 @@ aside li {text-align:center;
 		padding: 2%;
 		margin: 1%}
 		
-aside li b{color:#000;
-		border:none;
-		padding: 0}
+aside li b{padding: 0}
 
 main{order: 5;
 		width: 100%;
