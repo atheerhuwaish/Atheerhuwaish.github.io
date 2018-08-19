@@ -46,7 +46,7 @@ a header{color: white}
 
 
 nav{
-	background-color:#ddddee;
+	background-color:#dde;
 	text-align: center;
 	font-weight: bold;
 	padding: 0.5%;
@@ -71,7 +71,7 @@ h1,h2,h3,h4,nav,aside{text-align: center;
 	}
 
 	
-aside.aside1{
+aside{
 	background-color:rgba(244,244,255,0.9);
 	width:100%;
 	padding:10px;}
@@ -93,7 +93,7 @@ main{float: right;
 	text-align:justify;
 }
 
-main p{text-indent: 15%;
+main p{
 		padding: 2% 0;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
@@ -172,92 +172,114 @@ figure{display:inline-block; width:15%;}
 
 
 img{display:inline-block; 
-	width:40%; 
-	margin: 2% 4%}
+	width:70%; 
+	margin: 1% 15%;
+	transition:.6s}
+
+img:hover{width:112%;
+		position:relative;
+		margin:-6%;
+		z-index:10}
+		
+img:active{width:150%;
+		position:relative;
+		margin:-25%;
+		z-index:10}
+		
 
 img.rotate180 {
 	-webkit-transform: rotate(179.9deg);
 	transform: rotate(179.9deg)}
 
-
 #html_css_links{float:left; width:23%;}
-#main{float:right}
 
 
 
 
 @media screen and (max-width: 650px) {
 
+#html_css_links{display:block; float:none; width:100%; margin: auto}
+
+aside.aside1{float:left; width:48%;}
+aside.aside2{float:right;  width:48%;}
+
+main{float:none; position:relative; z-index:10;
+	display:inline-block; width:99%; margin-top:5px}
 
 nav {padding: 1% 0.5%;
-	width:90%;
+	width:100%;
 	font-size: 95%}
 	
-#container1{padding: 1%;
-				margin:0 auto;
-				width:100%
-				}
 
-aside ul li ul {visibility:hidden;
-				opacity:0;
-				position:absolute;
-				cursor: pointer;
-				background-color:rgba(244,244,255,.9);}
 
-aside ul:hover ul {visibility: visible;
-					display: block;
-					transition: 1s;
-					width:42%;
-					cursor:pointer;
-					text-decoration:none;
-					opacity:1
-					}
 
-aside ul li li:hover a{background-color:rgb(96,100,148);
-				text-decoration:none;
-				color: white;
-				display:block;
-				visibility:visible;
-				opacity:1				
-				}
 
-aside li {padding:3%;}
 
-li.bis600none {display:none}
 
-aside.aside1{display: inline-block;
-			width: 50%;
-			float:left;
-			background-color:rgba(244,244,255,0.9);
-			padding:0.5%;
-			}
-			
+
+/*begin aside menu*/
+
+aside ul li {
+	position: relative;   
+	float: left;
+	width: 98%;
+	list-style: none;
+}
+
+aside ul li a {
+	font-weight:bold;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 2px;
+}
+
+aside ul li {
+	background-color: #dde;
+}
+
+aside ul li a:hover {
+	background-color: #eef;
+}
+
+aside ul ul {
+	visibility: hidden;  
+	position: absolute;
+	width: 98%;
+	opacity: 0;
+	transition: opacity 1s; 
+}
+
+aside ul ul li {
+	width: 98%;   
+}
+
+aside ul li:hover ul {   
+	visibility: visible;
+	opacity: 1;
+	z-index:20;
+	background-color:#dde
+}
+		
+/*End aside menu*/
+				
+				
 	
-main{display: block;
-		width: 100%;
-		clear: both;
-		margin: 2% auto}
+img{width:86%; margin: 1% 7%; transition:.6s}
 
+img:hover{width:108%; margin: -4%}
 
-					
-					
-aside li {padding: 2%;}
+nav li.bis650none {display:none}
 
-aside b {margin-bottom:0%;}
-					
-					
 fieldset, input, select{width: 99%;}
 						
 textarea{height: 7rem;
 		width: 99%;}
 						
-						
-#html_css_links{float:none; width:auto}
-
-	
-img{width:60%; margin: 2% 20%}
-
 }
+
+
+
 
 
 @media screen and (max-width:479px){
@@ -267,7 +289,7 @@ header{padding:1%;
 		line-height:250%}
 		
 nav {padding: 2% 0.1%;
-width:100%;}
+	width:100%;}
 
 nav li{padding: 0.1% 0.5%}
 
