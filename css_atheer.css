@@ -202,9 +202,19 @@ img.rotate90 {
 
 
 
+aside b{background-color: #eee;
+		color:#000;
+		border:1px solid grey;
+		padding: 3%}
+
+
 
 @media screen and (max-width: 650px) {
-
+	
+aside b{
+		color:#000;
+		border:none;
+		padding: 0%}
 
 #html_css_links, aside{display:block; float:none; width:100%; margin: 1% 0%}
 aside{width:100%}
