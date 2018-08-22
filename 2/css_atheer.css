@@ -38,7 +38,7 @@ a:hover{color:rgb(106,0,128)}
 		
 header{order:1;
 	width: 100%;
-	line-height:250%;
+	line-height:290%;
 	background-color:rgba(79,79,105,0.7);
 	margin: 2% auto;
 	border-radius:15px;
@@ -52,8 +52,8 @@ nav{order:2;
 	background-color:#ddddee;
 	text-align: center;
 	font-weight: bold;
-	padding: 0.8%;
-	margin: 0 auto 2%;
+	padding: 1% 0;
+	margin: 1% auto;
 	width:100%
 }
 
@@ -72,9 +72,9 @@ aside.aside2{order: 5;}
 
 
 main{order:4;
-	padding:4%;
+	padding:1%;
 	width: 58%;
-	margin: auto 1% 1% 1%;
+	margin: 1%;
 	background-color:rgba(244,244,255,0.9);
 	text-align:justify;
 }
@@ -203,13 +203,13 @@ aside li b{background-color: #c9c9dd;
 
 
 
-@media screen and (max-width: 950px)
+@media screen and (max-width: 950px) and (min-width: 651px)
 {
 	
-	#container{display:block;}
+	#container{display:block; margin: 0;}
 	.aside1{width:25%}
-	.aside2{width:25%; display; inline-block; float:left}
-	main{display:inline-block;width:25%; float: left; width:72%;margin-top:-28%}
+	.aside2{width:25%; display; inline-block; float:left; margin-top:1%}
+	main{display:inline-block; float: right; width:72%; margin:-29% 0 1% 1%}
 	
 	footer{clear:both}
 
@@ -223,14 +223,13 @@ aside li b{background-color: #c9c9dd;
 		
 @media screen and (max-width: 650px) {
 
-#container{display:flex;}
-	
+
 aside.aside1{float:left; width:48%; margin:0; padding: 1%}
 aside.aside2{float:left; width:48%; margin: 0 0 1% 4%; padding: 1%}	
 
 aside li {text-align:center;
-		padding: 2%;
-		margin: 1%}
+			padding: 2%;
+			margin: 1%}
 		
 aside li b{padding: 0}
 
@@ -307,11 +306,9 @@ aside{	width: 55%;
 		background-color:rgba(244,244,255,0.9);
 		}
 
-aside.aside2{	order:4;}					
+aside.aside2{order:4;}					
 			
-/*
-nav li.bis650none {display:none}
-*/
+
 }
 
 
