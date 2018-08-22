@@ -74,7 +74,7 @@ aside.aside2{order: 5;}
 main{order:4;
 	padding:1%;
 	width: 58%;
-	margin: 1%;
+	margin: 0 auto;
 	background-color:rgba(244,244,255,0.9);
 	text-align:justify;
 }
