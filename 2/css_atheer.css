@@ -205,16 +205,13 @@ aside li b{background-color: #c9c9dd;
 
 @media screen and (max-width: 950px) and (min-width: 651px)
 {
-	
-	#container{display:block; margin: 0;}
-	.aside1{width:25%;margin-top:3%}
-	.aside2{width:25%; display; inline-block; float:left; margin-top:1%}
-	main{display:inline-block; float: right; width:73%; margin:-29% 0 1% 1%}
-	
-	footer{clear:both}
-
+	#container{margin: 0;}
+	.aside1{flex-basis:25%;}
+	.aside2{flex-basis:25%;}
+	main{flex-basis:73%;}
 
 }
+
 
 
 
