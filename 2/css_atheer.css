@@ -207,7 +207,7 @@ aside li b{background-color: #c9c9dd;
 {
 	
 	#container{display:block; margin: 0;}
-	.aside1{width:25%}
+	.aside1{width:25%;margin-top:3%}
 	.aside2{width:25%; display; inline-block; float:left; margin-top:1%}
 	main{display:inline-block; float: right; width:73%; margin:-29% 0 1% 1%}
 	
