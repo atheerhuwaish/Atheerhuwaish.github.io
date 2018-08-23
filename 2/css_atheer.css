@@ -12,20 +12,20 @@ body{background-image: url(../background_image_full_hd.jpg);
 	background-attachment: fixed;
 	-ms-background-size: cover;
 	-moz-background-size: cover;
-	-webkit-background-size: cover;
+	-webkit-background-size: cover;radius;
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
 	width:94%;
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 1% auto;
 	}
 
 
 #container{
 	display:flex;
+	justify-content:space-between;
 	flex-wrap: wrap;
-	margin: 1% auto;
 	padding: 1%;
 	}
 	
@@ -40,19 +40,19 @@ header{order:1;
 	width: 100%;
 	line-height:290%;
 	background-color:rgba(79,79,105,0.7);
-	margin: 2% auto;
+	margin: 1% auto;
 	border-radius:15px;
 	color: white;
 	}
 
-
 header div{color:#fff}
+
 
 nav{order:2;
 	background-color:#ddddee;
 	text-align: center;
 	font-weight: bold;
-	padding: 1% 0;
+	padding: 0.8%;
 	margin: 1% auto;
 	width:100%
 }
@@ -66,15 +66,15 @@ nav li{padding:0.4%;
 h1,h2,h3,h4,nav,aside{text-align: center;
 		font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
-	
+
 aside.aside1{order:3;}
-aside.aside2{order: 5;}
+aside.aside2{order: 5; }
 
 
 main{order:4;
-	padding:1%;
+	padding:4%;
 	width: 58%;
-	margin: 0 auto;
+	margin: auto 1% 1% 1%;
 	background-color:rgba(244,244,255,0.9);
 	text-align:justify;
 }
@@ -118,9 +118,10 @@ background-image: -webkit-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 
-a.nohover {color: black}
 
 ul li {	list-style: none;}
+
+
 
 form{width:100%}
 
@@ -132,7 +133,10 @@ textarea{height: 10rem;
 		padding: 1%;
 		margin: 1%;
 		width: 98%;
-		border-color: #cde}		
+		border-color: #cde}	
+
+
+	
 		
 input, select{padding: 1%;
 			margin: 1%;
@@ -176,6 +180,9 @@ img.rotate90 {
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg)}
 
+	
+	
+	
 aside{
 	background-color:rgba(244,244,255,0.9);
 	padding:3% 0;
@@ -188,45 +195,42 @@ aside li {text-align:center;
 		padding: 4% 0;
 		margin: 4% 0}
 
+		
 aside li b{background-color: #c9c9dd;
 		padding: 4% 1%;
 		display:inline-block;
-		width:90%}		
+		width:90%}	
 
 		
-
-
-
-
-
-
-
-
-
+				
+		
+		
 @media screen and (max-width: 950px) and (min-width: 651px)
 {
-	#container{margin: 0;}
-	.aside1{flex-basis:25%;}
-	.aside2{flex-basis:25%;}
-	main{flex-basis:73%;}
-
+	#container{display:block}
+	
+aside{width:27%; float:left}
+	main{float:right; 
+		margin-right:0;
+		width:72%}
+		.aside2{margin-top:1%}
+	footer{clear:both}
+	
+	
 }
 
-
-
-
-
 		
 		
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) 
 
-
-aside.aside1{float:left; width:48%; margin:0; padding: 1%}
-aside.aside2{float:left; width:48%; margin: 0 0 1% 4%; padding: 1%}	
+{
+	
+aside.aside1{width:48%; margin:0; padding: 1%;}
+aside.aside2{width:48%; margin: 0 0 1% 4%; padding: 1%}	
 
 aside li {text-align:center;
-			padding: 2%;
-			margin: 1%}
+		padding: 2%;
+		margin: 1%}
 		
 aside li b{padding: 0}
 
@@ -286,15 +290,14 @@ aside ul li:hover ul {
 		
 /*End aside menu*/
 
-
 	
 img{width:86%; margin: 1% 7%; transition:.6s}
 
 img:hover{width:104%; margin: -2%}
 
-					
+
 fieldset, input, select{width: 99%;}
-						
+					
 textarea{height: 7rem;
 		width: 99%;}
 		
@@ -303,7 +306,7 @@ aside{	width: 55%;
 		background-color:rgba(244,244,255,0.9);
 		}
 
-aside.aside2{order:4;}					
+aside.aside2{	order:4;}					
 			
 
 }
@@ -312,7 +315,9 @@ aside.aside2{order:4;}
 
 
 
-@media screen and (max-width:495px){
+@media screen and (max-width:495px)
+
+{
 
 header{padding:1%;
 		font-size: 95%;
