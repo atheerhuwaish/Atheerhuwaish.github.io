@@ -205,7 +205,7 @@ aside li b{background-color: #c9c9dd;
 				
 		
 		
-@media screen and (max-width: 950px) and (min-width: 651px)
+@media screen and (max-width: 1024px) and (min-width: 640px)
 {
 	#container{display:block}
 	
@@ -221,7 +221,7 @@ aside{width:27%; float:left}
 
 		
 		
-@media screen and (max-width: 650px) 
+@media screen and (max-width: 639px) 
 
 {
 	
