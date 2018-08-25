@@ -122,45 +122,40 @@ background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 ul li {	list-style: none;}
 
 
+fieldset{
+		padding: 2%;
+		}
 
-form{width:100%}
-
-fieldset{width:98%;
-		padding: 1%;
-		margin: 1%;}
-						
-textarea{height: 10rem;
-		padding: 1%;
-		margin: 1%;
-		width: 98%;
+				
+textarea{height: 10em;
+		width: 99%;
 		border-color: #cde}	
 
 
-	
 		
-input, select{padding: 1%;
-			margin: 1%;
+input, select{padding: 2%;
 			border-color: #cde;
-			width: 98%}
+			width: 99%;
+			margin-top:1%;}
 			
-input[type=checkbox]{width:auto}
+input[type=checkbox]{width:auto; }
 			
 input[type="submit"]:hover, input[type="reset"]:hover {
 		background-color: black;
 		color: #ded}
+
 		
 label:hover{cursor:pointer}
 
-figure{display:inline-block; width:15%;}
 
 img{display:inline-block; 
-	width:70%; 
-	margin: 1% 15%;
+	width:80%; 
+	margin: 1% 10% ;
 	transition:.6s}
 
-img:hover{width:112%;
+img:hover{width:116%;
 		position:relative;
-		margin:-6%;
+		margin:-8%;
 		z-index:10}
 		
 img:active{width:150%;
@@ -182,11 +177,9 @@ img.rotate90 {
 
 	
 	
-	
 aside{
 	background-color:rgba(244,244,255,0.9);
 	padding:3% 0;
-	margin: 0;
 	height:100%;
 	width: 20%}
 
@@ -197,7 +190,7 @@ aside li {text-align:center;
 
 		
 aside li b{background-color: #c9c9dd;
-		padding: 4% 1%;
+		padding: 2% 1%;
 		display:inline-block;
 		width:90%}	
 
@@ -217,6 +210,9 @@ aside{width:27%; float:left}
 	footer{clear:both}
 	
 	
+img:hover{width:112%;
+		margin:-6%;
+		}
 }
 
 		
@@ -224,15 +220,6 @@ aside{width:27%; float:left}
 @media screen and (max-width: 639px) 
 
 {
-	
-aside.aside1{width:48%; margin:0; padding: 1%;}
-aside.aside2{width:48%; margin: 0 0 1% 4%; padding: 1%}	
-
-aside li {text-align:center;
-		padding: 2%;
-		margin: 1%}
-		
-aside li b{padding: 0}
 
 main{order: 5;
 		width: 100%;
@@ -246,6 +233,16 @@ nav {padding: 1% 0%;
 
 /*begin aside menu*/
 
+aside.aside1{width:48%; margin:0; padding: 1%;}
+aside.aside2{width:48%; margin: 0 0 1% 4%; padding: 1%}	
+
+aside li {text-align:center;
+		padding: 2%;
+		margin: 1%}
+		
+aside li b{padding: 0}
+
+
 aside ul li {
 	position: relative;   
 	float: left;
@@ -254,11 +251,8 @@ aside ul li {
 }
 
 aside ul li a {
-	font-weight:bold;
 	display: block;
 	text-decoration: none;
-	text-align: center;
-	
 }
 
 aside ul li {
@@ -272,14 +266,12 @@ aside ul li a:hover {
 aside ul ul {
 	visibility: hidden;  
 	position: absolute;
-	width: 98%;
+	width: 96%;
 	opacity: 0;
 	transition: opacity 1s; 
 }
 
-aside ul ul li {
-	width: 98%;   
-}
+
 
 aside ul li:hover ul {   
 	visibility: visible;
@@ -298,38 +290,8 @@ img:hover{width:104%; margin: -2%}
 
 fieldset, input, select{width: 99%;}
 					
-textarea{height: 7rem;
-		width: 99%;}
+textarea{height: 7em;}
 		
+aside.aside2{	order:4;}
 
-aside{	width: 55%;
-		background-color:rgba(244,244,255,0.9);
-		}
-
-aside.aside2{	order:4;}					
-			
-
-}
-
-
-
-
-
-@media screen and (max-width:495px)
-
-{
-
-header{padding:1%;
-		font-size: 95%;
-		line-height:250%}
-		
-nav {padding: 2% 0.1%;
-width:100%;}
-
-nav li{padding: 0.1% 0.5%}
-
-.button{padding: 0.2em 0.1em;}
-
-
-img{width:80%; margin: 2% 10%}
 }
