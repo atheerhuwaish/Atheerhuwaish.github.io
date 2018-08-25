@@ -17,7 +17,7 @@ body{background-image: url(background_image_full_hd.jpg);
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
 	width:94%;
-	max-width: 1100px;
+	max-width: 1500px;
 	margin: 0 auto;
 	}
 
@@ -34,7 +34,7 @@ body{background-image: url(background_image_full_hd.jpg);
 	a:hover{color:rgb(106,0,128); font-weight:bold}
 	
 header{width: 100%;
-	line-height:290%;
+	line-height:250%;
 	background-color:rgba(79,79,105,0.7);
 	margin: 2% auto;
 	border-radius:15px;
@@ -202,7 +202,7 @@ aside li {text-align:center;
 aside li b{background-color: #c9c9dd;
 		padding: 4% 1%;
 		display:inline-block;
-		width:90%}		
+		width:90%}	
 
 		
 		
@@ -291,9 +291,6 @@ fieldset, input, select{width: 99%;}
 textarea{height: 7rem;
 		width: 99%;}
 
-/*
-nav li.bis650none {display:none}
-*/	
 }
 
 
