@@ -17,7 +17,7 @@ body{background-image: url(background_image_full_hd.jpg);
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
 	width:94%;
-	max-width: 1500px;
+	max-width: 1400px;
 	margin: 0 auto;
 	}
 
@@ -40,7 +40,7 @@ header{width: 100%;
 	border-radius:15px;
 	color: white}
 
-a header{color: white}
+header a{color: white}
 
 
 nav{
@@ -124,11 +124,9 @@ background-image: -webkit-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 
-a.nohover {color: black}
 
 ul li {	list-style: none;}
 
-form{width:100%}
 
 fieldset{width:98%;
 		padding: 4%;
@@ -208,7 +206,7 @@ aside li b{background-color: #c9c9dd;
 		
 		
 		
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 640px) {
 	
 aside.aside1{float:left; width:48%; margin:1% 2% 1% 0; padding: 1%}
 aside.aside2{float:left; width:48%; margin-left: 1%; padding: 1%}	
