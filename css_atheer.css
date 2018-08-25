@@ -134,7 +134,7 @@ fieldset{width:98%;
 		padding: 4%;
 		margin: 1%;}
 						
-textarea{height: 10rem;
+textarea{height: 10em;
 		padding: 1%;
 		margin: 1% 0;
 		width: 98%;
@@ -288,27 +288,7 @@ img:hover{width:108%; margin: -4%}
 
 fieldset, input, select{width: 99%;}
 						
-textarea{height: 7rem;
+textarea{height: 7em;
 		width: 99%;}
 
-}
-
-
-
-
-
-@media screen and (max-width:479px){
-
-header{padding:1%;
-		font-size: 95%;
-		line-height:250%}
-		
-nav {padding: 2% 0.1%;
-	width:100%;}
-
-nav li{padding: 0.1% 0.5%}
-
-.button{padding: 0.2em 0.1em;}
-
-img{width:80%; margin: 2% 10%}
 }
