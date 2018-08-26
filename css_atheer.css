@@ -183,11 +183,6 @@ img:hover{width:112%;
 		margin:-6%;
 		z-index:10}
 		
-img:active{width:150%;
-		position:relative;
-		margin:-25%;
-		z-index:10}
-		
 
 img.rotate180 {
 	-webkit-transform: rotate(180deg);
