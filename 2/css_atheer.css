@@ -12,7 +12,7 @@ body{background-image: url(../background_image_full_hd.jpg);
 	background-attachment: fixed;
 	-ms-background-size: cover;
 	-moz-background-size: cover;
-	-webkit-background-size: cover;radius;
+	-webkit-background-size: cover;
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
@@ -224,8 +224,9 @@ img:hover{width:112%;
 main{order: 5;
 		width: 100%;
 		padding: 2%;
-		margin: 5px 0 0 0}
-		
+		margin: 1% 0 0 0
+	}
+
 nav {padding: 1% 0%;
 	width:100%;
 	font-size: 90%}
