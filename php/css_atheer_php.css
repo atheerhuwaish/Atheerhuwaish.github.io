@@ -1,17 +1,11 @@
-@charset "utf-8";
-/* CSS Document */
-
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 
 *{	padding:0;
 	margin:0;
-
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	
-
 }
 
 body{background-image: url(background_image_full_hd.jpg);
@@ -22,14 +16,17 @@ body{background-image: url(background_image_full_hd.jpg);
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
-	width:90%;
-	max-width: 1100px;
-	margin: 0 auto;
+	width:94%;
+	max-width: 1280px;
+	margin: 1% auto;
 	}
 
 
-#container{display:flex;
+#container{
+	display:flex;
+	justify-content:space-between;
 	flex-wrap: wrap;
+	padding: 1%;
 	}
 	
 a:link{color:rgb(96,100,148)}
@@ -38,15 +35,17 @@ a:focus{color:rgb(96,100,148)}
 a:hover{color:rgb(106,0,128)}
 	
 
+		
 header{order:1;
 	width: 100%;
-	line-height:250%;
+	line-height:290%;
 	background-color:rgba(79,79,105,0.7);
-	margin: 2% auto;
+	margin: 1% auto;
 	border-radius:15px;
 	color: white;
 	}
 
+header div{color:#fff}
 
 
 nav{order:2;
@@ -54,7 +53,7 @@ nav{order:2;
 	text-align: center;
 	font-weight: bold;
 	padding: 0.8%;
-	margin: 0 auto 2%;
+	margin: 1% auto;
 	width:100%
 }
 
@@ -68,23 +67,10 @@ h1,h2,h3,h4,nav,aside{text-align: center;
 		font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
 
-aside{height: 100%}
-	
-aside#aside1{order:3;
-	background-color:rgba(244,244,255,0.9);
-	width:20%;
-	padding:10px;
-	}
+aside.aside1{order:3;}
+aside.aside2{order: 5; }
 
-aside li {text-align:center;
-		padding: 1%;
-		margin: 3% 1%}
 
-aside b {background-color:#cde;
-		margin-bottom:4%;
-		display:inline-block;
-		width:100%}
-		
 main{order:4;
 	padding:4%;
 	width: 58%;
@@ -93,26 +79,13 @@ main{order:4;
 	text-align:justify;
 }
 
-main p{text-indent: 15%;
+main p{
 		padding: 2%;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;}
 		
 
-aside#aside2{order: 5;
-	padding:10px;
-	background-color:rgba(244,244,255,0.9);
-	width: 20%;
-	}
-
-
-/* Clear floats after the columns 
-#container:after {
-    content: "";
-    display: table;
-    clear: both;
-}*/
 
 footer{order:6;
 	background-color:rgba(79,79,105,.8);
@@ -145,122 +118,181 @@ background-image: -webkit-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 
-a.nohover {color: black}
 
 ul li {	list-style: none;}
 
-form{width:100%}
 
-fieldset{width:98%;
-		padding: 1%;
-		margin: 1%;}
-						
-textarea{height: 10rem;
-		padding: 1%;
-		margin: 1%;
-		width: 98%;
-		border-color: #cde}		
+fieldset{
+		padding: 2%;
+		}
+
+				
+textarea{height: 10em;
+		width: 99%;
+		border-color: #cde}	
+
+
 		
-input, select{padding: 1%;
-			margin: 1%;
+input, select{padding: 2%;
 			border-color: #cde;
-			width: 98%}
+			width: 99%;
+			margin-top:1%;}
 			
-input[type=checkbox]{width:auto}
+input[type=checkbox]{width:auto; }
 			
 input[type="submit"]:hover, input[type="reset"]:hover {
 		background-color: black;
 		color: #ded}
+
 		
 label:hover{cursor:pointer}
 
-figure{display:inline-block; width:15%;}
 
-img {display:block;
-width: 100%;
-max-width: 310px;
-margin: 2% auto}
+img{display:inline-block; 
+	width:80%; 
+	margin: 1% 10% ;
+	transition:.6s}
 
+img:hover{width:116%;
+		position:relative;
+		margin:-8%;
+		z-index:10}
+		
+img:active{width:150%;
+		position:relative;
+		margin:-25%;
+		z-index:10}
+		
 
-@media screen and (max-width: 650px) {
+img.rotate180 {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg)}
 
 	
-nav {padding: 0.8% 0.5%;
-	font-size: 90%}
+img.rotate90 {
+	margin-top:15%;
+	margin-bottom:15%;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg)}
+
 	
-body{padding: 1%;
-				margin:0 auto;
-				width:100%
-				}
-
-aside ul li ul {visibility:hidden;
-				opacity:0;
-				position:absolute;
-				cursor: pointer;
-				background-color:rgba(244,244,255,.9);}
-
-aside ul:hover ul {visibility: visible;
-					transition: 1s;
-					width:42%;
-					cursor:pointer;
-					text-decoration:none;
-					opacity:1
-					}
-
-aside ul li li:hover a{background-color:rgb(96,100,148);
-				text-decoration:none;
-				color: white;
-				visibility:visible;
-				opacity:1				
-				}
-
-aside li {padding:3%;}
-
-aside#aside1{/*display: inline-block;*/
-			width: 50%;
-			background-color:rgba(244,244,255,0.9);
-			padding:0.5%;
-			}
-			
 	
+aside{
+	background-color:rgba(244,244,255,0.9);
+	padding:3% 0;
+	height:100%;
+	width: 20%}
+
+		
+aside li {text-align:center;
+		padding: 4% 0;
+		margin: 4% 0}
+
+		
+aside li b{background-color: #c9c9dd;
+		padding: 2% 1%;
+		display:inline-block;
+		width:90%}	
+
+		
+				
+		
+		
+@media screen and (max-width: 1024px) and (min-width: 640px)
+{
+	#container{display:block}
+	
+aside{width:27%; float:left}
+	main{float:right; 
+		margin-right:0;
+		width:72%}
+		.aside2{margin-top:1%}
+	footer{clear:both}
+	
+	
+img:hover{width:112%;
+		margin:-6%;
+		}
+}
+
+		
+		
+@media screen and (max-width: 639px) 
+
+{
+
 main{order: 5;
 		width: 100%;
 		padding: 2%;
-		margin: 3% auto}
+		margin: 1% 0 0 0
+	}
+
+nav {padding: 1% 0%;
+	width:100%;
+	font-size: 90%}
+	
+
+/*begin aside menu*/
+
+aside.aside1{width:48%; margin:0; padding: 1%;}
+aside.aside2{width:48%; margin: 0 0 1% 4%; padding: 1%}	
+
+aside li {text-align:center;
+		padding: 2%;
+		margin: 1%}
+		
+aside li b{padding: 0}
 
 
-aside#aside2{order:4;
-					width: 50%;
-					background-color:rgba(244,244,255,0.9);
-					padding:0.5%;}
+aside ul li {
+	position: relative;   
+	float: left;
+	width: 98%;
+	list-style: none;
+}
 
-					
-					
-aside li {padding: 2%;}
+aside ul li a {
+	display: block;
+	text-decoration: none;
+}
 
-aside b {margin-bottom:0%;}
-					
-					
-fieldset, input, select{width: 99%;}
-						
-textarea{height: 7rem;
-		width: 99%;}
-						
+aside ul li {
+	background-color: #dde;
+}
+
+aside ul li a:hover {
+	background-color: #eef;
+}
+
+aside ul ul {
+	visibility: hidden;  
+	position: absolute;
+	width: 96%;
+	opacity: 0;
+	transition: opacity 1s; 
 }
 
 
 
-@media screen and (max-width:495px){
-
-header{padding:1%;
-		font-size: 95%;
-		line-height:250%}
+aside ul li:hover ul {   
+	visibility: visible;
+	opacity: 1;
+	z-index:20;
+	background-color:#dde
+}
 		
-nav {padding: 2% 0.1%;
-width:100%;}
+/*End aside menu*/
 
-nav li{padding: 0.1% 0.5%}
+	
+img{width:86%; margin: 1% 7%; transition:.6s}
 
-.button{padding: 0.2em 0.1em;}
+img:hover{width:104%; margin: -2%}
+
+
+fieldset, input, select{width: 99%;}
+					
+textarea{height: 7em;}
+		
+aside.aside2{	order:4;}
 
 }
