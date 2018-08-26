@@ -1,11 +1,12 @@
 <?php include 'header.php'; ?>
-	<main>
-<h3>Ihre Bilder</h3>
-<strong>Senden Sie uns Ihre Bilder:</strong>
 
 
-<form action="#" enctype="multipart/form-data" method="post">
-    <fieldset>
+<main>
+
+	<h3>Kontakt</h3>
+
+	<form action="#" enctype="multipart/form-data" method="post">
+		<fieldset>
 				Anrede: <select name="anrede">
 					<option>Frau</option>
 					<option>Herr</option>
@@ -17,18 +18,17 @@
 				E-mail: <br>
 				<input type="email" name="mail" required placeholder="E-mail*"><br>
 				
-				Ihre Nachricht: (optional)<br>
+				Ihre Nachricht:<br>
 				<textarea name="nachricht" maxlength="800" placeholder="Ihre Nachricht an uns.."></textarea><br>
 				
-				Ihre Bilder hochladen <b>(erforderlich):</b><br>
-				<input required type="file" name="bilder" id="bilder" accept="image/*"><br>
+				PDF- /Bilddatei senden:<br>
+				<input type="file" name="datei" id="datei" accept="image/*, application/pdf"><br>
 				
 				<input type="checkbox" id="zustimmen" name="zustimmung" required>
-				<label for="zustimmen">Ich weiß, dass dieses Formular nicht funktioniert und keine Daten sendet</label><br>
+				<label for="zustimmen">Ich weiß, dass dieses Formular keine Daten sendet</label><br>
 				<input type="submit"> <input type="reset">
-    </fieldset>
-</form>
-
+		</fieldset>
+	</form>
 
 </main>
 	
