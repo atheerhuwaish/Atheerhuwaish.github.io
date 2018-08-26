@@ -215,7 +215,7 @@ main{order: 3;
 		width: 100%;
 		padding: 2%;
 		margin: 2% 0}
-		
+	
 nav {padding: 1% 0%;
 	width:100%;
 	font-size: 90%}
@@ -262,7 +262,6 @@ aside ul ul {
 }
 
 
-
 aside ul li:hover ul {   
 	visibility: visible;
 	opacity: 1;
@@ -278,7 +277,6 @@ img{width:86%; margin: 1% 7%; transition:.6s}
 img:hover{width:104%; margin: -2%}
 
 
-fieldset, input, select{width: 99%;}
 					
 textarea{height: 7em;}
 
