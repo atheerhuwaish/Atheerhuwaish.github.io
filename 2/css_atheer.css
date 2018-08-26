@@ -16,7 +16,7 @@ body{background-image: url(../background_image_full_hd.jpg);
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
-	width:94%;
+	width:80%;
 	max-width: 1280px;
 	margin: 1% auto;
 	}
@@ -200,7 +200,7 @@ aside li b{background-color: #c9c9dd;
 		
 @media screen and (max-width: 1024px) and (min-width: 640px)
 {
-	#container{display:block}
+#container{display:block}
 	
 aside{width:27%; float:left}
 	main{float:right; 
@@ -212,15 +212,16 @@ aside{width:27%; float:left}
 	
 img:hover{width:112%;
 		margin:-6%;
-		}
+	}
 }
 
 		
 		
 @media screen and (max-width: 639px) 
-
 {
 
+body{width:90%}
+	
 main{order: 5;
 		width: 100%;
 		padding: 2%;
