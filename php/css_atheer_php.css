@@ -18,41 +18,47 @@ body{background-image: url(background_image_full_hd.jpg);
 	line-height:170%;
 	width:80%;
 	max-width: 1280px;
-	margin: 0 auto;
+	margin: 1% auto;
 	}
 
 
-
-#container1{
-	margin: 1% auto;
+#container{
+	display:flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
 	padding: 1%;
 	}
-
-	a:link{color:rgb(96,100,148)}
-	a:visited{color:rgb(96,100,148)}
-	a:focus{color:rgb(96,100,148)}
-	a:hover{color:rgb(106,0,128); font-weight:bold}
 	
-header{width: 100%;
-	line-height:250%;
+a:link{color:rgb(96,100,148)}
+a:visited{color:rgb(96,100,148)}
+a:focus{color:rgb(96,100,148)}
+a:hover{color:rgb(106,0,128)}
+	
+
+		
+header{order:1;
+	width: 100%;
+	line-height:290%;
 	background-color:rgba(79,79,105,0.7);
-	margin: 2% auto;
+	margin: 1% auto;
 	border-radius:15px;
-	color: white}
+	color: white;
+	}
 
-header div{color: white}
+header div{color:#fff}
 
 
-nav{
-	background-color:#dde;
+nav{order:2;
+	background-color:#ddddee;
 	text-align: center;
 	font-weight: bold;
-	padding: 0.5%;
-	margin:0 auto 10px auto;
+	padding: 0.8%;
+	margin: 1% auto;
 	width:100%
 }
 
-nav li{padding:0.7%; 
+
+nav li{padding:0.4%; 
 	display: inline-block;
 	list-style: none;}
 
@@ -61,60 +67,31 @@ h1,h2,h3,h4,nav,aside{text-align: center;
 		font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
 
-
-.container2{
-	display: block;
-	margin: 0 auto
-	}
-		
-
-aside{background-color:rgba(244,244,255,0.9);
-	width:24%;
-	padding:1% 0;
-	margin: 1% 0;
-	}
+aside.aside1{order:3;}
+aside.aside2{order: 5; }
 
 
-aside li {text-align:center;
-		padding: 3% 0;
-		margin: 3% 0}
-
-aside li b{background-color: #c9c9dd;
-		padding: 4% 1%;
-		display:inline-block;
-		width:90%}	
-
-		
-aside	{float:left}
-
-
-		
-main{float: right;
-	padding: 4%;
-	width: 74%;
-	margin: 1% 0;
+main{order:4;
+	padding:4%;
+	width: 58%;
+	margin: auto 1% 1% 1%;
 	background-color:rgba(244,244,255,0.9);
 	text-align:justify;
 }
+
 main p{
-		padding: 2% 0;
+		padding: 2%;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
-		hyphens: auto;
-        }
+		hyphens: auto;}
 		
 
-/* Clear floats after container 2
-.container2:after {
-    content: "";
-    display: table;
-	clear: both;}
-*/
 
-footer{
-	clear: both;
+footer{order:6;
 	background-color:rgba(79,79,105,.8);
 	padding: 2% 0;
+	margin: 2% auto;
+	width:100%;
 	border-radius:15px;
 	}
 	
@@ -146,10 +123,13 @@ ul li {	list-style: none;}
 
 
 fieldset{padding: 2% 2% 2% 3%;}
-						
+
+				
 textarea{height: 10em;
 		width: 99%;
-		border-color: #cde}
+		border-color: #cde}	
+
+
 		
 input, select{padding: 2% 1%;
 			border-color: #cde;
@@ -162,21 +142,24 @@ input[type="submit"]:hover, input[type="reset"]:hover
 	{background-color: black;
 	color: #ded
 	}
+	
 		
 label:hover{cursor:pointer}
 
- 
-figure{display:inline-block; width:15%;}
-
 
 img{display:inline-block; 
-	width:70%; 
-	margin: 1% 15%;
+	width:80%; 
+	margin: 1% 10% ;
 	transition:.6s}
 
-img:hover{width:112%;
+img:hover{width:116%;
 		position:relative;
-		margin:-6%;
+		margin:-8%;
+		z-index:10}
+		
+img:active{width:150%;
+		position:relative;
+		margin:-25%;
 		z-index:10}
 		
 
@@ -186,27 +169,66 @@ img.rotate180 {
 
 	
 img.rotate90 {
-	
 	margin-top:15%;
 	margin-bottom:15%;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg)}
-	
 
+	
+	
+aside{
+	background-color:rgba(244,244,255,0.9);
+	padding:3% 0;
+	height:100%;
+	width: 20%}
+
+		
+aside li {text-align:center;
+		padding: 4% 0;
+		margin: 4% 0}
+
+		
+aside li b{background-color: #c9c9dd;
+		padding: 2% 1%;
+		display:inline-block;
+		width:90%}	
+
+		
+				
+		
+		
+@media screen and (max-width: 1024px) and (min-width: 640px)
+{
+	#container{display:block}
+	
+aside{width:27%; float:left}
+	main{float:right; 
+		margin-right:0;
+		width:72%}
+		.aside2{margin-top:1%}
+	footer{clear:both}
+	
+	
+img:hover{width:112%;
+		margin:-6%;
+		}
+}
+
+		
 		
 @media screen and (max-width: 639px) 
 
 {
-
-body {width:90%}
 	
-.container2{display:flex; flex-wrap:wrap}
+body{width:90%;}
 
-main{order: 3;
+
+main{order: 5;
 		width: 100%;
 		padding: 2%;
-		margin: 2% 0}
-	
+		margin: 1% 0 0 0
+	}
+
 nav {padding: 1% 0%;
 	width:100%;
 	font-size: 90%}
@@ -214,8 +236,8 @@ nav {padding: 1% 0%;
 
 /*begin aside menu*/
 
-aside.aside1{width:48%; margin-right:auto; margin-left:0; padding: 1%; order:1}
-aside.aside2{width:48%; margin-left: auto; margin-right:0; padding: 1%; order:2}
+aside.aside1{width:48%; margin:0; padding: 1%;}
+aside.aside2{width:48%; margin: 0 0 1% 4%; padding: 1%}	
 
 aside li {text-align:center;
 		padding: 2%;
@@ -225,7 +247,7 @@ aside li b{padding: 0}
 
 
 aside ul li {
-	position: relative; 
+	position: relative;
 	width: 98%;
 	list-style: none;
 }
@@ -252,6 +274,7 @@ aside ul ul {
 }
 
 
+
 aside ul li:hover ul {   
 	visibility: visible;
 	opacity: 1;
@@ -266,8 +289,9 @@ img{width:86%; margin: 1% 7%; transition:.6s}
 
 img:hover{width:104%; margin: -2%}
 
-
-					
-textarea{height: 7em;}
+				
+textarea{height: 7em}
+		
+aside.aside2{order:4}
 
 }
