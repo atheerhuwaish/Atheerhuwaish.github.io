@@ -73,8 +73,8 @@ aside.aside2{order: 5; }
 
 main{order:4;
 	padding:4%;
-	width: 58%;
-	margin: auto 1% 1% 1%;
+	width: 56%;
+	margin: 2%;
 	background-color:rgba(244,244,255,0.9);
 	text-align:justify;
 }
@@ -176,7 +176,7 @@ img.rotate90 {
 
 	
 	
-aside{
+aside{margin: 2% 0;
 	background-color:rgba(244,244,255,0.9);
 	padding:3% 0;
 	height:100%;
@@ -202,11 +202,13 @@ aside li b{background-color: #c9c9dd;
 	#container{display:block}
 	
 aside{width:27%; float:left}
-	main{float:right; 
+
+main{float:right; 
 		margin-right:0;
-		width:72%}
+		width:70%}
 		.aside2{margin-top:1%}
-	footer{clear:both}
+
+footer{clear:both}
 	
 	
 img:hover{width:112%;
@@ -236,8 +238,8 @@ nav {padding: 1% 0%;
 
 /*begin aside menu*/
 
-aside.aside1{width:48%; margin:0; padding: 1%;}
-aside.aside2{width:48%; margin: 0 0 1% 4%; padding: 1%}	
+aside.aside1{width:48%; margin:1% 0; padding: 1%;}
+aside.aside2{width:48%; margin: 1% 0 1% 4%; padding: 1%}	
 
 aside li {text-align:center;
 		padding: 2%;
