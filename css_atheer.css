@@ -145,8 +145,7 @@ background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 ul li {	list-style: none;}
 
 
-fieldset{width:98%;
-		padding: 4%;
+fieldset{padding: 2% 2% 2% 4%;
 		margin: 1%;}
 						
 textarea{height: 10em;
