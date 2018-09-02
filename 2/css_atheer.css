@@ -123,7 +123,7 @@ ul li {	list-style: none;}
 
 
 fieldset{
-		padding: 2%;
+		padding: 2% 2% 2% 3%;
 		}
 
 				
@@ -200,6 +200,7 @@ aside li b{background-color: #c9c9dd;
 		
 @media screen and (max-width: 1024px) and (min-width: 640px)
 {
+
 #container{display:block}
 	
 aside{width:27%; float:left}
@@ -212,16 +213,17 @@ aside{width:27%; float:left}
 	
 img:hover{width:112%;
 		margin:-6%;
-	}
+		}
 }
 
 		
 		
 @media screen and (max-width: 639px) 
+
 {
 
-body{width:90%}
-	
+body{width:90%;}
+
 main{order: 5;
 		width: 100%;
 		padding: 2%;
@@ -246,8 +248,7 @@ aside li b{padding: 0}
 
 
 aside ul li {
-	position: relative;   
-	float: left;
+	position: relative;
 	width: 98%;
 	list-style: none;
 }
