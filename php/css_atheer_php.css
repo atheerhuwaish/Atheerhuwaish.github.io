@@ -123,7 +123,7 @@ ul li {	list-style: none;}
 
 
 fieldset{
-		padding: 2%;
+		padding: 2% 2% 2% 3%;
 		}
 
 				
@@ -218,8 +218,11 @@ img:hover{width:112%;
 		
 		
 @media screen and (max-width: 639px) 
+
 {
-body{width:90%}
+	
+body{width:90%;}
+
 
 main{order: 5;
 		width: 100%;
@@ -245,8 +248,7 @@ aside li b{padding: 0}
 
 
 aside ul li {
-	position: relative;   
-	float: left;
+	position: relative;
 	width: 98%;
 	list-style: none;
 }
