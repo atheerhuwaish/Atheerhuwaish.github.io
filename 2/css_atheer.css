@@ -122,9 +122,7 @@ background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 ul li {	list-style: none;}
 
 
-fieldset{
-		padding: 2% 2% 2% 3%;
-		}
+fieldset{padding: 2% 2% 2% 3%;}
 
 				
 textarea{height: 10em;
@@ -133,16 +131,17 @@ textarea{height: 10em;
 
 
 		
-input, select{padding: 2%;
+input, select{padding: 2% 1%;
 			border-color: #cde;
 			width: 99%;
 			margin-top:1%;}
 			
-input[type=checkbox]{width:auto; }
+input[type=checkbox]{width:auto}
 			
-input[type="submit"]:hover, input[type="reset"]:hover {
-		background-color: black;
-		color: #ded}
+input[type="submit"]:hover, input[type="reset"]:hover 
+	{background-color: black;
+	color: #ded
+	}
 
 		
 label:hover{cursor:pointer}
@@ -290,8 +289,6 @@ img{width:86%; margin: 1% 7%; transition:.6s}
 
 img:hover{width:104%; margin: -2%}
 
-
-fieldset, input, select{width: 99%;}
 					
 textarea{height: 7em;}
 		
