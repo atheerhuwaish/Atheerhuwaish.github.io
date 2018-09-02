@@ -145,25 +145,23 @@ background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 ul li {	list-style: none;}
 
 
-fieldset{padding: 2% 2% 2% 4%;
-		margin: 1%;}
+fieldset{padding: 2% 2% 2% 3%;}
 						
 textarea{height: 10em;
-		padding: 1%;
-		margin: 1% 0;
-		width: 98%;
-		border-color: #cde}		
+		width: 99%;
+		border-color: #cde}
 		
-input, select{padding: 1%;
-			margin: 1% 0;
+input, select{padding: 2% 1%;
 			border-color: #cde;
-			width: 98%}
+			width: 99%;
+			margin-top:1%;}
 			
 input[type=checkbox]{width:auto}
 			
-input[type="submit"]:hover, input[type="reset"]:hover {
-		background-color: black;
-		color: #ded}
+input[type="submit"]:hover, input[type="reset"]:hover 
+	{background-color: black;
+	color: #ded
+	}
 		
 label:hover{cursor:pointer}
 
