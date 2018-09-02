@@ -74,7 +74,6 @@ aside{background-color:rgba(244,244,255,0.9);
 	margin: 1% 0;
 	}
 
-.aside1{float:left}
 
 aside li {text-align:center;
 		padding: 3% 0;
@@ -105,12 +104,12 @@ main p{
         }
 		
 
-/* Clear floats after column 2*/
+/* Clear floats after container 2
 .container2:after {
     content: "";
     display: table;
 	clear: both;}
-
+*/
 
 footer{
 	clear: both;
@@ -195,8 +194,6 @@ img.rotate90 {
 	margin-bottom:15%;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg)}
-
-	
 	
 
 		
@@ -204,7 +201,7 @@ img.rotate90 {
 
 {
 
-body{width:90%}
+body {width:90%}
 	
 .container2{display:flex; flex-wrap:wrap}
 
@@ -221,7 +218,7 @@ nav {padding: 1% 0%;
 /*begin aside menu*/
 
 aside.aside1{width:48%; margin-right:auto; margin-left:0; padding: 1%; order:1}
-aside.aside2{width:48%; margin-left: auto; margin-right:0 ;padding: 1%; order:2}	
+aside.aside2{width:48%; margin-left: auto; margin-right:0; padding: 1%; order:2}
 
 aside li {text-align:center;
 		padding: 2%;
@@ -231,8 +228,7 @@ aside li b{padding: 0}
 
 
 aside ul li {
-	position: relative;   
-	float: left;
+	position: relative; 
 	width: 98%;
 	list-style: none;
 }
