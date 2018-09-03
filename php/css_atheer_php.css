@@ -150,7 +150,7 @@ label:hover{cursor:pointer}
 img{display:inline-block; 
 	width:80%; 
 	margin: 1% 10% ;
-	transition:.6s}
+	transition:.2s}
 
 img:hover{width:116%;
 		position:relative;
@@ -272,7 +272,7 @@ aside ul ul {
 	position: absolute;
 	width: 96%;
 	opacity: 0;
-	transition: opacity 1s; 
+	transition: opacity .2s; 
 }
 
 
@@ -287,7 +287,7 @@ aside ul li:hover ul {
 /*End aside menu*/
 
 	
-img{width:86%; margin: 1% 7%; transition:.6s}
+img{width:86%; margin: 1% 7%}
 
 img:hover{width:104%; margin: -2%}
 
