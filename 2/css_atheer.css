@@ -152,7 +152,8 @@ img{display:inline-block;
 	margin: 1% 10% ;
 	transition:.2s}
 
-h4.info{text-align:left}
+.left{text-align: left}
+h4.left{text-align: left}
 	
 img.info, img.info:hover{display:inline-block; 
 	width:25%; 
