@@ -176,12 +176,12 @@ img{display:inline-block;
 
 h4.info{text-align:left}
 	
-	img.info, img.info:hover{display:inline-block; 
-	width:30%; 
+img.info, img.info:hover{display:inline-block; 
+	width:25%; 
 	margin: 5% 10%;
 	float:right;
 	}
-	
+
 	
 img:hover{width:112%;
 		position:relative;
