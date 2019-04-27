@@ -3,7 +3,7 @@
 <main>
 <h3>Info</h3><br>
 
-<img class="info" src="https://avatars2.githubusercontent.com/u/35437144?s=400&v=4" alt="personal photo"><br>
+<img class="info" src="../Atheer_photo.jpg" alt="personal photo"><br>
 <h4 class="left">Impressum</h4><br>
 		
 Angaben gemäß § 5 TMG<br>
