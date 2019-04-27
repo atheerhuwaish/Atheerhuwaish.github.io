@@ -152,6 +152,14 @@ img{display:inline-block;
 	margin: 1% 10% ;
 	transition:.2s}
 
+h4.info{text-align:left}
+	
+img.info, img.info:hover{display:inline-block; 
+	width:25%; 
+	margin: 5% 10%;
+	float:right;
+	}
+
 img:hover{width:116%;
 		position:relative;
 		margin:-8%;
