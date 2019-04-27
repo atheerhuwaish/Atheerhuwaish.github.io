@@ -12,7 +12,7 @@
 	
 	<header>
 	        <h1>Responsives Template 3</h1>
-		    <h3>Atheer Huwaish</h3>
+		    <h2>Atheer Huwaish</h2>
 	</header>
 	
 	
