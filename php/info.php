@@ -4,11 +4,11 @@
 <h3>Info</h3><br>
 
 <img class="info" src="../atheer_photo.jpg" alt="personal photo"><br>
-<h4 class="left">Responsives Template - 3-spaltig (3-column responsive template)</h4><br>
-<a href="https://atheerhuwaish.github.io/2" target="_blank" rel="nofollow">3-spaltiges responsives Template</a>.<br><br>
+<h4 class="left">Responsives Template - 2-spaltig</h4><br>
+<a href="https://atheerhuwaish.github.io" target="_blank" rel="nofollow">2-spaltiges responsives Template (2-column responsive template)</a>.<br><br>
 
-<a href="https://github.com/atheerhuwaish" target="_blank" rel="nofollow">Mein Github-Konto (my account on Github)</a>.<br><br>		
-	
+<a href="https://github.com/atheerhuwaish" target="_blank" rel="nofollow">Mein Github-Konto (my account on Github)</a>.<br><br>	
+
 <h4 class="left">Impressum</h4><br>
 		
 Angaben gemäß § 5 TMG<br>
