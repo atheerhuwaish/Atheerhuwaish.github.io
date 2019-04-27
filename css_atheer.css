@@ -178,7 +178,8 @@ img{display:inline-block;
 h4.left{text-align: left}
 	
 img.info, img.info:hover{display:inline-block; 
-	width:25%; 
+	width: auto;
+	max-width:100%;
 	margin: 5% 10%;
 	float:right;
 	}
