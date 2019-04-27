@@ -174,14 +174,15 @@ img{display:inline-block;
 	margin: 1% 15%;
 	transition:.6s}
 
-h4.info{text-align:left}
+.left{text-align: left}
+h4.left{text-align: left}
 	
 img.info, img.info:hover{display:inline-block; 
 	width:25%; 
 	margin: 5% 10%;
 	float:right;
 	}
-
+	
 	
 img:hover{width:112%;
 		position:relative;
