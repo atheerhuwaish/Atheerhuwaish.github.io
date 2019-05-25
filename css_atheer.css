@@ -94,7 +94,6 @@ main{float: right;
 	width: 74%;
 	margin: 1% 0;
 	background-color:rgba(244,244,255,0.9);
-	text-align:justify;
 }
 main p{
 		padding: 2% 0;
@@ -199,6 +198,10 @@ img.rotate90 {
 
 aside ul li {list-style: none;}
 
+img.pers_photo{width:auto; display: inline-block; float: right; margin: 1% 0 1% 2%}
+img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
+
+
 
 
 		
@@ -212,13 +215,15 @@ body {width:90%}
 
 main{order: 3;
 		width: 100%;
-		padding: 7%;
+		padding: 8%;
 		margin: 2% 0}
 	
 nav {padding: 1% 0%;
 	width:100%;
 	font-size: 90%}
 	
+img.pers_photo{width:39%;}
+img.pers_photo:hover{width:39%;}
 
 /*begin aside menu*/
 
