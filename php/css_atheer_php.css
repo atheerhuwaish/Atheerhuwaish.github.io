@@ -72,7 +72,7 @@ aside.aside2{order: 5; }
 
 
 main{order:4;
-	padding:4%;
+	padding:6%;
 	width: 56%;
 	margin: 2%;
 	background-color:rgba(244,244,255,0.9);
@@ -210,7 +210,7 @@ img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
 		
 		
 		
-@media screen and (max-width: 1024px) and (min-width: 640px)
+@media screen and (max-width: 1024px) and (min-width: 690px)
 {
 	#container{display:block}
 	
@@ -231,7 +231,7 @@ img:hover{width:112%;
 
 		
 		
-@media screen and (max-width: 639px) 
+@media screen and (max-width: 689px) 
 
 {
 	
