@@ -43,7 +43,8 @@ header{order:1;
 	background-color:rgba(79,79,105,0.7);
 	border-radius:15px;
 	color: white;
-	text-align: center}
+	text-align: center
+	}
 
 header div{color:#fff}
 
@@ -116,9 +117,6 @@ a{text-decoration: none}
 background-image: -webkit-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
-
-
-ul li {	list-style: none;}
 
 
 fieldset{padding: 2% 2% 2% 3%;}
@@ -202,7 +200,11 @@ aside li b{background-color: #c9c9dd;
 		width:90%}	
 
 		
-				
+aside ul li {list-style: none;}
+		
+		
+		
+		
 		
 		
 @media screen and (max-width: 1024px) and (min-width: 640px)
@@ -249,9 +251,10 @@ nav {padding: 1% 0%;
 aside.aside1{width:48%; margin:1% 0; padding: 1%;}
 aside.aside2{width:48%; margin: 1% 0 1% 4%; padding: 1%}	
 
-aside li {text-align:center;
+aside ul li {text-align:center;
 		padding: 2%;
-		margin: 1%}
+		margin: 1%;
+		background-color: #dde;}
 		
 aside li b{padding: 0}
 
@@ -259,7 +262,6 @@ aside li b{padding: 0}
 aside ul li {
 	position: relative;
 	width: 98%;
-	list-style: none;
 }
 
 aside ul li a {
@@ -267,9 +269,6 @@ aside ul li a {
 	text-decoration: none;
 }
 
-aside ul li {
-	background-color: #dde;
-}
 
 aside ul li a:hover {
 	background-color: #eef;
