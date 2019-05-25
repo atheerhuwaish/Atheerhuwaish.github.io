@@ -89,7 +89,7 @@ aside	{float:left}
 
 		
 main{float: right;
-	padding: 4%;
+	padding: 6%;
 	width: 74%;
 	margin: 1% 0;
 	background-color:rgba(244,244,255,0.9);
@@ -204,7 +204,7 @@ img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
 
 
 		
-@media screen and (max-width: 639px) 
+@media screen and (max-width: 659px) 
 
 {
 
