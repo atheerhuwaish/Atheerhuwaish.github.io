@@ -4,16 +4,16 @@
 
 
 <h3>Atheer Huwaish</h3><br>
-<img class="info" src="../atheer_photo.jpg" alt="personal photo">
+<img class="pers_photo" src="../atheer_photo.jpg" alt="personal photo">
 
-<h4>Meine Webseiten (My Websites):</h4><br>
+<h4>Meine Webseiten (My&nbsp;Websites):</h4><br>
 
 <ul>
 <li>Responsives Template (2-spaltig)<br>
-<a class="left" href="https://atheerhuwaish.github.io" target="_blank" rel="nofollow">2-spaltiges responsives Template (2-column responsive template)</a>.</li><br>
+<a href="https://atheerhuwaish.github.io" target="_blank" rel="nofollow">2-spaltiges responsives Template (2-column responsive template)</a>.</li><br>
 
 <li>Responsives Template (3-spaltig)<br>
-<a class="left" href="https://atheerhuwaish.github.io/2" target="_blank" rel="nofollow">3-spaltiges responsives Template (3-column responsive template)</a>.</li><br>
+<a href="https://atheerhuwaish.github.io/2" target="_blank" rel="nofollow">3-spaltiges responsives Template (3-column responsive template)</a>.</li><br>
 
 <li>Wordpress eCommerce Webseite<br>
 <a href="https://taharrur.com" target="_blank" rel="nofollow">Wordpress (Storefront & WooCommerce Website)</a>.</li><br>
