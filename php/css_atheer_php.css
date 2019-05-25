@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 }
 
-body{background-image: url(background_image_full_hd.jpg);
+body{background-image: url(../background_image_full_hd.jpg);
 	background-attachment: fixed;
 	-ms-background-size: cover;
 	-moz-background-size: cover;
@@ -63,8 +63,7 @@ nav li{padding:0.4%;
 	list-style: none;}
 
 
-h1,h2,h3,h4,nav,aside{text-align: center;
-		font-family: 'Playfair Display', "Times New Roman", Times, serif}
+h1,h2,h3,h4,nav,aside{font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
 
 aside.aside1{order:3;}
@@ -153,7 +152,6 @@ img{display:inline-block;
 	transition:.2s}
 
 .left{text-align: left}
-h4.left{text-align: left}
 	
 img.info, img.info:hover{display:inline-block; 
 	width: auto;
