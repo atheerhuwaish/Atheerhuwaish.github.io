@@ -1,278 +1,113 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-
-
-*{	padding:0;
-	margin:0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body{background-image: url(background_image_full_hd.jpg);
-	background-attachment: fixed;
-	-ms-background-size: cover;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	font-family: "Times New Roman", Times, serif;
-	line-height:170%;
-	width:80%;
-	max-width: 1280px;
-	margin: 0 auto;
-	}
-
-
-#container1{
-	margin: 1% auto;
-	padding: 1%;
-	}
-
-	a:link{color:rgb(96,100,148)}
-	a:visited{color:rgb(96,100,148)}
-	a:focus{color:rgb(96,100,148)}
-	a:hover{color:rgb(106,0,128); font-weight:bold}
+<!doctype html>
+<html lang="de">
+<head>
+        <meta charset="utf-8">
+	   <title>Atheer Huwaish</title>
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link href="css_atheer.css" rel="stylesheet" type="text/css">
+</head>
 	
-header{width: 100%;
-	line-height:290%;
-	margin: 2% auto;
-	background-color:rgba(79,79,105,0.7);
-	border-radius:15px;
-	color: white;
-	text-align: center}
-
-header div{color: white}
-
-
-nav{
-	background-color:#dde;
-	text-align: center;
-	font-weight: bold;
-	padding: 0.5%;
-	margin:0 auto 10px auto;
-	width:100%
-}
-
-nav li{padding:0.7%; 
-	display: inline-block;
-	list-style: none;}
-
-
-h1,h2,h3,h4,nav,aside{font-family: 'Playfair Display', "Times New Roman", Times, serif}
-
-
-
-.container2{
-	display: block;
-	margin: 0 auto
-	}
-		
-
-aside{background-color:rgba(244,244,255,0.9);
-	width:24%;
-	padding:1% 0;
-	margin: 1% 0;
-	}
-
-
-aside li {text-align:center;
-		padding: 3% 0;
-		margin: 3% 0}
-
-aside li b{background-color: #c9c9dd;
-		padding: 4% 1%;
-		display:inline-block;
-		width:90%}	
-
-		
-aside	{float:left}
-
-
-		
-main{float: right;
-	padding: 4%;
-	width: 74%;
-	margin: 1% 0;
-	background-color:rgba(244,244,255,0.9);
-}
-main p{
-		padding: 2% 0;
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		hyphens: auto;
-        }
-		
-
-/* Clear floats after container 2
-.container2:after {
-    content: "";
-    display: table;
-	clear: both;}
-*/
-
-footer{
-	clear: both;
-	background-color:rgba(79,79,105,.8);
-	padding: 2% 0;
-	border-radius:15px;
-	}
+<body>
 	
-footer p {color:white;
-	text-align: center; 
-	text-shadow: 1px 1px 1px white
-	}
+<div id="container1">
 
-a{text-decoration: none}
+		<header>
+					<div>
+						<h1>Responsives Template 1</h1>
+						<h2>Atheer Huwaish</h2>
+					</div>
+		</header>
+	
+	<nav>
+				<ul>
+					<li>Main Page</li>
+					<li><a href="bilder.html" class="button">Bilder</a></li>
+					<li><a href="kontakt.html" class="button">Kontakt</a></li>
+					<li><a href="info.html" class="button">Info</a></li>
+				</ul>
+	</nav>
+	
+	<div class="container2">
+	
+	<aside class="aside1">
+		<ul><li><b><a href="#">HTML Links</a></b>
+				<ul><li><a href="https://www.w3schools.com/html/default.asp" 
+						target="_blank">W3schools - HTML</a>
+					</li>
+					<li><a href="https://wiki.selfhtml.org/wiki/HTML" 
+						target="_blank">selfhtml</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</aside>
 
-.button{display: inline-block;
-	list-style: none;
-	padding: 0.2em 0.7em;
-	border-radius: 10px;
-	background-image: -moz-linear-gradient(#9999bb, #ffffff, #9999bb);
-	background-image: -webkit-linear-gradient(#9999bb, #ffffff, #9999bb);
-	background-image: -ms-linear-gradient(#9999bb, #ffffff, #9999bb);
-	background-image: linear-gradient(#9999bb, #ffffff, #9999bb);
-	color:black
-}
-
-.button:hover{background-image: -moz-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
-background-image: -webkit-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
-background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
-background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
-
-
-fieldset{padding: 2% 2% 2% 3%;}
-						
-textarea{height: 10em;
-		width: 99%;
-		border-color: #cde}
-		
-input, select{padding: 2% 1%;
-			border-color: #cde;
-			width: 99%;
-			margin-top:1%;}
-			
-input[type=checkbox]{width:auto}
-			
-input[type="submit"]:hover, input[type="reset"]:hover 
-	{background-color: black;
-	color: #ded
-	}
-		
-label:hover{cursor:pointer}
-
- 
-figure{display:inline-block; width:15%;}
-
-
-img{display:inline-block; 
-	width:70%; 
-	margin: 1% 15%;
-	transition:.6s}
-
-img.info, img.info:hover{display:inline-block; 
-	width: auto;
-	max-width:100%;
-	margin: 2%;
-	float:right;
-	}
 	
 	
-img:hover{width:112%;
-		position:relative;
-		margin:-6%;
-		z-index:10}
+	<main id="main">
+
+<h3>Atheer Huwaish</h3><br>
+<img class="pers_photo" src="atheer_photo.jpg" alt="personal photo">
+<h4>Meine Webseiten (My&nbsp;Websites):</h4><br>
+
+<ul>
+<li>Responsives Template (2-spaltig)<br>
+<a href="https://atheerhuwaish.github.io" target="_blank" rel="nofollow">2-spaltiges responsives Template (2-column responsive template)</a>.</li><br>
+
+<li>Responsives Template (3-spaltig)<br>
+<a href="https://atheerhuwaish.github.io/2" target="_blank" rel="nofollow">3-spaltiges responsives Template (3-column responsive template)</a>.</li><br>
+
+<li>Wordpress eCommerce Webseite<br>
+<a href="https://taharrur.com" target="_blank" rel="nofollow">Wordpress (Storefront & WooCommerce Website)</a>.</li><br>
+
+<li><a href="https://github.com/atheerhuwaish" target="_blank" rel="nofollow">Mein Github-Konto (my account on Github)</a>.</li><br><br>
+
+<h4>Weiterbildung - 28 Wochen (Courses - 28 Weeks)</h4><br>
+</ul>
+
+Zertifizierung - Certificates (Webmasters Europe):<br>
+<ul><li>Certified Web Designer<br>
+Note (Grade): 88%</li>
+<li>Certified JavaScript Developer<br>
+Note (Grade): 81%</li><br>
+
+<li>CMS - Wordpress und Joomla</li><br>
+<li>PHP & MySQL</li><br>		
+<li>Photoshop</li></ul><br><br>
+
+<ul>
+<h4>Sprachkenntnisse (Language skills)</h4><br>
+<li>Englisch</li><br>
+<li>Deutsch</li><br>
+<li>Arabisch</li></ul><br>
+
+
+	</main>
+	
+	
+	<aside class="aside2">
+		<ul><li><b><a href="#">CSS Links</a></b>
+				<ul><li><a href="https://css-tricks.com" 
+						target="_blank">CSS-Tricks</a>
+					</li>
+					<li><a href="https://www.w3schools.com/css/default.asp" 
+						target="_blank">W3schools - CSS</a>
+					</li>
+					<li><a href="http://css3buttongenerator.com" 
+						target="_blank">CSS Button Generator</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</aside>
+	
+	</div> <!--Ende container2-->
 		
-
-img.rotate180 {
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg)}
-
+	<footer>
+		<p>Atheer Huwaish &copy;</p>
+	</footer>
 	
-img.rotate90 {	
-	margin-top:15%;
-	margin-bottom:15%;
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg)}
+</div> <!--Ende container1-->
 	
-
-aside ul li {list-style: none;}
-
-img.pers_photo{width:auto; display: inline-block; float: right; margin: 1% 0 1% 2%}
-img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
-
-
-
-
-		
-@media screen and (max-width: 639px) 
-
-{
-
-body {width:90%}
-	
-.container2{display:flex; flex-wrap:wrap}
-
-main{order: 3;
-		width: 100%;
-		padding: 8%;
-		margin: 2% 0}
-	
-nav {padding: 1% 0%;
-	width:100%;
-	font-size: 90%}
-	
-img.pers_photo{width:39%;}
-img.pers_photo:hover{width:39%;}
-
-/*begin aside menu*/
-
-aside.aside1{width:48%; margin-right:auto; margin-left:0; padding: 1%; order:1}
-aside.aside2{width:48%; margin-left: auto; margin-right:0; padding: 1%; order:2}
-
-		
-aside li b{padding: 0}
-
-
-aside ul li {background-color: #dde;
-	text-align:center;
-	padding: 2%;
-	margin: 1%;
-	position: relative; 
-	width: 98%;
-}
-
-
-aside ul li a {
-	display: block;
-	text-decoration: none;
-}
-
-aside ul li a:hover {
-	background-color: #eef;
-}
-
-aside ul ul {
-	visibility: hidden;  
-	position: absolute;
-	width: 96%;
-	opacity: 0;
-	transition: opacity 1s; 
-}
-
-
-aside ul li:hover ul {   
-	visibility: visible;
-	opacity: 1;
-	z-index:20;
-	background-color:#dde
-}
-		
-/*End aside menu*/
-	
-img{width:86%; margin: 1% 7%; transition:.6s}
-
-img:hover{width:104%; margin: -2%}
-					
-textarea{height: 7em;}
-
-}
+</body>
+</html>
