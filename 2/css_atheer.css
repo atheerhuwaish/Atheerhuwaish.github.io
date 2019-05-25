@@ -118,8 +118,6 @@ background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 
 
-ul li {	list-style: none;}
-
 
 fieldset{padding: 2% 2% 2% 3%;}
 
@@ -151,7 +149,6 @@ img{display:inline-block;
 	margin: 1% 10% ;
 	transition:.2s}
 
-.left{text-align: left}
 	
 img.info, img.info:hover{display:inline-block; 
 	width: auto;
@@ -203,7 +200,7 @@ aside li b{background-color: #c9c9dd;
 		width:90%}	
 
 		
-				
+aside ul li{list-style:none}
 		
 		
 @media screen and (max-width: 1024px) and (min-width: 640px)
@@ -234,7 +231,7 @@ body{width:90%;}
 
 main{order: 5;
 		width: 100%;
-		padding: 2%;
+		padding: 5%;
 		margin: 1% 0 0 0
 	}
 
@@ -248,26 +245,22 @@ font-size: 90%}
 aside.aside1{width:48%; margin:2% 0; padding: 1%;}
 aside.aside2{width:48%; margin: 2% 0 1% 4%; padding: 1%}	
 
-aside li {text-align:center;
-		padding: 2%;
-		margin: 1%}
+aside ul li {
+	background-color: #dde;
+	position: relative;
+	width: 98%;
+	text-align:center;
+	padding: 2%;
+	margin: 1%}
+	
+
 		
 aside li b{padding: 0}
 
 
-aside ul li {
-	position: relative;
-	width: 98%;
-	list-style: none;
-}
-
 aside ul li a {
 	display: block;
 	text-decoration: none;
-}
-
-aside ul li {
-	background-color: #dde;
 }
 
 aside ul li a:hover {
