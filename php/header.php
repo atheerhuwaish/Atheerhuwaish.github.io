@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
        <meta charset="utf-8">
-	   <title>Portugal</title>
+	   <title>Atheer Huwaish</title>
 	   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
        <link href="css_atheer_php.css" rel="stylesheet" type="text/css">
 </head>
@@ -11,8 +11,8 @@
 	<div id="container">
 	
 	<header>
-	        <h1>Responsives Template 3</h1>
-		    <h2>Atheer Huwaish</h2>
+				<h1>Responsives Template 3</h1>
+				<h2>Atheer Huwaish</h2>
 	</header>
 	
 	
