@@ -30,7 +30,7 @@ body{background-image: url(background_image_full_hd.jpg);
 	a:link{color:rgb(96,100,148)}
 	a:visited{color:rgb(96,100,148)}
 	a:focus{color:rgb(96,100,148)}
-	a:hover{color:rgb(106,0,128); font-weight:bold}
+	a:hover{color:rgb(106,0,128);}
 	
 header{width: 100%;
 	line-height:290%;
