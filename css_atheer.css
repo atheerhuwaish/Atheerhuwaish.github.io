@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 }
 
-body{background-image: url(../background_image_full_hd.jpg);
+body{background-image: url(background_image_full_hd.jpg);
 	background-attachment: fixed;
 	-ms-background-size: cover;
 	-moz-background-size: cover;
@@ -18,26 +18,21 @@ body{background-image: url(../background_image_full_hd.jpg);
 	line-height:170%;
 	width:80%;
 	max-width: 1280px;
-	margin: 1% auto;
+	margin: 0 auto;
 	}
 
 
-#container{
-	display:flex;
-	justify-content:space-between;
-	flex-wrap: wrap;
+#container1{
+	margin: 1% auto;
 	padding: 1%;
 	}
-	
-a:link{color:rgb(96,100,148)}
-a:visited{color:rgb(96,100,148)}
-a:focus{color:rgb(96,100,148)}
-a:hover{color:rgb(106,0,128)}
-	
 
-		
-header{order:1;
-	width: 100%;
+	a:link{color:rgb(96,100,148)}
+	a:visited{color:rgb(96,100,148)}
+	a:focus{color:rgb(96,100,148)}
+	a:hover{color:rgb(106,0,128); font-weight:bold}
+	
+header{width: 100%;
 	line-height:290%;
 	margin: 2% auto;
 	background-color:rgba(79,79,105,0.7);
@@ -45,20 +40,19 @@ header{order:1;
 	color: white;
 	text-align: center}
 
-header div{color:#fff}
+header div{color: white}
 
 
-nav{order:2;
-	background-color:#ddddee;
+nav{
+	background-color:#dde;
 	text-align: center;
 	font-weight: bold;
-	padding: 0.8%;
-	margin: 1% auto;
+	padding: 0.5%;
+	margin:0 auto 10px auto;
 	width:100%
 }
 
-
-nav li{padding:0.4%; 
+nav li{padding:0.7%; 
 	display: inline-block;
 	list-style: none;}
 
@@ -66,30 +60,59 @@ nav li{padding:0.4%;
 h1,h2,h3,h4,nav,aside{font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
 
-aside.aside1{order:3;}
-aside.aside2{order: 5; }
 
-
-main{order:4;
-	padding:4%;
-	width: 56%;
-	margin: 1%;
-	background-color:rgba(244,244,255,0.9);
-}
-
-main p{
-		padding: 2%;
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		hyphens: auto;}
+.container2{
+	display: block;
+	margin: 0 auto
+	}
 		
 
+aside{background-color:rgba(244,244,255,0.9);
+	width:24%;
+	padding:1% 0;
+	margin: 1% 0;
+	}
 
-footer{order:6;
+
+aside li {text-align:center;
+		padding: 3% 0;
+		margin: 3% 0}
+
+aside li b{background-color: #c9c9dd;
+		padding: 4% 1%;
+		display:inline-block;
+		width:90%}	
+
+		
+aside	{float:left}
+
+
+		
+main{float: right;
+	padding: 4%;
+	width: 74%;
+	margin: 1% 0;
+	background-color:rgba(244,244,255,0.9);
+}
+main p{
+		padding: 2% 0;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+        }
+		
+
+/* Clear floats after container 2
+.container2:after {
+    content: "";
+    display: table;
+	clear: both;}
+*/
+
+footer{
+	clear: both;
 	background-color:rgba(79,79,105,.8);
 	padding: 2% 0;
-	margin: 2% auto;
-	width:100%;
 	border-radius:15px;
 	}
 	
@@ -117,15 +140,11 @@ background-image: -ms-linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);
 background-image: linear-gradient(#aa99aa, #ffffff 40%, #aa99aa);}
 
 
-
 fieldset{padding: 2% 2% 2% 3%;}
-
-				
+						
 textarea{height: 10em;
 		width: 99%;
-		border-color: #cde}	
-
-
+		border-color: #cde}
 		
 input, select{padding: 2% 1%;
 			border-color: #cde;
@@ -138,32 +157,29 @@ input[type="submit"]:hover, input[type="reset"]:hover
 	{background-color: black;
 	color: #ded
 	}
-
 		
 label:hover{cursor:pointer}
 
+ 
+figure{display:inline-block; width:15%;}
+
 
 img{display:inline-block; 
-	width:80%; 
-	margin: 1% 10% ;
-	transition:.2s}
+	width:70%; 
+	margin: 1% 15%;
+	transition:.6s}
 
-	
 img.info, img.info:hover{display:inline-block; 
 	width: auto;
 	max-width:100%;
 	margin: 2%;
 	float:right;
 	}
-
-img:hover{width:116%;
+	
+	
+img:hover{width:112%;
 		position:relative;
-		margin:-8%;
-		z-index:10}
-		
-img:active{width:150%;
-		position:relative;
-		margin:-25%;
+		margin:-6%;
 		z-index:10}
 		
 
@@ -172,99 +188,58 @@ img.rotate180 {
 	transform: rotate(180deg)}
 
 	
-img.rotate90 {
+img.rotate90 {	
 	margin-top:15%;
 	margin-bottom:15%;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg)}
-
 	
-	
-aside{
-	background-color:rgba(244,244,255,0.9);
-	padding:3% 0;
-	height:100%;
-	width: 20%;
-	margin:1% 0 1% 0}
-
-		
-aside li {text-align:center;
-		padding: 4% 0;
-		margin: 4% 0}
-
-		
-aside li b{background-color: #c9c9dd;
-		padding: 2% 1%;
-		display:inline-block;
-		width:90%}	
-
-		
 
 aside ul li {list-style: none;}
 
 img.pers_photo{width:auto; display: inline-block; float: right; margin: 1% 0 1% 2%}
 img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
 
-		
-		
-		
-		
-		
-@media screen and (max-width: 1024px) and (min-width: 640px)
-{
 
-#container{display:block}
-	
-aside{width:27%; float:left;}
 
-main{float:right; 
-		margin: 1% 0 2% auto;
-		width:70%}
 
-footer{clear:both;}	
-	
-img:hover{width:112%;
-		margin:-6%;
-		}
-}
-
-		
 		
 @media screen and (max-width: 639px) 
 
 {
 
-body{width:90%;}
+body {width:90%}
+	
+.container2{display:flex; flex-wrap:wrap}
 
-main{order: 5;
+main{order: 3;
 		width: 100%;
-		padding: 7%;
-		margin: 1% 0 0 0
-	}
-
-nav {padding: 1% 0;
-width:100%;
-font-size: 90%}
+		padding: 8%;
+		margin: 2% 0}
+	
+nav {padding: 1% 0%;
+	width:100%;
+	font-size: 90%}
 	
 img.pers_photo{width:39%;}
 img.pers_photo:hover{width:39%;}
 
 /*begin aside menu*/
 
-aside.aside1{width:48%; margin:2% 0; padding: 1%;}
-aside.aside2{width:48%; margin: 2% 0 1% 4%; padding: 1%}	
-
-aside ul li {
-	background-color: #dde;
-	position: relative;
-	width: 98%;
-	text-align:center;
-	padding: 2%;
-	margin: 1%}
-	
+aside.aside1{width:48%; margin-right:auto; margin-left:0; padding: 1%; order:1}
+aside.aside2{width:48%; margin-left: auto; margin-right:0; padding: 1%; order:2}
 
 		
 aside li b{padding: 0}
+
+
+aside ul li {background-color: #dde;
+	text-align:center;
+	padding: 2%;
+	margin: 1%;
+	position: relative; 
+	width: 98%;
+}
 
 
 aside ul li a {
@@ -281,9 +256,8 @@ aside ul ul {
 	position: absolute;
 	width: 96%;
 	opacity: 0;
-	transition: opacity .4s; 
+	transition: opacity 1s; 
 }
-
 
 
 aside ul li:hover ul {   
@@ -294,15 +268,11 @@ aside ul li:hover ul {
 }
 		
 /*End aside menu*/
-
 	
-img{width:86%; margin: 1% 7%}
+img{width:86%; margin: 1% 7%; transition:.6s}
 
 img:hover{width:104%; margin: -2%}
-
 					
 textarea{height: 7em;}
-		
-aside.aside2{	order:4;}
 
 }
