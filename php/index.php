@@ -5,7 +5,7 @@
 
 <h3>Atheer Huwaish</h3><br><br>
 <img class="info" src="../atheer_photo.jpg" alt="personal photo">
-<h4>Meine Webseiten (My Websites)</h4><br>
+<h4>Meine Webseiten (My Websites):</h4><br>
 
 <h4>Responsives Template (2-spaltig)</h4>
 <a class="left" href="https://atheerhuwaish.github.io" target="_blank" rel="nofollow">2-spaltiges responsives Template (2-column responsive template)</a>.<br><br>
