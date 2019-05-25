@@ -14,7 +14,7 @@
 <li>Responsives Template (3-spaltig)<br>
 <a href="https://atheerhuwaish.github.io/2" target="_blank" rel="nofollow">3-spaltiges responsives Template (3-column responsive template)</a>.<br></li>
 
-<li>Wordpress eCommerce Webseite<br>
+<li>Wordpress eCommerce Website<br>
 <a href="https://taharrur.com" target="_blank" rel="nofollow">Wordpress (Storefront & WooCommerce Website)</a>.<br></li>
 
 <li><a href="https://github.com/atheerhuwaish" target="_blank" rel="nofollow">Mein Github-Konto (my account on Github)</a>.<br><br></li>
