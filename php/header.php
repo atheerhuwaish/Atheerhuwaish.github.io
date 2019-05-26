@@ -11,7 +11,7 @@
 	<div id="container">
 	
 	<header>
-				<h1>Responsives Template 3</h1>
+				<h1>Responsive Template 3</h1>
 				<h2>Atheer Huwaish</h2>
 	</header>
 	
