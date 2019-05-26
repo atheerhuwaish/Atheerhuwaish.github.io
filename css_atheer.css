@@ -16,7 +16,7 @@ body{background-image: url(background_image_full_hd.jpg);
 	background-size: cover;
 	font-family: "Times New Roman", Times, serif;
 	line-height:170%;
-	width:80%;
+	width:83%;
 	max-width: 1280px;
 	margin: 0 auto;
 	}
@@ -204,7 +204,7 @@ img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
 
 
 		
-@media screen and (max-width: 699px) 
+@media screen and (max-width: 666px) 
 
 {
 
