@@ -9,10 +9,10 @@
 
 <ul>
 <li>Responsive Website Vorlage (2-spaltig)<br>
-<a href="https://atheerhuwaish.github.io" target="_blank" rel="nofollow">2-column responsive template</a>.<br></li>
+<a href="https://atheerhuwaish.github.io" rel="nofollow">2-column responsive template</a>.<br></li>
 
 <li>Responsive Website Vorlage (3-spaltig)<br>
-3-column responsive template.<br></li>
+<strong>3-column responsive template</strong>.<br></li>
 
 <li>Wordpress E-Commerce Website<br>
 <a href="https://taharrur.com" target="_blank" rel="nofollow">Website with Storefront & WooCommerce</a>.<br></li>
