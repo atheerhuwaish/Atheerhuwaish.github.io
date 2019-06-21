@@ -16,9 +16,14 @@
 	</aside>
 	
 		
-	<footer>
-		<p>Atheer Huwaish &copy;</p>
-	</footer>
+<footer>
+		<ul>
+		<li class="footer_link">
+		<a href="info.html#impressum">Impressum</a>
+		</li>
+		<li class="footer_link"><a href="info.html#datenschutzerklaerung">Datenschutzerklärung</a></li>
+		</ul>
+</footer>
 	
 	</div> <!--Ende container-->
 	
