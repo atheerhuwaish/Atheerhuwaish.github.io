@@ -21,8 +21,6 @@
 					<li><a href="index.php" class="button">Main Page</a></li>
 					<li><a href="bilder.php" class="button">Bilder</a></li>
 					<li><a href="kontakt.php" class="button">Kontakt</a></li>
-					<li><a href="info.php#impressum" class="button">Impressum</a></li>
-					<li><a href="info.html#datenschutzerklaerung" class="button">Datenschutzerklärung</a></li>
 				</ul>
 	</nav>
 
