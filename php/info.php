@@ -158,8 +158,5 @@ Webhosting Provider:<br>
 Github <a href="https://help.github.com/articles/github-privacy-statement" target="_blank">Privacy Statement</a><br><br>
 
 
-<a href="info.html#impressum">nach oben => Impressum</a>
-
-
 	</main>	
 	<?php include 'footer.php'; ?>
