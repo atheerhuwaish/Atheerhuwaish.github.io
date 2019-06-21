@@ -18,7 +18,6 @@ E-Mail: <a href="mailto:atheerhuwaish@web.de" target="_blank" rel="nofollow">ath
 
 <h4 id="datenschutzerklaerung">Datenschutzerklärung</h4><br>
 
-
 Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt) werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.<br>
 
 Gemäß Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend nur „DSGVO“ genannt), gilt als „Verarbeitung“ jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.<br>
@@ -38,7 +37,7 @@ Atheer Huwaish<br>
 Markstr. 364<br>
 44795 Bochum<br>
 Deutschland<br>
-E-mail: atheerhuwaish@web.de<br>
+E-mail: atheerhuwaish@web.de<br><br>
 
 II. Rechte der Nutzer und Betroffenen<br>
 
@@ -52,7 +51,7 @@ auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie der Ansicht sind, da
 
 Darüber hinaus ist der Anbieter dazu verpflichtet, alle Empfänger, denen gegenüber Daten durch den Anbieter offengelegt worden sind, über jedwede Berichtigung oder Löschung von Daten oder die Einschränkung der Verarbeitung, die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit diese Mitteilung unmöglich oder mit einem unverhältnismäßigen Aufwand verbunden ist. Unbeschadet dessen hat der Nutzer ein Recht auf Auskunft über diese Empfänger.<br>
 
-Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht auf Widerspruch gegen die künftige Verarbeitung der sie betreffenden Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.<br>
+Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht auf Widerspruch gegen die künftige Verarbeitung der sie betreffenden Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.<br><br><br>
 
 III. Informationen zur möglichen Datenverarbeitung
 Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, der Löschung der Daten keine gesetzlichen Aufbewahrungspflichten entgegenstehen und nachfolgend keine anderslautenden Angaben zu einzelnen Verarbeitungsverfahren gemacht werden.<br><br><br>
@@ -126,7 +125,7 @@ weitere Informationen an und zwar insbesondere zu den Möglichkeiten der Unterbi
 
 YouTube<br><br>
 
-In unserem Internetauftritt setzen wir YouTube ein. Hierbei handelt es sich um ein Videoportal der YouTube LLC., 901 Cherry Ave., 94066 San Bruno, CA, USA, nachfolgend nur „YouTube“ genannt.<br>
+In unserem Internetauftritt können wir YouTube einsetzen. Hierbei handelt es sich um ein Videoportal der YouTube LLC., 901 Cherry Ave., 94066 San Bruno, CA, USA, nachfolgend nur „YouTube“ genannt.<br>
 
 YouTube ist ein Tochterunternehmen der Google LLC., Gordon House, Barrow Street, Dublin 4, Irland, nachfolgend nur „Google“ genannt.<br>
 
@@ -159,6 +158,8 @@ Webhosting Provider:<br>
 Github <a href="https://help.github.com/articles/github-privacy-statement" target="_blank">Privacy Statement</a><br><br>
 
 
-	</main>
-	
+<a href="info.html#impressum">nach oben => Impressum</a>
+
+
+	</main>	
 	<?php include 'footer.php'; ?>
