@@ -86,7 +86,6 @@ aside li b{background-color: #c9c9dd;
 		
 aside	{float:left}
 
-
 		
 main{float: right;
 	padding: 6%;
@@ -109,17 +108,6 @@ main p{
 	clear: both;}
 */
 
-footer{
-	clear: both;
-	background-color:rgba(79,79,105,.8);
-	padding: 2% 0;
-	border-radius:15px;
-	}
-	
-footer p {color:white;
-	text-align: center; 
-	text-shadow: 1px 1px 1px white
-	}
 
 a{text-decoration: none}
 
@@ -201,6 +189,27 @@ img.pers_photo{width:auto; display: inline-block; float: right; margin: 1% 0 1% 
 img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
 
 ul ul li{padding-left:1%; margin-left:4%}
+
+.strong{font-weight: strong}
+
+
+footer{
+	clear: both;
+	background-color:rgba(79,79,105,.8);
+	padding: 2% 0;
+	border-radius:15px;
+	}
+
+
+footer ul{text-align: center;}
+
+footer ul li.footer_link{display: inline-block;
+						list-style: none;
+						margin: 0 2%;
+						}
+
+footer p, footer ul li.footer_link a{color:white;}
+footer p, footer ul li.footer_link a:hover{color:#002;}
 
 
 		
