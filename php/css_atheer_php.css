@@ -83,21 +83,7 @@ main p{
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;}
-		
-
-
-footer{order:6;
-	background-color:rgba(79,79,105,.8);
-	padding: 2% 0;
-	margin: 1% auto;
-	width:100%;
-	border-radius:15px;
-	}
 	
-footer p {color:white;
-	text-align: center; 
-	text-shadow: 1px 1px 1px white
-	}
 
 a{text-decoration: none}
 
@@ -205,10 +191,30 @@ aside ul li {list-style: none;}
 img.pers_photo{width:auto; display: inline-block; float: right; margin: 1% 0 1% 2%}
 img.pers_photo:hover{width:auto; margin: 1% 0 1% 2%}
 		
-ul ul li{padding-left:1%; margin-left:4%}		
+ul ul li{padding-left:1%; margin-left:4%}
 		
-		
-		
+.strong{font-weight: strong}
+
+
+
+footer{order:6;
+	background-color:rgba(79,79,105,.8);
+	padding: 2% 0;
+	margin: 1% auto;
+	width:100%;
+	border-radius:15px;
+	}
+
+footer ul{text-align: center;}
+
+footer ul li.footer_link{display: inline-block;
+						list-style: none;
+						margin: 0 2%;
+						}
+
+footer p, footer ul li.footer_link a{color:white;}
+footer p, footer ul li.footer_link a:hover{color:#002;}
+
 		
 @media screen and (max-width: 1024px) and (min-width: 700px)
 {
