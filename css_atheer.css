@@ -289,5 +289,12 @@ img{width:86%; margin: 1% 7%; transition:.6s}
 img:hover{width:104%; margin: -2%}
 					
 textarea{height: 7em;}
+	
+
+	
+
+aside b a{
+  pointer-events: auto;
+}
 
 }
