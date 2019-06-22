@@ -323,4 +323,10 @@ textarea{height: 7em;}
 		
 aside.aside2{	order:4;}
 
+	
+	
+aside b a{
+  pointer-events: auto;
+	
+}
 }
