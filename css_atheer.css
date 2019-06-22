@@ -212,6 +212,12 @@ footer p, footer ul li.footer_link a{color:white;}
 footer p, footer ul li.footer_link a:hover{color:#002;}
 
 
+aside b a{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
 		
 @media screen and (max-width: 666px) 
 
