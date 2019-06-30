@@ -70,7 +70,7 @@ Die Daten werden spätestens nach sieben Tage wieder gelöscht, soweit keine wei
 	
 Cookies<br><br>
 
-Wir nutzen keine Cookies<br><br><br>
+Diese Website benutzt keine Cookies.<br><br><br>
 	
 	
 Kontaktanfragen / Kontaktmöglichkeit<br><br>
