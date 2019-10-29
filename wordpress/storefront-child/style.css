@@ -1,0 +1,210 @@
+/*
+ Theme Name:   Storefront Child
+ Template:	   storefront
+ Description:  Storefront Child Theme
+ Author:       Atheer Huwaish
+ Author URI:   http://atheerhuwaish.github.io
+ Version:      1.0.0
+ Tags:         two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  storefrontchild
+*/
+
+
+
+
+#masthead{background-color: #1E477B; color: #fff;}
+
+p.site-description{color:#8ac}
+
+#masthead a{color: #fff}
+
+div.storefront-breadcrumb{margin-bottom:0}
+
+body{color:#000; max-width: 1920px; margin:auto}
+
+
+li.lang-item a:lang(ar){float:left; margin-right:.1rem}
+
+ul:not(:lang(ar)) li.lang-item {float:right; margin-left:.1rem}
+
+li.lang-item img {margin:auto}
+
+li.lang-item a{text-align:center;}
+
+ul:lang(ar) li.lang-item{float:right}
+
+
+div#polylang-2 ul:not(:lang(ar)) li.lang-item{float:left}
+
+
+div#polylang-2 ul::after{content:""; display:table; clear:both}
+
+
+h1,h2,h3,h4,h5,h6, #secondary ul li a, nav.woocommerce-breadcrumb a, div.tagcloud a.tag-cloud-link{color:#000;}
+
+
+
+
+#primary{background-color: rgba(255,255,255,.7); border-radius: 1rem; padding:2%;}
+
+#primary a, #secondary a{text-decoration:none}
+
+
+footer ul.menu{padding-top:1%;}
+
+
+footer ul.menu li:lang(ar){display:inline-block; margin: 0 0 0 2rem;}
+
+
+footer ul.menu li:not(:lang(ar)){display:inline-block; margin: 0 2rem 0 0;}
+
+
+footer ul.menu li:last-child:lang(ar){margin-left:0;}
+
+footer ul.menu li:last-child:not(:lang(ar)){margin-right:0;}
+
+
+#primary a:hover, #secondary a:hover{color: #1E477B}
+
+
+div.site-info{display:none}
+
+#colophon{background-color:black; color:white; margin-bottom:0;}
+
+#colophon a{background-color:black; color:white; text-decoration:none}
+
+#colophon a:hover{color:#1E477B;}
+
+footer#colophon{margin-bottom:0; padding-bottom:0;}
+
+
+input#woocommerce-product-search-field-0:lang(ar){margin-right:-200%; width:170%}
+
+input#woocommerce-product-search-field-0:not(:lang(ar)){margin-left:-200%; width:170%}
+
+
+
+nav#site-navigation ul li a:hover{color: #1E477B; border-radius: 1rem; background-color:#fff}
+
+input.search-field{background-color: white; border: solid black 1px; border-radius:1rem; max-width:49rem}
+
+h2.comments-title{font-size:120%}
+
+
+div.footer-widgets, #colophon{padding-top:0; padding-bottom:2rem}
+
+
+header#masthead.site-header div.col-full a{padding-top:.5rem; padding-bottom:0.5rem; margin-bottom:.5rem;}
+
+
+.header-widget-region ul li a:hover{color: #007}
+
+
+nav.storefront-product-pagination a, nav.storefront-product-pagination a:hover{background-color:rgba(255,255,255,.9); color:#1E477B}
+
+section.storefront-sticky-add-to-cart.storefront-sticky-add-to-cart--slideInDown{color:white}
+
+section.storefront-sticky-add-to-cart{background-color: #1E477B}
+
+/*sticky footer*/
+
+html {position: relative;
+    min-height: 100%;
+}
+
+body { 
+    margin: 0 auto 100px;
+}
+
+footer{
+		position: absolute;
+	  left: 0;
+		right:0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+		max-width:1920px;
+		margin: 0 auto;
+		overflow:hidden;
+}
+
+
+
+ul#site-header-cart li.woocommerce-mini-cart-item a{color:black}
+
+ul#site-header-cart p a{color:black}
+
+
+ul#site-header-cart p a.button.checkout.wc-forward{color:white}
+
+
+
+/*for easy digital downloads*/ 
+
+/*personal info padding and border radius*/
+fieldset#edd_checkout_user_info legend{padding:2%; border-radius:10px;
+background-color:#dde9ee}
+
+fieldset#edd_checkout_user_info {border-radius:10px;
+background-color:#dde9ee}
+
+/*centering payment icons*/
+form div.edd-payment-icons {display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width:50%;
+}
+
+/*background color sum*/
+th[colspan="3"].edd_cart_total{background-color:#dde9ee}
+
+
+.float-left{float:left}
+.float-right{float:right}
+
+
+
+
+@media (max-width:767px)
+{
+
+
+div.col-full
+	{
+		margin-left:1.41575em;
+		margin-right:1.41575em;
+		margin-bottom:0;
+		padding:10px;
+	}
+
+
+
+div#secondary{margin-top:3%}
+
+
+header#masthead div.menu ul li, nav#site-navigation ul li{text-align:center}
+
+
+div.storefront-breadcrumb{margin-bottom:3rem;}
+
+
+div#content{position:relative}
+
+
+div#polylang-2 ul{position:absolute; top:-3rem; left:2rem}
+
+body{margin-bottom: 150px;}
+
+footer{height: 150px;}
+
+
+/*for easy digital downloads- reduce padding for button*/
+div.edd_purchase_submit_wrapper a{padding:8%}
+
+
+div#primary{margin: 0 -3%}
+
+
+footer ul li:lang(ar) {display:inline-block; margin: 0;}
+	
+}
