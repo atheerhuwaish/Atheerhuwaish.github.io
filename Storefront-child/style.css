@@ -1,0 +1,391 @@
+/*
+ Theme Name:   Storefront Child
+ Template:	   storefront
+ Description:  Storefront Child Theme
+ Author:       Atheer Huwaish
+ Author URI:   http://atheerhuwaish.github.io
+ Version:      1.0.0
+ Tags:         two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  storefrontchild
+*/
+
+
+/*test*/
+h1.entry-title {color:darkblue !important} 
+
+
+
+#masthead {background-color: rgba(0,0,0, 0.4); color:#000}
+
+#masthead a{color: #fff}
+
+p.site-description{color:#bdf}
+
+div.storefront-breadcrumb{margin-bottom:0}
+
+body{color:#000; max-width: 1920px; margin:auto}
+
+
+div.site-branding{
+	text-shadow: 2px 2px 5px black;
+	animation: website-name 1s linear;}
+
+@keyframes website-name{
+	
+	50% {  text-shadow: 2px 2px 5px darkblue, 4px 4px 5px blue;}	
+}
+
+
+li.lang-item img {margin:auto}
+
+li.lang-item a{text-align:center;}
+
+
+a{color: darkblue}
+
+
+h1,h2,h3,h4,h5,h6, #secondary ul li a, nav.woocommerce-breadcrumb a, div.tagcloud a.tag-cloud-link{color:#000;}
+
+
+
+
+#primary{background-color: rgba(255,255,255,.9); border-radius: 1rem; padding:2%;}
+
+#primary a, #secondary a{text-decoration:none}
+
+
+footer ul.menu{padding-top:1%;}
+
+
+#primary a:hover, #secondary a:hover{color: #1E477B}
+
+
+div.site-info{display:none}
+
+#colophon{background-color:black; color:white; margin-bottom:0;}
+
+#colophon a{background-color:black; color:white; text-decoration:none}
+
+#colophon a:hover{color:#1E477B;}
+
+footer#colophon{margin-bottom:0; padding-bottom:0;}
+
+
+nav#site-navigation ul li a:hover{color: #1E477B; border-radius: 1rem; background-color:#fff}
+
+
+/* buttons radius and border */
+a.button, button.button{border: solid 1px #000; border-radius: 10px; text-align: center}
+
+/* form fields light gray border */
+p#order_comments_field textarea, input#coupon_code, main#main input {border: solid 1px #aaa} 
+
+
+table.woocommerce-table.woocommerce-table--order-downloads.shop_table td{text-align: center;}
+
+
+td a.woocommerce-button.button.view{padding:8px}
+
+
+
+/* categories design*/
+ul.product-categories li.cat-item a{border: solid 0.5px #777; text-align: center; background-color: #fff; border-radius: 8px; padding:9px 0; display:block;}
+
+
+ul.product-categories li.cat-item a:hover{background-color: #abc; cursor:pointer;} 
+
+ul.product-categories li.cat-item:before{display:none}
+
+
+
+h2.comments-title{font-size:120%}
+
+
+div.footer-widgets, #colophon{padding-top:0; padding-bottom:2rem}
+
+
+header#masthead.site-header div.col-full a{padding-top:.5rem; padding-bottom:0.5rem; margin-bottom:.5rem;}
+
+
+.header-widget-region ul li a:hover{color: #007}
+
+
+nav.storefront-product-pagination a, nav.storefront-product-pagination a:hover{background-color:rgba(255,255,255,.9); color:#1E477B}
+
+section.storefront-sticky-add-to-cart.storefront-sticky-add-to-cart--slideInDown{color:white}
+
+section.storefront-sticky-add-to-cart{background-color: #1E477B}
+
+
+
+
+/*sticky footer*/
+
+/*div#page{min-height:750px;}*/
+
+html {position: relative;
+    min-height: 100%;
+	 
+}
+
+body { 
+    margin: 0 auto 120px;
+}
+
+
+footer{
+	position: absolute;
+	left: 0;
+	right:0;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+	max-width:1920px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+
+ul#site-header-cart li.woocommerce-mini-cart-item a{color:black}
+
+ul#site-header-cart p a{color:black}
+
+ul#site-header-cart p a.button.checkout.wc-forward{color:white}
+
+/* disable "visible full height cart filled with several products" */
+div#page{overflow: visible}
+
+/* no list style for header cart */
+ul#site-header-cart li{list-style-type:none}
+
+
+/* hide subtotal*/
+div.cart_totals h2, tbody tr.cart-subtotal {display:none}
+
+
+/*Translatepress language switcher*/
+div#trp-floater-ls{z-index:1000; margin-left: -200px; }
+/*Translatepress center text*/
+div#trp-floater-ls *{text-align:center}
+
+
+
+/*smaller font size and bold for Product title*/
+div.summary h1{font-size:1.3rem; font-weight:600}
+
+/*smaller font size for Product discrption and reviews*/
+div.panel.entry-content.wc-tab h2{font-size: 1.3rem;}
+
+
+
+/* remove margin top checkout of policy box */
+#main div.form-row.place-order{margin-top: 0}
+
+/*border top subtotal cart page*/
+tbody tr.woocommerce-cart-form__cart-item.cart_item td.product-remove, tr.woocommerce-cart-form__cart-item.cart_item td{border-top: #bbb 1px solid}
+
+/* border total cart page*/
+div.cart-collaterals div.cart_totals table.shop_table{border: #ccc 1px solid;}
+
+
+/*undo remove item cart page*/
+a.restore-item{color: orange}
+
+
+/* small text privacy policy checkout*/
+div.woocommerce-privacy-policy-text p{font-size: 13px}
+
+
+
+/* table checkout fields bottom border */
+table.shop_table.woocommerce-checkout-review-order-table th, table.shop_table.woocommerce-checkout-review-order-table td{border-bottom: solid 1px #ccc}
+
+/* green italic for (optional) checkout fileds */
+p span.optional{color:#6b6; font-style: italic}
+
+/* coupon link checkout page*/
+a.showcoupon{color: #33a}
+
+/*log in link at checkout*/ 
+div.entry-content div.woocommerce div.woocommerce-form-login-toggle div.woocommerce-info a.showlogin {color: #33a}
+
+/* lost password check out link*/
+main#main div.woocommerce ul.woocommerce-error li a{color:#33a}
+
+/* test text color */
+div#primary #main {color: black}
+
+
+footer li.menu-item{float:left; margin:3px 0}
+
+footer li.menu-item::before{display:none}
+
+nav.woocommerce-breadcrumb{background-color:rgba(255,255,255,0.9);}
+
+
+
+/*remove border radius*/
+nav#site-navigation ul.sub-menu li.menu-item:hover *{color: darkblue; border-radius:0}
+
+/*th table background color*/
+div.woocommerce-tabs table tbody tr th{background-color:#224; color:white}
+
+
+/*sub list format*/
+li li {list-style: square}
+
+
+
+
+/*drop-down menu colors and full width to avoid letter breaks*/
+nav#site-navigation ul.sub-menu li.menu-item *{color: black; background-color: white; width:100%; white-space: nowrap;}
+
+nav#site-navigation ul li.menu-item *{
+list-style-type:none
+}
+
+
+
+/* zero margin between categories widget and page */
+div#woocommerce_product_categories-3 * {margin-right: 5%; margin-left: 0; padding-left:0}
+
+
+
+/* hide tag cloud widget title */
+div#woocommerce_product_tag_cloud-3 span{display:none}
+
+
+/*formatting tag cloud text*/
+div.tagcloud *{white-space: nowrap; background-color:white; border-radius:40%; padding: 0 5px;}
+
+div.keine_leistungen{background-color: red; text-align: center; color: white; font-weight: 900; margin:0; padding:0}
+
+
+
+ul li.lang-item {float:right; margin-left:.1rem}
+
+footer ul.menu li{display:inline-block; margin: 0 2rem 0 0;}
+
+footer ul.menu li:last-child{margin-right:0;}
+
+
+/*product search width*/
+#masthead > div.col-full > div.site-search > div > form{margin-left:-150px; display:block;}
+
+
+/*remove product search from the top*/
+div.col-full div.site-search{display:none}
+
+/*background and padding for cart*/
+div#woocommerce_widget_cart-2{background-color: rgba(245,250,255,0.7); padding: 0 15px;}
+
+
+
+
+/* for larger screens*/
+
+@media (min-width:768px)
+{
+/*full width grouped product aligned to the bottom left*/
+form.cart.grouped_form{margin: 25% auto 20px -85%
+	  }
+}
+
+
+
+/*for smaller screens*/
+
+
+@media (min-width:768px) and (max-width:1100px)
+{
+/*float and format sidebar*/
+div#secondary.widget-area {width:100%}
+
+/*primary page full width*/
+div#primary.content-area{width:100%}
+
+}
+
+
+
+/*for tablet screens */
+@media (max-width:767px)
+{
+
+
+/* disable "visible full height cart filled with several products" */
+div#page{overflow: auto}
+
+/* formating relative positioning of mobile footer bar 
+div.storefront-handheld-footer-bar{position:relative; bottom:48px; left:0; border-top:none} */
+	
+td.product-remove a::before{margin-top: 20px}
+	
+div#primary{margin-top: 15px}
+	
+div.site-branding {margin-top:20px}
+	
+	
+	/*Ausfuerung waehlen*/
+	td.woocommerce-grouped-product-list-item__quantity a{padding: 10px 0; font-size:80%}
+			
+
+div#secondary{margin-top:3%}
+
+
+header#masthead div.menu ul li, nav#site-navigation ul li{text-align:center}
+
+
+div.storefront-breadcrumb{margin-bottom:15px;}
+
+
+div#content{position:relative}
+	
+
+body{margin-bottom: 150px;}
+
+
+header#masthead{margin-bottom:0}
+
+
+	
+div.storefront-breadcrumb{margin:0 1px; padding: 0}
+
+	
+/*remove padding of grouped products*/
+	
+table.woocommerce-grouped-product-list.group_table td{padding:10px 0 10px 3px;}	
+	
+td.woocommerce-grouped-product-list-item__quantity input{height: 3rem; width:2rem; width: 3rem !important;}
+	
+div.handheld-navigation li.menu-item button{background-color: white}
+	
+	
+nav#site-navigation button.menu-toggle{margin-top:15px}
+	
+}
+
+
+/*for mobile screens*/
+
+@media (max-width:500px)
+{
+	
+/*drop-down menu list normal letter breaks*/
+nav#site-navigation ul.sub-menu li.menu-item *{color: black; background-color: white; width:100%; white-space: normal;}
+	
+	
+/*wider content area*/
+div#primary.content-area
+	{
+		width:112%;
+		margin-left: -6%
+	}
+
+	td.product-remove a::before{margin-left: -10px}
+
+/* increasing footer height */
+body { margin-bottom: 150px;}
+footer{height: 150px}
+	
+}
