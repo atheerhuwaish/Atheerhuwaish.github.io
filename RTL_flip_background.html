@@ -34,12 +34,12 @@ main:hover [dir="rtl"] {
   display: inline-flex;
 } /* do not use display:inline here when not using display:flex or display:grid for the main container. Use inline-block instead */
 
-main:hover {
+main {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
-main:hover * {
+main * {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
