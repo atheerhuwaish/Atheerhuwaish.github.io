@@ -24,12 +24,12 @@ p[dir=rtl]{ display: none; }
 main:hover p.ltr { display: none; }
 main:hover [dir=rtl]{ display: inline-flex; } /* do not use display:inline here when not using display:flex or display:grid for the main container. Use inline-block instead */
 
-main:hover {
+main:hover, main:active {
      -webkit-transform: scaleX(-1);
      transform: scaleX(-1);
      }
 
-main:hover *{
+main:hover, main: active *{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     }
