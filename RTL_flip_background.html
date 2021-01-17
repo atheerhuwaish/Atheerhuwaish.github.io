@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+main {
+    display: flex;
+    box-sizing: border-box;
+	  background-image: url(https://raw.githubusercontent.com/atheerhuwaish/atheerhuwaish.github.io/master/background_image_s.png);
+    color: red;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 400px;
+}
+p   { padding-top: 12rem; margin-top: 0; }
+
+p[dir=rtl]{ display: none; }
+main:hover p.ltr { display: none; }
+main:hover [dir=rtl]{ display: inline-flex; } /* do not use display:inline here when not using display:flex or display:grid for the main container. Use inline-block instead */
+
+main:hover {
+     -webkit-transform: scaleX(-1);
+     transform: scaleX(-1);
+     }
+
+main:hover *{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    }
+</style>
+</head>
+<body>
+
+<main>
+<p class="ltr">Hover to switch to RTL.</p>
+<p dir="rtl">هذا النص من اليمين إلى اليسار.</p>
+</main>
+</body>
+</html> 
