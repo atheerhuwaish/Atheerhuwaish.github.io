@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Background LTR to RTL
 </title>
 <style>
@@ -24,13 +23,8 @@ p {
   margin-top: 0;
 }
 
-p[dir="rtl"] {
-  display: none;
 }
-main:hover p.ltr {
-  display: none;
-}
-main:hover [dir="rtl"] {
+main [dir="rtl"] {
   display: inline-flex;
 } /* do not use display:inline here when not using display:flex or display:grid for the main container. Use inline-block instead */
 
@@ -39,7 +33,10 @@ main {
   transform: scaleX(-1);
 }
 
-
+main:hover * {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 
 @media screen and (max-width: 699px) {
 
