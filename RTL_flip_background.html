@@ -18,20 +18,23 @@ main {
   width: 600px;
   height: 400px;
 }
+
 p {
   padding-top: 12rem;
   margin-top: 0;
 }
 
-p[dir="rtl"] {
+[dir="rtl"] {
   display: none;
 }
-main:hover p.ltr {
+
+main:hover .ltr {
   display: none;
 }
+
 main:hover [dir="rtl"] {
   display: inline-flex;
-} /* do not use display:inline for the value above when not using flex or grid for the container */
+} /* the value "inline" does not work for the line above for containers that are neither flex not grid */
 
 main:hover {
   -webkit-transform: scaleX(-1);
@@ -42,6 +45,7 @@ main:hover * {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
 </style>
 </head>
 <body>
