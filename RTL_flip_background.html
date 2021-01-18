@@ -34,7 +34,7 @@ main:hover [dir="ltr"] {
 
 main:hover [dir="rtl"] {
   display: inline-flex;
-} /* the value "inline" does not work for the line above for containers that are neither flex not grid */
+} /* Note for when not using flex or grid: the value "inline" for the line above will not work correctly */
 
 main:hover {
   -webkit-transform: scaleX(-1);
@@ -45,6 +45,7 @@ main:hover * {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
 </style>
 </head>
 <body>
