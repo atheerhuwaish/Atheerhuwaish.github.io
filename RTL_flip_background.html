@@ -28,7 +28,7 @@ p {
   display: none;
 }
 
-main:hover .ltr {
+main:hover [dir="ltr"] {
   display: none;
 }
 
@@ -45,14 +45,13 @@ main:hover * {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-
 </style>
 </head>
 <body>
 
 <main>
-<p class="ltr">Hover to switch to RTL.</p>
+<p dir="ltr">Hover to switch to RTL.</p>
 <p dir="rtl">هذا النص من اليمين إلى اليسار.</p>
 </main>
 </body>
-</html> 
+</html>
