@@ -24,7 +24,7 @@ function proteincalculate (){
 	var foodamount = foodamountelem.value;
 	foodamountelem.setAttribute("value", foodamount);
 	
-	proteinsubtotal= parseInt(foodamount * proteincontent * .0012 * bodyweight );
+	proteinsubtotal= parseInt(foodamount * proteincontent / (1.2 * bodyweight)  );
 						
 						
 	food1.innerHTML += "<span>" + proteinsubtotal + "</span>";
