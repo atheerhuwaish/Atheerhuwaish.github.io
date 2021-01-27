@@ -6,7 +6,6 @@ var reset = document.getElementById("reset");
 var input = document.getElementById("foodinput");
 
 
-
 function proteincalculate (){
 	
 	food1.innerHTML = "<br>Protein: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
@@ -26,11 +25,14 @@ function proteincalculate (){
 	foodamountelem.setAttribute("value", foodamount);
 	
 	proteinsubtotal= parseInt(foodamount * proteincontent * .0012 * bodyweight );
+						
+						
 	food1.innerHTML += "<span>" + proteinsubtotal + "</span>";
 	
 	
 	food1.innerHTML += "% of the daily protein requirement.";	
 	
+
 }
 
 	
@@ -103,7 +105,7 @@ function proteincontentfunc(){
 	case "whole milk yogurt" : 
 	return proteincontent = 5.7;
 	
-	default: food1.innerHTML = "Not found in the food list!";
+	default: food1.innerHTML = "<p style='color:red'>Not found in the food list!</p>";
 	}
 	}
 	
