@@ -1,4 +1,3 @@
-
 var datalist = document.getElementById("fooditems1");
 var button = document.getElementById("foodbutton");
 var food1 = document.getElementById("food1");
@@ -26,7 +25,7 @@ function proteincalculate (){
 	var foodamount = foodamountelem.value;
 	foodamountelem.setAttribute("value", foodamount);
 	
-	proteinsubtotal= parseInt(foodamount * proteincontent * .0008 * bodyweight );
+	proteinsubtotal= parseInt(foodamount * proteincontent * .001 * bodyweight );
 	food1.innerHTML += "<span>" + proteinsubtotal + "</span>";
 	
 	
