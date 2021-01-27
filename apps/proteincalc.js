@@ -30,7 +30,7 @@ function proteincalculate (){
 	food1.innerHTML += "<span>" + proteinsubtotal + "</span>";
 	
 	
-	food1.innerHTML += "% of your daily protein requirement.";
+	food1.innerHTML += "% of the daily protein requirement.";
 	
 	
 	
