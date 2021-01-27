@@ -16,7 +16,7 @@ function proteincalculate (){
 	proteincontentelem.setAttribute("value", proteincontent);
 	
 	
-	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams for a person who weighs <input type='number' id='bodyweight' value='75' min='5' max='150'> constitute ";
+	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams for a person who weighs <input type='number' id='bodyweight' value='75' min='5' max='150'>kg constitute ";
 	var bodyweightelem = document.querySelector("#bodyweight");
 	var bodyweight = bodyweightelem.value;
 	bodyweightelem.setAttribute("value", bodyweight);
