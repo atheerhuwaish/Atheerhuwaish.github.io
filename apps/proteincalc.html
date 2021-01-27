@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Protein Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {max-width: 400px; font-size: 16px; margin: 5px auto; padding: 5px; text-align:center; background-color:#ccddcc}
+input {padding:20px 5px; margin-bottom: 5px; width: 100px; font-size: 22px;}
+input#foodinput {padding:20px 5px; margin-bottom: 5px; width: 280px; font-size: 22px;}
+button{padding:20px; font-size: 18px}
+p{font-size: 28px; padding: 0; margin:0}
+li{list-style: none}
+
+</style>
+
+</head>
+<body>
+<h1>Protein Calculator</h1>
+
+<h2>Search or choose food item:</h2>
+
+    <datalist id="fooditems1">
+	
+	<option value="almonds">
+	<option value="baked beans">
+	<option value="bread">
+	<option value="chickpeas">
+	<option value="cheddar cheese">
+	<option value="cottage cheese">
+	<option value="cornflakes">
+	<option value="eggs">
+    <option value="hazelnuts">
+	<option value="oatmeal">
+	<option value="kidney beans">
+	<option value="red lentils">
+    <option value="soy nuts">
+	<option value="soy milk">
+	<option value="soy sauce">
+	<option value="tofu">
+	<option value="walnuts">
+	<option value="wheat flour">
+	<option value="whole milk">	
+	<option value="whole milk yogurt">	
+	</datalist>
+	<input list="fooditems1" id="foodinput" placeholder="Search or choose">
+	<br>
+	<button id="foodbutton">Find protein content</button>
+	<button type="reset" id="reset">reset</button>
+   
+ <p id="food1"></p>
+ 
+ <h3>Sources:</h3>
+ <ul>
+ <li>https://fdc.nal.usda.gov</li>
+ <li>https://www.nutrition.org.uk</li>
+ </ul>
+<h4>Disclaimer:<br>Protein content values are approximate.<br>Their correctness is not guaranteed.</h4>
+
+<script type="text/javascript" src="proteincalculator.js">
+</script>
+
+</body>
+</html>
