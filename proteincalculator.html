@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Protein Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {margin: 5px auto; padding: 5px; text-align:center; background-color:#ccddcc}
+input, button {padding:20px; font-size: 22px;}
+button{padding:10px 17px}
+p{font-size: 28px; padding: 0; margin:0}
+li{list-style: none}
+
+</style>
+
+</head>
+<body>
+<h1>Protein Calculator</h1>
+
+<h2>Search or choose food item:</h2>
+
+    <datalist id="fooditems1">
+	
+	<option value="almonds">
+	<option value="baked beans">
+	<option value="bread">
+	<option value="chickpeas">
+	<option value="cheddar cheese">
+	<option value="cottage cheese">
+	<option value="cornflakes">
+	<option value="eggs">
+    <option value="hazelnuts">
+	<option value="oatmeal">
+	<option value="kidney beans">
+	<option value="red lentils">
+    <option value="soy nuts">
+	<option value="soy milk">
+	<option value="soy sauce">
+	<option value="tofu">
+	<option value="walnuts">
+	<option value="wheat flour">
+	<option value="whole milk">	
+	<option value="whole milk yogurt">	
+	</datalist>
+	<input list="fooditems1" id="foodinput" placeholder="Search or choose">
+	<br>
+	<button id="foodbutton">Find protein content</button>
+	<button type="reset" id="reset">reset</button>
+   
+ <p id="food1"></p>
+ 
+ <h3>Sources:</h3>
+ <ul>
+ <li>https://fdc.nal.usda.gov</li>
+ <li>https://www.nutrition.org.uk</li>
+ </ul>
+<h4>Disclaimer: protein content values are approximate.<br>Their correctness is not guaranteed.</h4>
+<script>
+var datalist = document.getElementById("fooditems1");
+var button = document.getElementById("foodbutton");
+var food1 = document.getElementById("food1");
+var datalist = document.getElementById("fooditems1");
+var reset = document.getElementById("reset");
+var input = document.getElementById("foodinput");
+
+
+
+function proteincalculate (){
+	
+	food1.innerHTML = "<br>Protein: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
+	
+	var proteincontentelem = document.querySelector(".proteincontent");
+	var proteincontent = proteincontentfunc();
+	proteincontentelem.setAttribute("value", proteincontent);
+	
+	
+	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams constitute ";
+	var foodamountelem= document.querySelector(".foodamount");
+	var foodamount = foodamountelem.value;
+	foodamountelem.setAttribute("value", foodamount);
+	
+	proteinsubtotal= parseInt(foodamount * proteincontent / 70);
+	food1.innerHTML += "<span>" + proteinsubtotal + "</span>";
+	
+	
+	food1.innerHTML += "% of your daily protein requirement";
+	
+	
+	
+}
+
+	
+	
+	
+function proteincontentfunc(){
+	
+	
+	switch (input.value) {
+
+	case "almonds" : 
+	return proteincontent = 19.35;
+
+	case "baked beans" : 
+	return proteincontent = 5.2;
+	
+	case "bread" : 
+	return proteincontent = 7.9;
+	
+	case "chickpeas" : 
+	return proteincontent = 8.75;
+
+	case "cheddar cheese" : 
+	return proteincontent = 25.4;	
+	
+	case "cottage cheese" : 
+	return proteincontent = 12.6;	
+	
+	case "cornflakes" : 
+	return proteincontent = 7.5;
+	
+	case "eggs" : 
+	return proteincontent = 12.5;
+	
+	case "hazelnuts" : 
+	return proteincontent = 14.1;
+	
+	case "kidney beans" : 
+	return proteincontent = 6.9;
+		
+	case "oatmeal" : 
+	return proteincontent = 11.2;
+	
+	case "red lentils" : 
+	return proteincontent = 7.6;
+	
+	case "rice" : 
+	return proteincontent = 6.67;
+	
+	case "soy nuts" : 
+	return proteincontent = 38.55;
+	
+	case "soy milk" : 
+	return proteincontent = 2.6;
+
+	case "soy sauce" : 
+	return proteincontent = 8.14;
+	
+	case "tofu" : 
+	return proteincontent = 9.41;
+	
+	case "walnuts" : 
+	return proteincontent = 14.7;
+	
+	case "wheat flour" : 
+	return proteincontent = 12.6;
+	
+	case "whole milk" : 
+	return proteincontent = 3.3;
+	
+	case "whole milk yogurt" : 
+	return proteincontent = 5.7;
+	
+	default: food1.innerHTML = "Not found in the food list!";
+	}
+	}
+	
+
+	
+function fooddetailsclick (){
+	if ( input.value.length > 0 ) {
+	proteincalculate();
+    }
+	}
+	
+function fooddetailskey (event) {
+    if ( input.value.length > 0 && event.which === 13 ) {
+	proteincalculate();
+    }
+}
+
+
+
+input.addEventListener ("keyup", fooddetailskey);
+button.addEventListener ("click", fooddetailsclick);
+
+
+
+reset.addEventListener ("click", function () {
+food1.innerHTML = "";
+input.value = "";
+})
+
+
+
+</script>
+
+</body>
+</html>
