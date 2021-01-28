@@ -27,10 +27,10 @@ function proteincalculate (){
 	proteinsubtotal= parseInt(foodamount * proteincontent / (1.1 * bodyweight)  );
 						
 						
-	food1.innerHTML += "<span>" + proteinsubtotal + "</span>";
+	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
 	
-	food1.innerHTML += "% of the daily protein requirement.";	
+	food1.innerHTML += " of the daily protein requirement.";	
 	
 
 }
