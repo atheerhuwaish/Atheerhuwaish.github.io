@@ -7,14 +7,14 @@
 <style>
 
 body {max-width: 400px; font-size: 18px; margin: 0 auto; padding: 2px; text-align:center; background-color:#cce3d9}
-input {padding:8px 2px; margin-bottom: 5px; width: 70px; font-size: 22px;}
+input {padding:8px 2px; margin-bottom: 5px; width: 70px; font-size: 20px;}
 input#foodinput {padding:15px 2px; width: 270px; font-size: 22px;}
 button{padding:15px 2px; font-size: 18px}
-p{font-size: 22px; padding: 2px; margin:0}
+p{font-size: 20px; padding: 2px; margin:0}
 li{list-style: none}
-h2{font-size: 24px}
+h2{font-size: 22px}
 h3{margin-bottom: 0; padding-bottom:0}
-ul{margin-top: 2px}
+ul, li{margin: 0; padding: 2px}
 #proteinsubtotal{color: darkblue}
 #proteinsubtotal::after{content: "%"}
 
@@ -31,15 +31,18 @@ ul{margin-top: 2px}
 	<option value="almonds">
 	<option value="baked beans">
 	<option value="bread">
+	<option value="chia seeds">
 	<option value="chickpeas">
 	<option value="cheddar cheese">
 	<option value="cottage cheese">
 	<option value="cornflakes">
 	<option value="eggs">
+	<option value="flax seeds">
     <option value="hazelnuts">
 	<option value="kidney beans">
 	<option value="oatmeal">
 	<option value="red lentils">
+	<option value="seitan">
     <option value="soy nuts">
 	<option value="soy milk">
 	<option value="soy sauce">
@@ -56,22 +59,15 @@ ul{margin-top: 2px}
    
  <p id="food1"></p>
  
+<h4>Disclaimer:<br>Protein values are currently only for sedentary persons weighing 75kg.<br>Sport people need 25-120% more protein depending on their activity.<br>Females while pregnant need 60% more and while lactating need 40% more</h4>
+
+
  <h3>Sources:</h3>
  <ul>
  <li>https://fdc.nal.usda.gov</li>
  <li>https://www.nutrition.org.uk</li>
  <li>https://examine.com/guides/protein-intake</li>
  </ul>
-
-<h4>Disclaimer:<br>Protein values are currently only for sedentary persons weighing 75kg.<br>Sport people need 25-120% more protein depending on their activity.<br>Females while pregnant need 60% more and  lactating need 40% more</h4>
-
-<script type="text/javascript" src="proteincalc.js">
-</script>
-
-</body>
-</html>
-
-
 <script type="text/javascript" src="proteincalc.js">
 </script>
 
