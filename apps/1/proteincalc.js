@@ -3,7 +3,7 @@ var mbutton = document.getElementById("foodbutton");
 var food1 = document.getElementById("food1");
 var datalist = document.getElementById("fooditems1");
 var mreset = document.getElementById("reset");
-var input = document.getElementById("foodinput");
+var foodinput = document.getElementById("foodinput");
 
 
 function proteincalculate (){
@@ -19,8 +19,7 @@ function proteincalculate (){
 						return food1.innerHTML ="Food item is not found, reset and try again";
 						}
 						else {food1.style.color ="black";}	
-	
-	
+		
 	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams for a person who weighs <input type='number' id='bodyweight' value='75' min='5' max='150'> kg constitute ";
 	var bodyweightelem = document.querySelector("#bodyweight");
 	var bodyweight = bodyweightelem.value;
@@ -31,23 +30,17 @@ function proteincalculate (){
 	foodamountelem.setAttribute("value", foodamount);
 	
 	proteinsubtotal= parseInt(foodamount * proteincontent / (1.1 * bodyweight)  );
-						
-						
+											
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	
 	food1.innerHTML += " of the daily protein requirement.";
-	
-	
-
 }
 
-	
 	
 function proteincontentfunc(){
 	
 	
-	switch (input.value) {
+	switch (foodinput.value.toLowerCase()) {
 
 	case "almonds" : 
 	return proteincontent = 19.35;
@@ -128,25 +121,25 @@ function proteincontentfunc(){
 
 	
 function fooddetailsclick (){
-	if ( input.value.length > 0 ) {
+	if ( foodinput.value.length > 0 ) {
 	proteincalculate();
     }
 	}
 	
 function fooddetailskey (event) {
-    if ( input.value.length > 0 && event.which === 13 ) {
+    if ( foodinput.value.length > 0 && event.which === 13 ) {
 	proteincalculate();
     }
 }
 
 
 
-input.addEventListener ("keyup", fooddetailskey);
+foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
 
 
 
 mreset.addEventListener ("click", function () {
 food1.innerHTML = "";
-input.value = "";
+foodinput.value = "";
 })
