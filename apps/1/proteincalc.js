@@ -1,8 +1,8 @@
 var datalist = document.getElementById("fooditems1");
-var button = document.getElementById("foodbutton");
+var mbutton = document.getElementById("foodbutton");
 var food1 = document.getElementById("food1");
 var datalist = document.getElementById("fooditems1");
-var reset = document.getElementById("reset");
+var mreset = document.getElementById("reset");
 var input = document.getElementById("foodinput");
 
 
@@ -13,6 +13,12 @@ function proteincalculate (){
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
 	proteincontentelem.setAttribute("value", proteincontent);
+	
+	
+	if (!proteincontent) {food1.style.color ="red";
+						return food1.innerHTML ="Food item is not found, reset and try again";
+						}
+						else {food1.style.color ="black";}	
 	
 	
 	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams for a person who weighs <input type='number' id='bodyweight' value='75' min='5' max='150'> kg constitute ";
@@ -30,7 +36,8 @@ function proteincalculate (){
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
 	
-	food1.innerHTML += " of the daily protein requirement.";	
+	food1.innerHTML += " of the daily protein requirement.";
+	
 	
 
 }
@@ -114,7 +121,7 @@ function proteincontentfunc(){
 	case "whole milk yogurt" : 
 	return proteincontent = 5.7;
 	
-	default: food1.innerHTML = "<p style='color:red'>Not found in the food list!</p>";
+	default: proteincontent = false;
 	}
 	}
 	
@@ -135,11 +142,11 @@ function fooddetailskey (event) {
 
 
 input.addEventListener ("keyup", fooddetailskey);
-button.addEventListener ("click", fooddetailsclick);
+mbutton.addEventListener ("click", fooddetailsclick);
 
 
 
-reset.addEventListener ("click", function () {
+mreset.addEventListener ("click", function () {
 food1.innerHTML = "";
 input.value = "";
 })
