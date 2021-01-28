@@ -6,7 +6,25 @@ var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
 
+
+
+	
+	var bodyweightelem = document.querySelector("#bodyweight");
+	
+//	bodyweightelem.style.display ="none";
+		
+	bodyweightelem.addEventListener("input", function() 
+	{
+	var bodyweight = bodyweightelem.value;
+	bodyweightelem.setAttribute("value", bodyweight);	
+	})
+	
+		
+
+
 function proteincalculate (){
+		
+	
 	
 	food1.innerHTML = "<br>Protein: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
 	
@@ -20,7 +38,7 @@ function proteincalculate (){
 						}
 						else {food1.style.color ="black";}	
 		
-	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams for a person who weighs <input type='number' id='bodyweight' value='75' min='5' max='150'> kg constitute ";
+	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams constitute ";
 	var bodyweightelem = document.querySelector("#bodyweight");
 	var bodyweight = bodyweightelem.value;
 	bodyweightelem.setAttribute("value", bodyweight);
@@ -33,7 +51,11 @@ function proteincalculate (){
 											
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	food1.innerHTML += " of the daily protein requirement.";
+	food1.innerHTML += " of your daily protein requirement.";
+	
+	
+	
+	
 }
 
 	
@@ -138,6 +160,8 @@ foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
 
 
+
+	
 
 mreset.addEventListener ("click", function () {
 food1.innerHTML = "";
