@@ -51,9 +51,12 @@ function proteincontentfunc(){
 	case "bread" : 
 	return proteincontent = 7.9;
 	
+	case "chia seeds" : 
+	return proteincontent = 18.29;
+	
 	case "chickpeas" : 
 	return proteincontent = 8.75;
-
+	
 	case "cheddar cheese" : 
 	return proteincontent = 25.4;	
 	
@@ -66,12 +69,15 @@ function proteincontentfunc(){
 	case "eggs" : 
 	return proteincontent = 12.5;
 	
+	case "flax seeds" : 
+	return proteincontent = 18.29;
+	
 	case "hazelnuts" : 
 	return proteincontent = 14.1;
 	
 	case "kidney beans" : 
 	return proteincontent = 6.9;
-		
+	
 	case "oatmeal" : 
 	return proteincontent = 11.2;
 	
@@ -80,6 +86,9 @@ function proteincontentfunc(){
 	
 	case "rice" : 
 	return proteincontent = 6.67;
+	
+	case "seitan" : 
+	return proteincontent = 19.05;
 	
 	case "soy nuts" : 
 	return proteincontent = 38.55;
