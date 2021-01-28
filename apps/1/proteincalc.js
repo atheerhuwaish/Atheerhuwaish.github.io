@@ -19,7 +19,6 @@ var foodinput = document.getElementById("foodinput");
 	bodyweightelem.setAttribute("value", bodyweight);	
 	})
 	
-		
 
 
 function proteincalculate (){
@@ -52,9 +51,6 @@ function proteincalculate (){
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
 	food1.innerHTML += " of your daily protein requirement.";
-	
-	
-	
 	
 }
 
@@ -158,8 +154,6 @@ function fooddetailskey (event) {
 
 foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
-
-
 
 	
 
