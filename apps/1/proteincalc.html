@@ -8,7 +8,7 @@
 
 body {position: relative; max-width: 400px; font-size: 18px; margin: 0 auto; padding: 2px; text-align:center; background-color:#ccd1cc}
 input {padding:8px 2px; margin-bottom: 5px; width: 70px; font-size: 20px;}
-input#foodinput {padding:15px 2px; width: 270px; font-size: 22px;}
+input#foodinput {padding:15px 2px; width: 270px; font-size: 16px;}
 button{padding:15px 2px; font-size: 18px}
 p{font-size: 20px; padding: 2px; margin:0}
 li{list-style: none}
@@ -56,7 +56,8 @@ p#made{font-style: italic}
 	<option value="whole milk">	
 	<option value="whole milk yogurt">	
 	</datalist>
-	<input list="fooditems1" id="foodinput" placeholder="Search or choose..">
+	Choose your body weight: <input type='number' id='bodyweight' value='70' min='5' max='150'> kg<br>
+	<input list="fooditems1" id="foodinput" placeholder="Search or choose your food item..">
 	<br>
 	<button id="foodbutton">Find protein content</button>
 	<button type="reset" id="reset">Reset</button>
@@ -64,7 +65,7 @@ p#made{font-style: italic}
  <p id="food1"></p>
  
  <footer>
-<h4>Disclaimer:<br>Protein values are currently only for sedentary persons weighing 75kg using 1.1g protein daily per kg bodyweight.<br>Sport people need 25-120% more protein depending on their activity.<br>Females while pregnant need 60% more and while lactating need 40% more. All the information is without liability.</h4>
+<h4>Disclaimer:<br>Protein values are currently only for sedentary persons using 1.1g protein daily per kg bodyweight.<br>Sport people need 25-120% more protein depending on their activity.<br>Females while pregnant need 60% more and while lactating need 40% more. All the information is without liability.</h4>
 
 
  <h3>Sources:</h3>
