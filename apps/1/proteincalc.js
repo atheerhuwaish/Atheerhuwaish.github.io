@@ -6,7 +6,8 @@ var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
 
-function grayinputborder(){foodinput.style.borderColor="gray";}
+function grayinputborder(){foodinput.style.borderColor="gray";
+						   bodyweightelem.style.borderColor="gray";}
 
 window.addEventListener("load", grayinputborder);
 
@@ -23,9 +24,14 @@ function verifyweight(){
 								  || bodyweightelem.value.length < 1 )
 		{food1.innerHTML ="Please enter a valid body weight number";
 		food1.style.color ="red";
+		bodyweightelem.style.borderColor="red";
 		return false}
 		
-		else proteincalculate();
+		else 
+		{
+		bodyweightelem.style.borderColor="gray";
+		proteincalculate();
+		}
 }
 	
 	
