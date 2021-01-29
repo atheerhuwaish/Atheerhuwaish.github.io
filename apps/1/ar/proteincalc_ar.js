@@ -82,7 +82,7 @@ function proteincontentfunc(){
 	case "فاصوليا مطهية" : 
 	return proteincontent = 5.2;
 	
-	case "خبر/صمون" : 
+	case "خبز/صمون" : 
 	return proteincontent = 7.9;
 	
 	case "حبوب الشيا" : 
