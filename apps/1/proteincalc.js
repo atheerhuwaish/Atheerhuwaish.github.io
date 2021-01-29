@@ -20,7 +20,7 @@ var bodyweightelem = document.querySelector("#bodyweight");
 bodyweightelem.addEventListener("input", verifyweight);
 	
 function verifyweight(){
-	if (bodyweightelem.value < 1  ||  bodyweightelem.value > 300 
+	if (bodyweightelem.value < 1  ||  bodyweightelem.value > 600 
 								  || bodyweightelem.value.length < 1 )
 		{food1.innerHTML ="Please enter a valid body weight number";
 		food1.style.color ="red";
@@ -65,7 +65,7 @@ function proteincalculate (){
 											
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	food1.innerHTML += " of your daily protein requirement.";
+	food1.innerHTML += " of the daily protein requirement.";
 	
 
 }
