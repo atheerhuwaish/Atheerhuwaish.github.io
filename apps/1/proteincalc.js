@@ -17,7 +17,11 @@ function redinputborder(){foodinput.style.borderColor="red";}
 var bodyweightelem = document.querySelector("#bodyweight");
 	
 	bodyweightelem.addEventListener("input", function() 
-	{proteincalculate ();
+	{ if (bodyweightelem.value < 1  ||  bodyweightelem.value > 300 )
+		{food1.innerHTML ="Please enter a valid body weight number";
+		food1.style.color ="red";}
+		else
+		proteincalculate ();
 	})
 	
 
@@ -33,8 +37,9 @@ function proteincalculate (){
 	proteincontentelem.setAttribute("value", proteincontent);
 	
 	
-	if (!proteincontent) {food1.style.color ="red";
-						return food1.innerHTML ="Food item is not found, reset and try again";
+	if (!proteincontent) {redinputborder();
+						food1.style.color ="red";
+						return food1.innerHTML ="Food item is not found, you can reset and try again";
 						}
 						else {food1.style.color ="black";}	
 		
