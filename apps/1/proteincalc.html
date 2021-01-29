@@ -8,7 +8,7 @@
 
 body {position: relative; max-width: 400px; font-size: 18px; margin: 0 auto; padding: 2px; text-align:center; background-color:#ccd1cc}
 input {padding:8px 2px; margin-bottom: 5px; width: 70px; font-size: 20px;}
-input#foodinput {padding:15px 2px; width: 270px; font-size: 16px;}
+input#foodinput {padding:15px 2px; width: 77%; height: 22px; font-size: .83em;}
 button{padding:15px 2px; font-size: 18px}
 p{font-size: 20px; padding: 2px; margin:0}
 li{list-style: none}
@@ -21,7 +21,7 @@ ul, li{margin: 0; padding: 2px}
 #proteinsubtotal::after{content: "%"}
 footer{background-color: #667166; color: white}
 p#made{font-style: italic}
-#reset{position:absolute; right:0}
+#reset{float:right; height: 53px; width: 18%}
 </style>
 
 </head>
@@ -56,11 +56,11 @@ p#made{font-style: italic}
 	<option value="whole milk">	
 	<option value="whole milk yogurt">	
 	</datalist>
-	<input list="fooditems1" id="foodinput" placeholder="Search or choose your food item.."><br>
+	<input list="fooditems1" id="foodinput" placeholder="Search or choose your food item.."><button type="reset" id="reset">Reset</button><br>
 	Choose the body weight: <input type='number' id='bodyweight' value='70' min='1' max='600'> kg
 	<br>
 	<button id="foodbutton">Find protein content</button>
-	<button type="reset" id="reset">Reset</button>
+	
    
  <p id="food1"></p>
  
