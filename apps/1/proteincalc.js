@@ -6,6 +6,12 @@ var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
 
+function grayinputborder(){foodinput.style.borderColor="gray";}
+
+window.addEventListener("load", grayinputborder);
+
+function redinputborder(){foodinput.style.borderColor="red";}
+
 
 
 	
@@ -137,23 +143,23 @@ function proteincontentfunc(){
 	}
 	
 
-	
+
+
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
-	foodinput.style.borderColor="gray";
+	grayinputborder()
 	proteincalculate();
     }
-	else {foodinput.style.borderColor="red"}
-	}
+	else if  (foodinput.value.length <= 0) {redinputborder()}
+}
 	
 function fooddetailskey (event) {
-    if ( foodinput.value.length > 0 && event.which === 13 ) {
-	foodinput.style.borderColor="gray";
+	if ( foodinput.value.length > 0 && event.which === 13 ) {
+	grayinputborder()
 	proteincalculate();
     }
-	else {foodinput.style.borderColor="red"}
+	else if (foodinput.value.length <= 0) {redinputborder()}
 }
-
 
 foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
