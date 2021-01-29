@@ -103,7 +103,7 @@ function proteincontentfunc(){
 	case "eggs" : 
 	return proteincontent = 12.5;
 	
-	case "flax seeds" : 
+	case "flaxseeds" : 
 	return proteincontent = 18.29;
 	
 	case "hazelnuts" : 
