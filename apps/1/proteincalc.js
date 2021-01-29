@@ -13,16 +13,11 @@ window.addEventListener("load", grayinputborder);
 function redinputborder(){foodinput.style.borderColor="red";}
 
 
-
 	
-	var bodyweightelem = document.querySelector("#bodyweight");
+var bodyweightelem = document.querySelector("#bodyweight");
 	
-//	bodyweightelem.style.display ="none";
-		
 	bodyweightelem.addEventListener("input", function() 
-	{
-	var bodyweight = bodyweightelem.value;
-	bodyweightelem.setAttribute("value", bodyweight);	
+	{proteincalculate ();
 	})
 	
 
@@ -43,10 +38,10 @@ function proteincalculate (){
 						}
 						else {food1.style.color ="black";}	
 		
+		
 	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams constitute ";
-	var bodyweightelem = document.querySelector("#bodyweight");
 	var bodyweight = bodyweightelem.value;
-	bodyweightelem.setAttribute("value", bodyweight);
+	
 	
 	var foodamountelem= document.querySelector(".foodamount");
 	var foodamount = foodamountelem.value;
