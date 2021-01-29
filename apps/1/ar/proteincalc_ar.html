@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>حاسبة البروتين</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {position: relative; max-width: 400px; font-size: 18px; margin: 0 auto; padding: 2px; text-align:center; background-color:#ccd1cc}
+input {padding:8px 2px; margin-bottom: 5px; width: 70px; font-size: 20px;}
+input#foodinput {padding:15px 2px; width: 77%; height: 22px; font-size: .83em;}
+button{padding:15px 2px; font-size: 18px}
+p{font-size: 20px; padding: 2px; margin:0}
+li{list-style: none}
+h1{background-color: #4a5f44; color: white}
+h2{font-size: 22px}
+#subtitle{color: darkgreen; font-style: italic}
+h3{margin-bottom: 0; padding-bottom:0}
+ul, li{margin: 0; padding: 2px}
+#proteinsubtotal{color: darkblue}
+#proteinsubtotal::after{content: "%"}
+footer{background-color: #667166; color: white}
+p#made{font-style: italic}
+#reset{float:left; height: 55px; width: 18%}
+</style>
+
+</head>
+<body dir="rtl">
+<h1>حاسبة البروتين</h1>
+
+<h2 id="subtitle">للمواد النباتية</h2>
+
+    <datalist id="fooditems1">
+	
+	<option value="لوز">
+	<option value="فاصوليا مطهية">
+	<option value="خبر/صمون">
+	<option value="حبوب الشيا">
+	<option value="حمص">
+	<option value="جبنة تشيدر">
+	<option value="جبنة القريشة">
+	<option value="رقائق الذرة">
+	<option value="بيض">
+	<option value="حبوب الكتان">
+    <option value="بندق">
+	<option value="kidney فاصوليا">
+	<option value="شوفان">
+	<option value="عدس أحمر">
+	<option value="رز / تمن">
+    <option value="بروتين القمح/ سيتان">
+	<option value="فول الصويا">
+	<option value="حليب الصويا">
+	<option value="صلصة أو صوص الصويا">
+	<option value="توفو">
+	<option value="جوز">
+	<option value="دقيق أو طحين القمح">
+	<option value="حليب كامل الدسم">	
+	<option value="لبن حليب كامل">	
+	</datalist>
+	<input list="fooditems1" id="foodinput" placeholder="بحث أو اختيار المادة الغذائية.."><button type="reset" id="reset">مسح</button><br>
+	اختيار وزن الجسم <input type='number' id='bodyweight' value='70' min='1' max='600'> كغم
+	<br>
+	<button id="foodbutton">عرض محتوى البروتين</button>
+	
+   
+ <p id="food1"></p>
+ 
+ <footer>
+<h4>ملاحظة:<br>قيم البروتين  المحسوبة لا تأخذ الرياضة بنظر الاعتبار فتحسب 1.1غرام فقط لكل كيلوغرام من  وزن الجسم.<br>يحتاج الرياضيون كمية من البروتين تزيد بنسبة  25-120% حسب نشاطهم الرياضي.<br>تحتاج النساء أثناء الحمل حوالي 60% أكثر من البروتين كما تحتاج المرضعات حوالي 40% أكثر. لا نتحمل مسؤولية صحة المعلومات.</h4>
+
+
+ <h3>المصادر:</h3>
+ <ul>
+ <li>https://fdc.nal.usda.gov</li>
+ <li>https://www.nutrition.org.uk</li>
+ <li>https://examine.com/guides/protein-intake</li>
+ </ul>
+ <p id="made">By Atheer Huwaish</p>
+</footer>
+
+<script type="text/javascript" src="proteincalc_ar.js">
+</script>
+
+</body>
+</html>
