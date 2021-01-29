@@ -140,16 +140,19 @@ function proteincontentfunc(){
 	
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
+	foodinput.style.borderColor="gray";
 	proteincalculate();
     }
+	else {foodinput.style.borderColor="red"}
 	}
 	
 function fooddetailskey (event) {
     if ( foodinput.value.length > 0 && event.which === 13 ) {
+	foodinput.style.borderColor="gray";
 	proteincalculate();
     }
+	else {foodinput.style.borderColor="red"}
 }
-
 
 
 foodinput.addEventListener ("keyup", fooddetailskey);
