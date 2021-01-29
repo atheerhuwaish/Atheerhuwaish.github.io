@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eiweiß-Rechner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {position: relative; max-width: 400px; font-size: 18px; margin: 0 auto; padding: 2px; text-align:center; background-color:#ccd1cc}
+input {padding:8px 2px; margin-bottom: 5px; width: 70px; font-size: 20px;}
+input#foodinput {padding:15px 2px; width: 77%; height: 22px; font-size: .83em;}
+button{padding:15px 2px; font-size: 18px}
+p{font-size: 20px; padding: 2px; margin:0}
+li{list-style: none}
+h1{background-color: #4a5f44; color: white}
+h2{font-size: 22px}
+#subtitle{color: darkgreen; font-style: italic}
+h3{margin-bottom: 0; padding-bottom:0}
+ul, li{margin: 0; padding: 2px}
+#proteinsubtotal{color: darkblue}
+#proteinsubtotal::after{content: "%"}
+footer{background-color: #667166; color: white}
+p#made{font-style: italic}
+#reset{float:right; height: 55px; width: 18%}
+</style>
+
+</head>
+<body>
+<h1>Eiweiß-Rechner</h1>
+
+<h2 id="subtitle">Für vegetarische Nährstoffe</h2>
+
+    <datalist id="fooditems1">
+	
+	<option value="Brot">
+	<option value="Cheddarkäse">
+	<option value="Chiasamen">
+	<option value="Cornflakes">
+	<option value="Eier">
+	<option value="gebackene Bohnen">
+	<option value="Hafer">
+	<option value="Haselnüsse">
+	<option value="Hüttenkäse">
+	<option value="Kichererbsen">
+	<option value="Kidneybohnen">
+	<option value="Leinsamen">
+	<option value="Mandeln">
+	<option value="Rote Linsen">
+	<option value="Reis">
+	<option value="Seitan">
+    <option value="Sojabohnen">
+	<option value="Sojamilch">
+	<option value="Sojasauce">
+	<option value="Tofu">
+	<option value="Vollmilch">	
+	<option value="Vollmilch Joghurt">
+	<option value="Walnüsse ">
+	<option value="Weizenmehl">
+	</datalist>
+	<input list="fooditems1" id="foodinput" placeholder="Nährstoff wählen/suchen.."><button type="reset" id="reset">CE</button><br>
+	Körpergewicht wählen: <input type='number' id='bodyweight' value='70' min='1' max='600'> kg
+	<br>
+	<button id="foodbutton">Finde Eiweißgehalt</button>
+	
+   
+ <p id="food1"></p>
+ 
+ <footer>
+<h4>Haftungsausschluss:<br>Körperaktivität und Sport wurden bei der Berechnung nicht berücksichtigt, sondern lediglich 1.1g Eiweis pro Tag pro Kg Körpergewicht.<br>Sportler brauchen 25-120% mehr Eiweis.<br>Schwangere benötigen 60% mehr Eiweiß und  laktierene Frauen 40% mehr. Alle Angaben ohne Gewähr.</h4>
+
+
+ <h3>Quellen:</h3>
+ <ul>
+ <li>https://fdc.nal.usda.gov</li>
+ <li>https://www.nutrition.org.uk</li>
+ <li>https://examine.com/guides/protein-intake</li>
+ </ul>
+ <p id="made">Von  Atheer Huwaish</p>
+</footer>
+
+<script type="text/javascript" src="proteincalc_de.js">
+</script>
+
+</body>
+</html>
