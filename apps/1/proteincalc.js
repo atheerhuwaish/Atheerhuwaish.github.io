@@ -53,7 +53,7 @@ function proteincalculate (){
 						else {food1.style.color ="black";}	
 		
 		
-	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'> grams constitute ";
+	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'>g include ";
 	var bodyweight = bodyweightelem.value;
 	
 	
@@ -65,7 +65,7 @@ function proteincalculate (){
 											
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	food1.innerHTML += " of the daily protein requirement.";
+	food1.innerHTML += " of the daily requirement";
 	
 
 }
