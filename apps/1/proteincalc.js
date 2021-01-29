@@ -48,7 +48,7 @@ function proteincalculate (){
 	
 	if (!proteincontent) {redinputborder();
 						food1.style.color ="red";
-						return food1.innerHTML ="Food item is not found, you can reset and try again";
+						return food1.innerHTML ="Food item is not found, you can enter/choose a food item or reset and try again";
 						}
 						else {food1.style.color ="black";}	
 		
