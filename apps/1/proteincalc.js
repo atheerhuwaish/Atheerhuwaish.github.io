@@ -158,7 +158,7 @@ function proteincontentfunc(){
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
 	grayinputborder()
-	verifyweight()();
+	verifyweight();
     }
 	else if  (foodinput.value.length <= 0) {redinputborder()}
 }
@@ -166,7 +166,7 @@ function fooddetailsclick (){
 function fooddetailskey (event) {
 	if ( foodinput.value.length > 0 && event.which === 13 ) {
 	grayinputborder()
-	verifyweight()();
+	verifyweight();
     }
 	else if (foodinput.value.length <= 0) {redinputborder()}
 }
