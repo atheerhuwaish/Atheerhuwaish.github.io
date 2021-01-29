@@ -39,7 +39,7 @@ function verifyweight(){
 
 function proteincalculate (){
 	
-	food1.innerHTML = "<br>Protein: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
+	food1.innerHTML = "<br>Protein content: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
 	
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
