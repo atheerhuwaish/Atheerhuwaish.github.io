@@ -9,14 +9,10 @@
 <h4>Web-App (Vanilla JavaScript)</h4>
 
 <ul>	
- 	<li>Eiweis-Rechner
-        </li>
+ 	<li>Eiweis-Rechner</li>
 	<a href="https://atheerhuwaish.github.io/apps/1/proteincalc" target="_blank">Protein Calculator</a>
-</ul>
 
 <h4>Webdesign von Websites &amp; Onlineshops</h4>
-
-<ul>
 <li>Responsive Website Vorlage (2-spaltig)<br>
 <a href="https://atheerhuwaish.github.io" rel="nofollow">2-column responsive template</a>.<br></li>
 
