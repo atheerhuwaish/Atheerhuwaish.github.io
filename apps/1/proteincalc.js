@@ -16,19 +16,22 @@ function redinputborder(){foodinput.style.borderColor="red";}
 	
 var bodyweightelem = document.querySelector("#bodyweight");
 	
-	bodyweightelem.addEventListener("input", function() 
-	{ if (bodyweightelem.value < 1  ||  bodyweightelem.value > 300 )
+bodyweightelem.addEventListener("input", verifyweight);
+	
+function verifyweight(){
+	if (bodyweightelem.value < 1  ||  bodyweightelem.value > 300 
+								  || bodyweightelem.value.length < 1 )
 		{food1.innerHTML ="Please enter a valid body weight number";
-		food1.style.color ="red";}
-		else
-		proteincalculate ();
-	})
+		food1.style.color ="red";
+		return false}
+		
+		else proteincalculate();
+}
+	
 	
 
 
 function proteincalculate (){
-		
-	
 	
 	food1.innerHTML = "<br>Protein: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
 	
@@ -58,6 +61,7 @@ function proteincalculate (){
 	
 	food1.innerHTML += " of your daily protein requirement.";
 	
+
 }
 
 	
@@ -148,7 +152,7 @@ function proteincontentfunc(){
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
 	grayinputborder()
-	proteincalculate();
+	verifyweight()();
     }
 	else if  (foodinput.value.length <= 0) {redinputborder()}
 }
@@ -156,7 +160,7 @@ function fooddetailsclick (){
 function fooddetailskey (event) {
 	if ( foodinput.value.length > 0 && event.which === 13 ) {
 	grayinputborder()
-	proteincalculate();
+	verifyweight()();
     }
 	else if (foodinput.value.length <= 0) {redinputborder()}
 }
