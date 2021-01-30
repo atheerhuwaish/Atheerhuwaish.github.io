@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Protein Calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing: border-box; padding: 0; margin: .5rem auto}
-body {position: relative; max-width: 30rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#ccd1cc;
-  font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
-input {width: 4.2rem; height: 3rem; font-size: 1.2rem; margin:0; padding:0}
-input#foodinput {height: 4rem; width: 73%; font-size: 1.2rem; display:inline-block;}
-input#bodyweight{height: 4rem; width:4rem;}
+*{box-sizing: border-box; padding: 0; margin: .2rem auto}
+body {position: relative; max-width: 30rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#ccd1cc; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+input {font-size: 1.2rem;}
+input#foodinput {height: 3.5rem; width: 75%; font-size: 1.2rem; display:inline-block;}
+input#bodyweight{height: 3rem; width:4rem;}
+input.proteincontent{border:none; width: 3.5rem; height: 1.5rem;}
+input.foodamount {border:none; width: 2.5rem; height: 1.5rem;}
 button{padding:1rem .5rem; font-size: 1.2rem; background:white; border-color:black}
 p{font-size: 1.2rem; margin:0; padding:0}
 li{list-style: none}
 h1{background-color: #4a5f44; color: white}
 h2{font-size: 1.2rem}
-ul, li{}
-#proteinsubtotal{color: darkblue}
+#proteinsubtotal{background-color:white; color:blue}
 #proteinsubtotal::after{content: "%"}
 footer{background-color: #667166; color: white}
 p#made{font-style: italic}
-#reset{margin-left:.3rem; width: 4rem; height: 4rem; border-radius: 50%; display:inline-block; background-color:white; border-color: gray}
+#reset{margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem}
 #subtitle{text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
 .language-switcher{text-align:right; width:13%; font-style:italic;}
-a{text-decoration:none; ; color:darkblue}
+a{text-decoration:none; color:darkblue}
 </style>
 
 </head>
@@ -60,10 +60,10 @@ a{text-decoration:none; ; color:darkblue}
 	<option value="whole milk">	
 	<option value="whole milk yogurt">	
 	</datalist>
-	<input list="fooditems1" id="foodinput" placeholder="Search or choose your food item.."><button type="reset" id="reset">CE</button><br>
+	<input list="fooditems1" id="foodinput" placeholder="Search/choose a food item.."><button type="reset" id="reset">CE</button><br>
 	Choose the body weight: <input type='number' id='bodyweight' value='70' min='1' max='600'>kg
 	<br>
-	<button id="foodbutton">Find protein content</button>
+	<!-- <button id="foodbutton">Find protein content</button> -->
 	
    
  <p id="food1"></p>
@@ -78,7 +78,7 @@ a{text-decoration:none; ; color:darkblue}
  <li>https://www.nutrition.org.uk</li>
  <li>https://examine.com/guides/protein-intake</li>
  </ul>
- <p id="made">By <a href="/">Atheer Huwaish</a></p>
+ <p id="made">By <a href="/1/en">Atheer Huwaish</a></p>
 </footer>
 
 <script type="text/javascript" src="proteincalc.js">
