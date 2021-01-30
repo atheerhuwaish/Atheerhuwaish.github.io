@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>حاسبة البروتين</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing: border-box; padding: 0; margin: .5rem auto}
+body {position: relative; max-width: 30rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#ccd1cc;
+  font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+input {width: 4.2rem; height: 3rem; font-size: 1.2rem; margin:0; padding:0}
+input#foodinput {height: 4rem; width: 73%; font-size: 1.2rem; display:inline-block;}
+input#bodyweight{height: 4rem; width:4rem;}
+button{padding:1rem .5rem; font-size: 1.2rem}
+p{font-size: 1.2rem; margin:0; padding:0}
+li{list-style: none}
+h1{background-color: #4a5f44; color: white}
+h2{font-size: 1.2rem}
+ul, li{}
+#proteinsubtotal{color: darkblue}
+#proteinsubtotal::after{content: "%"}
+footer{background-color: #667166; color: white}
+p#made{font-style: italic}
+#reset{margin-right:.3rem; width: 4rem; height: 4rem; border-radius: 50%; display:inline-block; background-color:white; border-color: gray}
+#subtitle{text-align:right; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
+.language-switcher{text-align:left; width:13%; font-style:italic;}
+a{text-decoration:none; ; color:darkblue}
+</style>
+
+</head>
+<body dir="rtl" lang="ar">
+<h1>حاسبة البروتين</h1>
+
+<h2 id="subtitle">للغذاء النباتي</h2><a href="../../en/apps/proteincalc.html" class="language-switcher">English</a>
+
+    <datalist id="fooditems1">
+	
+	<option value="لوز">
+	<option value="فاصوليا مطهية">
+	<option value="خبز/صمون">
+	<option value="حبوب الشيا">
+	<option value="حمص">
+	<option value="جبنة تشيدر">
+	<option value="جبنة القريشة">
+	<option value="رقائق الذرة">
+	<option value="بيض">
+	<option value="حبوب الكتان">
+    <option value="بندق">
+	<option value="kidney فاصوليا">
+	<option value="شوفان">
+	<option value="عدس أحمر">
+	<option value="رز / تمن">
+    <option value="بروتين القمح/ سيتان">
+	<option value="فول الصويا">
+	<option value="حليب الصويا">
+	<option value="صلصة أو صوص الصويا">
+	<option value="توفو">
+	<option value="جوز">
+	<option value="دقيق أو طحين القمح">
+	<option value="حليب كامل الدسم">	
+	<option value="لبن حليب كامل الدسم">	
+	</datalist>
+	<input list="fooditems1" id="foodinput" placeholder="بحث أو اختيار المادة الغذائية.."><button type="reset" id="reset">مسح</button><br>
+	اختيار وزن الجسم <input type='number' id='bodyweight' value='70' min='1' max='600'> كغم
+	<br>
+	<button id="foodbutton">عرض محتوى البروتين</button>
+	
+   
+ <p id="food1"></p>
+ 
+ <footer>
+<h4>ملاحظة:<br>قيم البروتين المحسوبة لا تأخذ النشاط البدني بنظر الاعتبار فتحسب 1.1غرام فقط لكل كيلوغرام من وزن الجسم.<br>يحتاج الرياضيون كمية من البروتين تزيد بنسبة 25-120%.<br>تحتاج النساء أثناء الحمل حوالي 60% أكثر من البروتين كما تحتاج المرضعات حوالي 40% أكثر. لا نتحمل مسؤولية صحة المعلومات.</h4>
+
+
+ <h3>المصادر:</h3>
+ <ul>
+ <li>https://fdc.nal.usda.gov</li>
+ <li>https://www.nutrition.org.uk</li>
+ <li>https://examine.com/guides/protein-intake</li>
+ </ul>
+ <p id="made">By <a href="/1/en">Atheer Huwaish</a></p>
+</footer>
+
+<script type="text/javascript" src="proteincalc_ar.js">
+</script>
+
+</body>
+</html>
