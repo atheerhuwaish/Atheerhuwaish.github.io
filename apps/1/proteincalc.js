@@ -6,13 +6,16 @@ var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
 
-function grayinputborder(){foodinput.style.borderColor="gray";
-						   bodyweightelem.style.borderColor="gray";}
 
-window.addEventListener("load", grayinputborder);
+function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
+						   bodyweightelem.style.borderColor="lightgray";}
+
+window.addEventListener("load", lightgrayinputborder);
 
 function redinputborder(){foodinput.style.borderColor="red";}
 
+
+foodinput.addEventListener("input", verifyweight);
 
 	
 var bodyweightelem = document.querySelector("#bodyweight");
@@ -29,7 +32,7 @@ function verifyweight(){
 		
 		else 
 		{
-		bodyweightelem.style.borderColor="gray";
+		bodyweightelem.style.borderColor="lightgray";
 		proteincalculate();
 		}
 }
@@ -39,7 +42,7 @@ function verifyweight(){
 
 function proteincalculate (){
 	
-	food1.innerHTML = "<br>Protein content: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
+	food1.innerHTML = "<br>Protein content: <input type='text' class='proteincontent'>%<br>"
 	
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
@@ -48,12 +51,12 @@ function proteincalculate (){
 	
 	if (!proteincontent) {redinputborder();
 						food1.style.color ="red";
-						return food1.innerHTML ="Food item is not found, you can enter/choose a food item or reset and try again";
+						return food1.innerHTML ="Food item is not found, you can correct, enter/choose a food item or press CE and try again";
 						}
 						else {food1.style.color ="black";}	
 		
 		
-	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'>g include ";
+	food1.innerHTML += "<input type='text' class='foodamount' value='100'>g include ";
 	var bodyweight = bodyweightelem.value;
 	
 	
@@ -67,6 +70,7 @@ function proteincalculate (){
 	
 	food1.innerHTML += " of the daily requirement";
 	
+	lightgrayinputborder()
 
 }
 
@@ -155,9 +159,19 @@ function proteincontentfunc(){
 
 
 
+mreset.addEventListener ("click", function () {
+food1.innerHTML = "";
+foodinput.value = "";
+lightgrayinputborder()
+})
+
+
+
+
+/*
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
-	grayinputborder()
+	lightgrayinputborder()
 	verifyweight();
     }
 	else if  (foodinput.value.length <= 0) {redinputborder()}
@@ -165,18 +179,15 @@ function fooddetailsclick (){
 	
 function fooddetailskey (event) {
 	if ( foodinput.value.length > 0 && event.which === 13 ) {
-	grayinputborder()
+	lightgrayinputborder()
 	verifyweight();
     }
 	else if (foodinput.value.length <= 0) {redinputborder()}
 }
 
+
 foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
+*/
 
 	
-
-mreset.addEventListener ("click", function () {
-food1.innerHTML = "";
-foodinput.value = "";
-})
