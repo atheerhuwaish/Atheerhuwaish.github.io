@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing: border-box; padding: 0; margin: .2rem auto}
-body {position: relative; max-width: 30rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#ccd1cc; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+*{box-sizing: border-box; padding: 0; margin: .6rem auto}
+body {position: relative; max-width: 35rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#ccd1cc; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
 input {font-size: 1.2rem;}
 input#foodinput {height: 3.5rem; width: 75%; font-size: 1.2rem; display:inline-block;}
 input#bodyweight{height: 3rem; width:4rem;}
@@ -25,6 +25,17 @@ p#made{font-style: italic}
 #subtitle{text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
 .language-switcher{text-align:right; width:13%; font-style:italic;}
 a{text-decoration:none; color:darkblue}
+
+
+@media screen and (max-width: 450px) {
+				body {max-width: 30rem;
+					margin: .2rem auto;
+					}
+				
+				h1{font-size:1.9rem}
+}
+@media screen and (max-height: 750px)
+				* {margin: .2rem auto}
 </style>
 
 </head>
@@ -62,7 +73,7 @@ a{text-decoration:none; color:darkblue}
 	</datalist>
 	<input list="fooditems1" id="foodinput" placeholder="Search/choose a food item.."><button type="reset" id="reset">CE</button><br>
 	Choose the body weight: <input type='number' id='bodyweight' value='70' min='1' max='600'>kg
-	<br>
+	<hr>
 	<!-- <button id="foodbutton">Find protein content</button> -->
 	
    
