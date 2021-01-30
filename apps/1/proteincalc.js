@@ -189,5 +189,3 @@ function fooddetailskey (event) {
 foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
 */
-
-	
