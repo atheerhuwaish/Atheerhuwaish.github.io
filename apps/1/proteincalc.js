@@ -5,6 +5,38 @@ var datalist = document.getElementById("fooditems1");
 var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
+var factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
+
+var foodproteincontent =document.querySelector("#foodproteincontent");
+
+// var factorvaluefemale = document.querySelectorAll(".factorvaluefemale");
+
+
+function factorvalueactivities()
+{return factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;}
+
+
+
+var factor = 1.3;
+
+
+function factorvalueactivitiesfunc() {
+switch (factorvalueactivities()) {
+case "none" :  return factor = 1.1;
+	
+case	"rare" : return factor =1.2;
+	
+case	"middle" : return factor = 1.3;
+
+case	"rel_high" :  return factor = 1.5;
+	
+case	"high" :  return factor = 1.8;
+	
+case	"very_high" : return factor = 2.4;
+	
+default : return factor = false;
+}
+}
 
 
 function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
@@ -17,6 +49,8 @@ function redinputborder(){foodinput.style.borderColor="red";}
 
 foodinput.addEventListener("input", verifyweight);
 
+
+
 	
 var bodyweightelem = document.querySelector("#bodyweight");
 	
@@ -28,11 +62,12 @@ function verifyweight(){
 		{food1.innerHTML ="Please enter a valid body weight number";
 		food1.style.color ="red";
 		bodyweightelem.style.borderColor="red";
-		return false}
+		}
 		
 		else 
 		{
 		bodyweightelem.style.borderColor="lightgray";
+		factorvalueactivitiesfunc();
 		proteincalculate();
 		}
 }
@@ -42,21 +77,24 @@ function verifyweight(){
 
 function proteincalculate (){
 	
-	food1.innerHTML = "<br>Protein content: <input type='text' class='proteincontent'>%<br>"
+	factor= factorvalueactivitiesfunc();
 	
+	
+	foodproteincontent.innerHTML = "<br>Protein content is <input type='text' class='proteincontent'>%<br>"
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
 	proteincontentelem.setAttribute("value", proteincontent);
-	
-	
-	if (!proteincontent) {redinputborder();
+			
+		
+	if (!proteincontent) {redinputborder();	
 						food1.style.color ="red";
-						return food1.innerHTML ="Food item is not found, you can correct, enter/choose a food item or press CE and try again";
+						foodproteincontent.innerHTML = "";	
+						return food1.innerHTML ="Food item is not found, you can correct, enter or choose a food item or press CE and try again";
 						}
 						else {food1.style.color ="black";}	
 		
 		
-	food1.innerHTML += "<input type='text' class='foodamount' value='100'>g include ";
+	food1.innerHTML = "<input type='text' class='foodamount' value='100'>g include ";
 	var bodyweight = bodyweightelem.value;
 	
 	
@@ -64,19 +102,27 @@ function proteincalculate (){
 	var foodamount = foodamountelem.value;
 	foodamountelem.setAttribute("value", foodamount);
 	
-	proteinsubtotal= parseInt(foodamount * proteincontent / (1.1 * bodyweight)  );
-											
+		
+	
+	var dailyrequirementingram = parseInt(factor * bodyweight);	
+	
+	
+	
+	proteinsubtotal= parseInt(foodamount * proteincontent / dailyrequirementingram  );
+		
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	food1.innerHTML += " of the daily requirement";
+	food1.innerHTML += " of the daily protein requirement (" + dailyrequirementingram + "g)";
+			
 	
-	lightgrayinputborder()
+	lightgrayinputborder();
 
 }
 
+
+
 	
-function proteincontentfunc(){
-	
+function proteincontentfunc(){	
 	
 	switch (foodinput.value.toLowerCase()) {
 
@@ -162,16 +208,19 @@ function proteincontentfunc(){
 mreset.addEventListener ("click", function () {
 food1.innerHTML = "";
 foodinput.value = "";
+foodproteincontent.innerHTML ="";
 lightgrayinputborder()
 })
 
 
 
+// factorvalueactivitieselem.addEventListener("input", proteincontentfunc);
 
-/*
+
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
-	lightgrayinputborder()
+	lightgrayinputborder();
+	factorvalueactivitiesfunc();
 	verifyweight();
     }
 	else if  (foodinput.value.length <= 0) {redinputborder()}
@@ -179,7 +228,8 @@ function fooddetailsclick (){
 	
 function fooddetailskey (event) {
 	if ( foodinput.value.length > 0 && event.which === 13 ) {
-	lightgrayinputborder()
+	lightgrayinputborder();
+	factorvalueactivitiesfunc();
 	verifyweight();
     }
 	else if (foodinput.value.length <= 0) {redinputborder()}
@@ -188,4 +238,3 @@ function fooddetailskey (event) {
 
 foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
-*/
