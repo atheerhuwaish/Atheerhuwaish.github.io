@@ -5,13 +5,50 @@ var datalist = document.getElementById("fooditems1");
 var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
+var factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
 
-function grayinputborder(){foodinput.style.borderColor="gray";
-						   bodyweightelem.style.borderColor="gray";}
+var foodproteincontent =document.querySelector("#foodproteincontent");
 
-window.addEventListener("load", grayinputborder);
+// var factorvaluefemale = document.querySelectorAll(".factorvaluefemale");
+
+
+function factorvalueactivities()
+{return factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;}
+
+
+
+var factor = 1.3;
+
+
+function factorvalueactivitiesfunc() {
+switch (factorvalueactivities()) {
+case "none" :  return factor = 1.1;
+	
+case	"rare" : return factor =1.2;
+	
+case	"middle" : return factor = 1.3;
+
+case	"rel_high" :  return factor = 1.5;
+	
+case	"high" :  return factor = 1.8;
+	
+case	"very_high" : return factor = 2.4;
+	
+default : return factor = false;
+}
+}
+
+
+function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
+						   bodyweightelem.style.borderColor="lightgray";}
+
+window.addEventListener("load", lightgrayinputborder);
 
 function redinputborder(){foodinput.style.borderColor="red";}
+
+
+foodinput.addEventListener("input", verifyweight);
+
 
 
 	
@@ -25,11 +62,12 @@ function verifyweight(){
 		{food1.innerHTML ="Please enter a valid body weight number";
 		food1.style.color ="red";
 		bodyweightelem.style.borderColor="red";
-		return false}
+		}
 		
 		else 
 		{
-		bodyweightelem.style.borderColor="gray";
+		bodyweightelem.style.borderColor="lightgray";
+		factorvalueactivitiesfunc();
 		proteincalculate();
 		}
 }
@@ -39,21 +77,27 @@ function verifyweight(){
 
 function proteincalculate (){
 	
-	food1.innerHTML = "<br>Eiweißgehalt: <input type='number' class='proteincontent' min='0' max='100'>%<br>"
+	factor= factorvalueactivitiesfunc();
 	
+	
+	if (foodinput.value != "" )
+	{	
+	foodproteincontent.innerHTML = "<br>Protein content of " + foodinput.value + " is <input type='text' class='proteincontent'>%<br>"
+		
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
 	proteincontentelem.setAttribute("value", proteincontent);
-	
+	}		
+		
 	
 	if (!proteincontent) {redinputborder();
 						food1.style.color ="red";
-						return food1.innerHTML ="Nährstoff nicht gefunden, Sie können einen wählen/eingeben oder CE wählen und nochmals versuchen";
+						return food1.innerHTML ="Food item is not found, you can correct, enter/choose a food item or press CE and try again";
 						}
 						else {food1.style.color ="black";}	
 		
 		
-	food1.innerHTML += "<input type='number' class='foodamount' value='100' min='0' max='9999'>g beinhalten ";
+	food1.innerHTML = "<input type='text' class='foodamount' value='100'>g include ";
 	var bodyweight = bodyweightelem.value;
 	
 	
@@ -61,91 +105,100 @@ function proteincalculate (){
 	var foodamount = foodamountelem.value;
 	foodamountelem.setAttribute("value", foodamount);
 	
-	proteinsubtotal= parseInt(foodamount * proteincontent / (1.1 * bodyweight)  );
-											
+		
+	
+	var dailyrequirementingram = parseInt(factor * bodyweight);	
+	
+	
+	
+	proteinsubtotal= parseInt(foodamount * proteincontent / dailyrequirementingram  );
+		
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	food1.innerHTML += " des täglichen Bedarfs";
+	food1.innerHTML += " of the daily protein requirement (" + dailyrequirementingram + "g)";
+			
 	
+	lightgrayinputborder();
 
 }
 
+
+
 	
-function proteincontentfunc(){
-	
+function proteincontentfunc(){	
 	
 	switch (foodinput.value.toLowerCase()) {
 
-	case "gebackene bohnen" : 
+	case "almonds" : 
+	return proteincontent = 19.35;
+
+	case "baked beans" : 
 	return proteincontent = 5.2;
 	
-	case "mandeln" : 
-	return proteincontent = 19.35;
-	
-	case "brot" : 
+	case "bread" : 
 	return proteincontent = 7.9;
 	
-	case "chiasamen" : 
+	case "chia seeds" : 
 	return proteincontent = 18.29;
 	
-	case "cheddarkäse" : 
+	case "chickpeas" : 
 	return proteincontent = 8.75;
 	
-	case "hüttenkäse" : 
+	case "cheddar cheese" : 
 	return proteincontent = 25.4;	
 	
-	case "cornflakes" : 
+	case "cottage cheese" : 
 	return proteincontent = 12.6;	
 	
-	case "kichererbsen" : 
+	case "cornflakes" : 
 	return proteincontent = 7.5;
 	
-	case "eier" : 
+	case "eggs" : 
 	return proteincontent = 12.5;
 	
-	case "leinsamen" : 
+	case "flaxseeds" : 
 	return proteincontent = 18.29;
 	
-	case "haselnüsse" : 
+	case "hazelnuts" : 
 	return proteincontent = 14.1;
 	
-	case "kidneybohnen" : 
+	case "kidney beans" : 
 	return proteincontent = 6.9;
 	
-	case "hafer" : 
+	case "oatmeal" : 
 	return proteincontent = 11.2;
 	
-	case "rote linsen" : 
+	case "red lentils" : 
 	return proteincontent = 7.6;
 	
-	case "reis" : 
+	case "rice" : 
 	return proteincontent = 6.67;
 	
 	case "seitan" : 
 	return proteincontent = 19.05;
 	
-	case "sojabohnen" : 
+	case "soy nuts" : 
 	return proteincontent = 38.55;
 	
-	case "sojamilch" : 
+	case "soy milk" : 
 	return proteincontent = 2.6;
 
-	case "sojasauce" : 
+	case "soy sauce" : 
 	return proteincontent = 8.14;
 	
 	case "tofu" : 
 	return proteincontent = 9.41;
 	
-	case "walnüsse" : 
+	case "walnuts" : 
 	return proteincontent = 14.7;
 	
-	case "weizenmehl" : 
+	case "wheat flour" : 
 	return proteincontent = 12.6;
 	
-	case "vollmilch" : 
+	case "whole milk" : 
 	return proteincontent = 3.3;
 	
-	case "vollmilch joghurt" : 
+	case "whole milk yogurt" : 
 	return proteincontent = 5.7;
 	
 	default: proteincontent = false;
@@ -155,9 +208,22 @@ function proteincontentfunc(){
 
 
 
+mreset.addEventListener ("click", function () {
+food1.innerHTML = "";
+foodinput.value = "";
+foodproteincontent.innerHTML ="";
+lightgrayinputborder()
+})
+
+
+
+// factorvalueactivitieselem.addEventListener("input", proteincontentfunc);
+
+
 function fooddetailsclick (){
 	if ( foodinput.value.length > 0 ) {
-	grayinputborder()
+	lightgrayinputborder();
+	factorvalueactivitiesfunc();
 	verifyweight();
     }
 	else if  (foodinput.value.length <= 0) {redinputborder()}
@@ -165,18 +231,13 @@ function fooddetailsclick (){
 	
 function fooddetailskey (event) {
 	if ( foodinput.value.length > 0 && event.which === 13 ) {
-	grayinputborder()
+	lightgrayinputborder();
+	factorvalueactivitiesfunc();
 	verifyweight();
     }
 	else if (foodinput.value.length <= 0) {redinputborder()}
 }
 
+
 foodinput.addEventListener ("keyup", fooddetailskey);
 mbutton.addEventListener ("click", fooddetailsclick);
-
-	
-
-mreset.addEventListener ("click", function () {
-food1.innerHTML = "";
-foodinput.value = "";
-})
