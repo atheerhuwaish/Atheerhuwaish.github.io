@@ -75,22 +75,23 @@ function verifyweight(){
 	
 	
 	
+	
+	
 function proteincalculate (){
 	
 	factor= factorvalueactivitiesfunc();
+		
 	
-	if (foodinput.value != "" )
-	{	
-	foodproteincontent.innerHTML = "<br>Eiweißgehalt (" + foodinput.value + "): <input type='text' class='proteincontent'>%<br>"
-	
+	foodproteincontent.innerHTML = "<br>Eiweißgehalt ist <input type='text' class='proteincontent'>%<br>"
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
 	proteincontentelem.setAttribute("value", proteincontent);
-	}
 	
-	if (!proteincontent) {redinputborder();
+	
+	if (!proteincontent) {redinputborder();	
 						food1.style.color ="red";
-						return food1.innerHTML ="Nährstoff nicht gefundem, bitte korrigieren, eingeben/wählen oder CE drücken und nochmals versuchen";
+						foodproteincontent.innerHTML = "";		
+						return food1.innerHTML ="Lebensmittel nicht gefunden, bitte korrigieren, eingeben oder wählen oder CE wählen und nochmals versuchen";
 						}
 						else {food1.style.color ="black";}	
 		
