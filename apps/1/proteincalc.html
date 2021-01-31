@@ -6,27 +6,29 @@
 
 <style>
 *{box-sizing: border-box; padding: 0; margin: .6rem auto}
-body {position: relative; max-width: 35rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#ccd1cc; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
-input {font-size: 1.2rem;}
-input#foodinput {height: 3.5rem; width: 75%; font-size: 1.2rem; display:inline-block;}
-input#bodyweight{height: 3rem; width:4rem;}
+body {position: relative; max-width: 35rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+input, select{height: 3rem;; font-size: 1.2rem;}
+input#foodinput {width: 75%; font-size: 1.2rem; display:inline-block; padding-left:.2rem}
+input#bodyweight{ width:4rem;}
 input.proteincontent{border:none; width: 3.5rem; height: 1.5rem;}
 input.foodamount {border:none; width: 2.5rem; height: 1.5rem;}
-button{padding:1rem .5rem; font-size: 1.2rem; background:white; border-color:black}
+button{padding:1rem .5rem; font-size: 1.2rem; background:white; border-color:black; max-width:300px; border-radius:1rem}
 p{font-size: 1.2rem; margin:0; padding:0}
 li{list-style: none}
 h1{background-color: #4a5f44; color: white}
 h2{font-size: 1.2rem}
 #proteinsubtotal{background-color:white; color:blue}
 #proteinsubtotal::after{content: "%"}
-footer{background-color: #667166; color: white}
+footer{background-color: #667166; color: white; padding: 1rem}
 p#made{font-style: italic}
 #reset{margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem}
 #subtitle{text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
 .language-switcher{text-align:right; width:13%; font-style:italic;}
 a{text-decoration:none; color:darkblue}
-
-
+input[type="radio"]{height:.7rem; margin-left: .4rem}
+label{margin-left:.1rem}
+footer p.note{text-align:left; font-weight: bold}
+footer p.note:not(:first-child){margin-top:1rem}
 
 @media screen and (max-width: 450px) {
 				body {max-width: 30rem;
@@ -35,6 +37,12 @@ a{text-decoration:none; color:darkblue}
 				
 				h1{font-size:1.9rem}
 }
+
+@media screen and (max-width: 359px) {
+#female{display:block}
+}
+
+
 @media screen and (max-height: 750px)
 				* {margin: .2rem auto}
 </style>
@@ -73,15 +81,34 @@ a{text-decoration:none; color:darkblue}
 	<option value="whole milk yogurt">	
 	</datalist>
 	<input list="fooditems1" id="foodinput" placeholder="Search/choose a food item.."><button type="reset" id="reset">CE</button><br>
-	Choose the body weight: <input type='number' id='bodyweight' value='70' min='1' max='600'>kg
-	<hr>
-	<!-- <button id="foodbutton">Find protein content</button> -->
 	
+	<p id="foodproteincontent"></p>
+	
+	Choose the body weight: <input type='number' id='bodyweight' value='70' min='1' max='600'>kg
+<br>
+<label for="physicalactivity">Physical activity/Sport:</label>
+<select name="factorvalueactivities" id="factorvalueactivities">
+	<option value="none">1.none</option>
+	<option value="rare">2.rare</option>
+	<option value="middle" selected>3.middle activity/sport</option>
+	<option value="rel_high">4.relatively high activity/sport</option>
+	<option value="high">5.high activity/sport</option>
+	<option value="very_high">6.very high for muscle building</option>
+</select>
+
+
+<!-- <br><span id="female">Female:</span> -->
+<!-- <input type="radio" class="factorvaluefemale" id="pregnant" name="femalepossiblereq" value="pregnant"><label for="pregnant">Pregnant</label> -->
+<!-- <input type="radio" class="factorvaluefemale" id="lactating" name="femalepossiblereq" value="lactating"><label for="lactating">Lactating</label> -->
+<!-- <input type="radio" class="factorvaluefemale" id="no" name="femalepossiblereq" value="no" checked><label for="no">None</label> -->
+
+	<br>
+	<button id="foodbutton">Update protein requirements to consider physical activity</button>
+	<p id="food1"></p>
    
- <p id="food1"></p>
- 
  <footer>
-<h4>Disclaimer:<br>Protein values are currently only for sedentary persons using 1.1g protein daily per kg bodyweight.<br>Sport people need 25-120% more protein depending on their activity.<br>Females while pregnant need 60% more and while lactating need 40% more. All the information is without liability.</h4>
+<p class="note">Important Note:<br>Women require regardless of their physical activity as much protein as sport people with high activity (option 5) while pregnant and as much as sport people with relatively high activity (option 4) while lactating.</p>
+<p class="note">Disclaimer: All information is without liability.</p>
 
 
  <h3>Sources:</h3>
