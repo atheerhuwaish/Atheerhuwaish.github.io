@@ -27,9 +27,9 @@ case "none" :  return factor = 1.1;
 case	"rare" : return factor =1.2;
 	
 case	"middle" : return factor = 1.3;
-
-case	"rel_high" :  return factor = 1.5;
 	
+case	"rel_high" :  return factor = 1.5;
+
 case	"high" :  return factor = 1.8;
 	
 case	"very_high" : return factor = 2.4;
@@ -59,9 +59,10 @@ bodyweightelem.addEventListener("input", verifyweight);
 function verifyweight(){
 	if (bodyweightelem.value < 1  ||  bodyweightelem.value > 600 
 								  || bodyweightelem.value.length < 1 )
-		{food1.innerHTML ="Please enter a valid body weight number";
+		{food1.innerHTML ="bitte ein gültiges Körpergewicht eingeben";
 		food1.style.color ="red";
 		bodyweightelem.style.borderColor="red";
+		
 		}
 		
 		else 
@@ -73,31 +74,29 @@ function verifyweight(){
 }
 	
 	
-
-
+	
 function proteincalculate (){
 	
 	factor= factorvalueactivitiesfunc();
 	
-	
 	if (foodinput.value != "" )
 	{	
-	foodproteincontent.innerHTML = "<br>Protein content of " + foodinput.value + " is <input type='text' class='proteincontent'>%<br>"
-		
+	foodproteincontent.innerHTML = "<br>Eiweißgehalt (" + foodinput.value + "): <input type='text' class='proteincontent'>%<br>"
+	
 	var proteincontentelem = document.querySelector(".proteincontent");
 	var proteincontent = proteincontentfunc();
 	proteincontentelem.setAttribute("value", proteincontent);
-	}		
-		
+	}
 	
 	if (!proteincontent) {redinputborder();
 						food1.style.color ="red";
-						return food1.innerHTML ="Food item is not found, you can correct, enter/choose a food item or press CE and try again";
+						return food1.innerHTML ="Nährstoff nicht gefundem, bitte korrigieren, eingeben/wählen oder CE drücken und nochmals versuchen";
 						}
 						else {food1.style.color ="black";}	
 		
 		
-	food1.innerHTML = "<input type='text' class='foodamount' value='100'>g include ";
+		
+	food1.innerHTML = "<input type='text' class='foodamount' value='100'>g beinhalten ";
 	var bodyweight = bodyweightelem.value;
 	
 	
@@ -105,7 +104,7 @@ function proteincalculate (){
 	var foodamount = foodamountelem.value;
 	foodamountelem.setAttribute("value", foodamount);
 	
-		
+	
 	
 	var dailyrequirementingram = parseInt(factor * bodyweight);	
 	
@@ -115,90 +114,90 @@ function proteincalculate (){
 		
 	food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 	
-	food1.innerHTML += " of the daily protein requirement (" + dailyrequirementingram + "g)";
+	food1.innerHTML += " des täglichen Eiweißbedarfs (" + dailyrequirementingram + "g)";
 			
 	
 	lightgrayinputborder();
 
 }
-
-
-
 	
-function proteincontentfunc(){	
+	
+		
+function proteincontentfunc(){
+	
 	
 	switch (foodinput.value.toLowerCase()) {
 
-	case "almonds" : 
-	return proteincontent = 19.35;
-
-	case "baked beans" : 
+	case "gebackene bohnen" : 
 	return proteincontent = 5.2;
 	
-	case "bread" : 
+	case "mandeln" : 
+	return proteincontent = 19.35;
+	
+	case "brot" : 
 	return proteincontent = 7.9;
 	
-	case "chia seeds" : 
+	case "chiasamen" : 
 	return proteincontent = 18.29;
 	
-	case "chickpeas" : 
+	case "cheddarkäse" : 
 	return proteincontent = 8.75;
 	
-	case "cheddar cheese" : 
+	case "hüttenkäse" : 
 	return proteincontent = 25.4;	
 	
-	case "cottage cheese" : 
+	case "cornflakes" : 
 	return proteincontent = 12.6;	
 	
-	case "cornflakes" : 
+	case "kichererbsen" : 
 	return proteincontent = 7.5;
 	
-	case "eggs" : 
+	case "eier" : 
 	return proteincontent = 12.5;
 	
-	case "flaxseeds" : 
+	case "leinsamen" : 
 	return proteincontent = 18.29;
 	
-	case "hazelnuts" : 
+	case "haselnüsse" : 
 	return proteincontent = 14.1;
 	
-	case "kidney beans" : 
+	case "kidneybohnen" : 
 	return proteincontent = 6.9;
 	
-	case "oatmeal" : 
+	case "hafer" : 
 	return proteincontent = 11.2;
 	
-	case "red lentils" : 
+	case "rote linsen" : 
 	return proteincontent = 7.6;
 	
-	case "rice" : 
+	case "reis" : 
 	return proteincontent = 6.67;
 	
 	case "seitan" : 
 	return proteincontent = 19.05;
 	
-	case "soy nuts" : 
+	case "sojabohnen" : 
 	return proteincontent = 38.55;
 	
-	case "soy milk" : 
+	case "sojamilch" : 
 	return proteincontent = 2.6;
 
-	case "soy sauce" : 
+	case "sojasauce" : 
 	return proteincontent = 8.14;
 	
 	case "tofu" : 
 	return proteincontent = 9.41;
 	
-	case "walnuts" : 
+	case "walnüsse" : 
 	return proteincontent = 14.7;
 	
-	case "wheat flour" : 
+	case "weizenmehl" : 
 	return proteincontent = 12.6;
 	
-	case "whole milk" : 
+	case "vollmilch" : 
 	return proteincontent = 3.3;
 	
-	case "whole milk yogurt" : 
+	case "vollmilch joghurt" : 
 	return proteincontent = 5.7;
 	
 	default: proteincontent = false;
@@ -218,6 +217,7 @@ lightgrayinputborder()
 
 
 // factorvalueactivitieselem.addEventListener("input", proteincontentfunc);
+
 
 
 function fooddetailsclick (){
