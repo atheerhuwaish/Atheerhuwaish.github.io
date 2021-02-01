@@ -126,87 +126,107 @@ function proteincalculate (){
 
 
 
-	
+
 function proteincontentfunc(){	
 	
 	switch (foodinput.value.toLowerCase()) {
 
 	case "almonds" : 
-	return proteincontent = 19.35;
+	return proteincontent = 21.15;
 
-	case "baked beans" : 
-	return proteincontent = 5.2;
-	
-	case "bread" : 
-	return proteincontent = 7.9;
-	
+	case "black beans" : 
+	return proteincontent = 21.6;
+
+	case "brie cheese" : 
+	return proteincontent = 20.75;	
+
+	case "broad beans (fava beans)" : 
+	return proteincontent = 26.12;	
+
+	case "cashew" : 
+	return proteincontent = 18.22;	
+
 	case "chia seeds" : 
-	return proteincontent = 18.29;
+	return proteincontent = 16.54;
 	
 	case "chickpeas" : 
-	return proteincontent = 8.75;
+	return proteincontent = 20.47;
 	
 	case "cheddar cheese" : 
-	return proteincontent = 25.4;	
-	
-	case "cottage cheese" : 
-	return proteincontent = 12.6;	
-	
-	case "cornflakes" : 
-	return proteincontent = 7.5;
+	return proteincontent = 24.25;	
+		
+	case "corn grain" : 
+	return proteincontent = 9.42;
 	
 	case "eggs" : 
-	return proteincontent = 12.5;
+	return proteincontent = 12.56;
+
+	case "english walnuts" : 
+	return proteincontent = 15.23;
+
+	case "firm tofu" : 
+	return proteincontent = 10.92;
 	
 	case "flaxseeds" : 
 	return proteincontent = 18.29;
+
+	case "green peas" : 
+	return proteincontent = 5.42;
 	
 	case "hazelnuts" : 
-	return proteincontent = 14.1;
+	return proteincontent = 14.95;
 	
 	case "kidney beans" : 
-	return proteincontent = 6.9;
+	return proteincontent = 23.58;
 	
-	case "oatmeal" : 
-	return proteincontent = 11.2;
-	
-	case "red lentils" : 
-	return proteincontent = 7.6;
+	case "lentils" : 
+	return proteincontent = 24.63;
+
+	case "mozzerella cheese" : 
+	return proteincontent = 22.17;	
+
+	case "oat flour" : 
+	return proteincontent = 14.66;
+
+	case "peanuts" : 
+	return proteincontent = 25.8;	
+
+	case "pistachio" : 
+	return proteincontent = 20.16;	
 	
 	case "rice" : 
-	return proteincontent = 6.67;
+	return proteincontent = 7.23;
 	
-	case "seitan" : 
-	return proteincontent = 19.05;
+	case "soybeans" : 
+	return proteincontent = 36.49;
 	
-	case "soy nuts" : 
-	return proteincontent = 38.55;
-	
-	case "soy milk" : 
-	return proteincontent = 2.6;
+	case "soymilk" : 
+	return proteincontent = 2.47;
 
 	case "soy sauce" : 
-	return proteincontent = 8.14;
+	return proteincontent = 10.51;
+
+	case "soft tofu" : 
+	return proteincontent = 6.38;
 	
-	case "tofu" : 
-	return proteincontent = 9.41;
-	
-	case "walnuts" : 
-	return proteincontent = 14.7;
-	
-	case "wheat flour" : 
-	return proteincontent = 12.6;
+	case "wheat, soft white" : 
+	return proteincontent = 10.69;
+
+	case "wheat, hard white" : 
+	return proteincontent = 11.31;
+
+	case "white beans" : 
+	return proteincontent = 21.11;
 	
 	case "whole milk" : 
-	return proteincontent = 3.3;
+	return proteincontent = 3.15;
 	
 	case "whole milk yogurt" : 
-	return proteincontent = 5.7;
+	return proteincontent = 3.47;
 	
 	default: proteincontent = false;
 	}
 	}
-	
 
 
 
