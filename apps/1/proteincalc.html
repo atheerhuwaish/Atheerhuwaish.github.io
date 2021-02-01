@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Protein Calculator</title>
+	<title>Protein Calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 *{box-sizing: border-box; padding: 0; margin: .6rem auto}
-body {position: relative; max-width: 35rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
-input, select{height: 3rem;; font-size: 1.2rem;}
+body {
+	position: relative; max-width: 35rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+	input, select{height: 3rem;; font-size: 1.2rem;
+	}
 input#foodinput {width: 75%; font-size: 1.2rem; display:inline-block; padding-left:.2rem}
+
 input#bodyweight{ width:4rem;}
+
 input.proteincontent{border:none; width: 3.5rem; height: 1.5rem;}
-input.foodamount {border:none; width: 2.5rem; height: 1.5rem;}
-button{padding:1rem .5rem; font-size: 1.2rem; background:white; border-color:black; max-width:300px; border-radius:1rem}
+
+button{padding:1rem .5rem; font-size: 1.2rem; border-color:black; max-width:300px; border-radius:1rem}
+
 p{font-size: 1.2rem; margin:0; padding:0}
+
 li{list-style: none}
+
 h1{background-color: #4a5f44; color: white}
+
 h2{font-size: 1.2rem}
-#proteinsubtotal{background-color:white; color:blue}
-#proteinsubtotal::after{content: "%"}
+
+#proteinsubtotal, #dailyrequirementingram, .proteincontent{color:blue}
+
+#proteinsubtotal::after{content: "%";}
+
 footer{background-color: #667166; color: white; padding: 1rem}
+
 p#made{font-style: italic}
-#reset{margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem}
-#subtitle{text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
+
+#reset{
+	margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
+	}
+#subtitle {text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
+
 .language-switcher{text-align:right; width:13%; font-style:italic;}
+
 a{text-decoration:none; color:darkblue}
+
 input[type="radio"]{height:.7rem; margin-left: .4rem}
 label{margin-left:.1rem}
+
+#result{font-weight:700; text-decoration:underline;}
+
 footer p.note{text-align:left; font-weight: bold}
+
 footer p.note:not(:first-child){margin-top:1rem}
 
 @media screen and (max-width: 450px) {
@@ -39,7 +61,7 @@ footer p.note:not(:first-child){margin-top:1rem}
 }
 
 @media screen and (max-width: 359px) {
-#female{display:block}
+				#female{display:block}
 }
 
 
@@ -104,33 +126,33 @@ footer p.note:not(:first-child){margin-top:1rem}
 </select>
 
 
-<!-- <br><span id="female">Female:</span> -->
-<!-- <input type="radio" class="factorvaluefemale" id="pregnant" name="femalepossiblereq" value="pregnant"><label for="pregnant">Pregnant</label> -->
-<!-- <input type="radio" class="factorvaluefemale" id="lactating" name="femalepossiblereq" value="lactating"><label for="lactating">Lactating</label> -->
-<!-- <input type="radio" class="factorvaluefemale" id="no" name="femalepossiblereq" value="no" checked><label for="no">None</label> -->
-
+	<!-- <br><span id="female">Female:</span> -->
+	<!-- <input type="radio" class="factorvaluefemale" id="pregnant" name="femalepossiblereq" value="pregnant"><label for="pregnant">Pregnant</label> -->
+	<!-- <input type="radio" class="factorvaluefemale" id="lactating" name="femalepossiblereq" value="lactating"><label for="lactating">Lactating</label> -->
+	<!-- <input type="radio" class="factorvaluefemale" id="no" name="femalepossiblereq" value="no" checked><label for="no">None</label> -->
 	<br>
-	<!-- <button id="foodbutton">Update protein requirements to consider physical activity</button> -->
+	<!-- <button id="foodbutton">Update protein requirements</button> -->
 	<p id="food1"></p>
    
  <footer>
-<p class="note">Important Note for pregnant and lactating women:<br>Women require regardless of their physical activity as much protein as sport people with high activity (option 5) while pregnant and as much as sport people with relatively high activity (option 4) while lactating.</p>
-<p class="note">Disclaimer: All information is without liability.</p>
+	<p class="note">Important Note for pregnant and lactating women:<br>Women require regardless of their physical activity as much protein as sport people with high activity (option 5) while pregnant and as much as sport people with relatively high activity (option 4) while lactating.</p>
+	<p class="note">Disclaimer: All information is without liability.</p>
 
 
- <h3>Sources:</h3>
- <ul>
- <li>Standard Reference (SR Legacy)<br>
-	Survey (FNDDS)<br>
-	https://fdc.nal.usda.gov</li>
- <li>https://examine.com/guides/protein-intake</li>
- </ul>
- <p id="made">By <a href="/">Atheer Huwaish</a></p>
+	 <h3>Sources:</h3>
+	 <ul>
+		<li>Standard Reference (SR Legacy)<br>
+			Survey (FNDDS)<br>
+			https://fdc.nal.usda.gov</li>
+		<li>https://examine.com/guides/protein-intake</li>
+		<li>https://pubmed.ncbi.nlm.nih.gov/19841581</li>
+		<li>https://www.healthline.com/nutrition/how-much-protein-per-day</li>
+	 </ul>
+	<p id="made">By <a href="/">Atheer Huwaish</a></p>
 </footer>
 
 
-<script src="proteincalc.js">
-</script>
+<script src="proteincalc.js"></script>
 
 </body>
 </html>
