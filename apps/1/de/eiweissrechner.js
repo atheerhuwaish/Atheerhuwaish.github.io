@@ -93,7 +93,7 @@ function proteincalculate (){
 	if (!proteincontent) {redinputborder();	
 						food1.style.color ="red";
 						foodproteincontent.innerHTML = "";		
-						return food1.innerHTML ="Lebensmittel nicht gefunden, bitte korrigieren, eingeben oder wählen oder CE wählen und nochmals versuchen";
+						return food1.innerHTML ="Nahrungsmittel nicht gefunden, bitte korrigieren, eingeben, wählen oder CE wählen und nochmals versuchen";
 						}
 						else {food1.style.color ="black";}	
 		
