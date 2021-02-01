@@ -1,27 +1,29 @@
 var datalist = document.getElementById("fooditems1");
-var mbutton = document.getElementById("foodbutton");
+// var mbutton = document.getElementById("foodbutton");
 var food1 = document.getElementById("food1");
 var datalist = document.getElementById("fooditems1");
 var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 
-var factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
-
 var foodproteincontent =document.querySelector("#foodproteincontent");
+
+var factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
+factorvalueactivities= factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;
+
 
 // var factorvaluefemale = document.querySelectorAll(".factorvaluefemale");
 
-
-function factorvalueactivities()
-{return factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;}
+var factor = factorvalueactivities;
 
 
+factorvalueactivitieselem.addEventListener("change", factorvalueactivitiesfunc);
+factorvalueactivitieselem.addEventListener("change", proteincalculate);
+factorvalueactivitieselem.addEventListener("change", verifyweight);
 
-var factor = 1.3;
 
 
 function factorvalueactivitiesfunc() {
-switch (factorvalueactivities()) {
+switch (factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value) {
 case "none" :  return factor = 1.1;
 	
 case	"rare" : return factor =1.2;
@@ -80,7 +82,7 @@ function verifyweight(){
 function proteincalculate (){
 	
 	factor= factorvalueactivitiesfunc();
-		
+	
 	
 	foodproteincontent.innerHTML = "<br>Eiweißgehalt ist <input type='text' class='proteincontent'>%<br>"
 	var proteincontentelem = document.querySelector(".proteincontent");
@@ -241,4 +243,4 @@ function fooddetailskey (event) {
 
 
 foodinput.addEventListener ("keyup", fooddetailskey);
-mbutton.addEventListener ("click", fooddetailsclick);
+// mbutton.addEventListener ("click", fooddetailsclick);
