@@ -21,9 +21,9 @@ factorvalueactivitieselem.addEventListener("change", verifyweight);
 
 function factorvalueactivitiesfunc() {
 		switch (factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value) {
-		case "none" :  return factor = 1;
+		case "none" :  return factor = 1.1;
 			
-		case	"rare" : return factor =1.15;
+		case	"rare" : return factor =1.2;
 			
 		case	"middle" : return factor = 1.3;
 
@@ -105,11 +105,11 @@ function proteincalculate (){
 
 			
 			
-			var dailyrequirementingram = Math.round(factor * bodyweight);	
+			var dailyrequirementingram = Math.ceil(factor * bodyweight);
+			
+			proteinsubtotal= Math.floor(foodamount * proteincontent / dailyrequirementingram);
 			
 			
-			
-			proteinsubtotal= parseInt(foodamount * proteincontent / dailyrequirementingram  );
 				
 			food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 			
