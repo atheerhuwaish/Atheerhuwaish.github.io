@@ -79,7 +79,7 @@ function proteincalculate (){
 			factor= factorvalueactivitiesfunc();
 			
 			
-			foodproteincontent.innerHTML = "<br>Eiweißgehalt ist <span class='proteincontent'>%<br>"
+			foodproteincontent.innerHTML = "<br>Eiweißgehalt ist <span class='proteincontent'></span>%<br>"
 			var proteincontentelem = document.querySelector(".proteincontent");
 			var proteincontent = proteincontentfunc();
 			proteincontentelem.innerHTML = proteincontent;
