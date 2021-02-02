@@ -38,9 +38,11 @@ footer{background-color: #667166; color: white; padding: 1rem}
 
 p#made{font-style: italic}
 
-#reset{
-	margin-right:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
+	/* For Arabic line-height 1*/
+	#reset{
+	line-height: 1; margin-right:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
 	}
+	
 #subtitle {text-align:right; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
 
 .language-switcher{text-align:left; width:13%; font-style:italic;}
@@ -56,8 +58,10 @@ footer p.note{text-align:right; font-weight: bold}
 
 footer p.note:not(:first-child){margin-top:1rem}
 
-footer #sources {font-size: 1rem;}
-
+footer #sources {font-size: 1rem}
+	
+	
+	
 
 
 @media screen and (max-width: 599px){
@@ -67,8 +71,8 @@ footer #sources {font-size: 1rem;}
 				footer #sources li{-webkit-hyphens: manual;
 								-ms-hyphens: manual;
 								hyphens: manual;}
-	
-*/
+	*/
+
 }
 
 </style>
@@ -115,7 +119,7 @@ footer #sources {font-size: 1rem;}
 	
 	</datalist>
 	
-	<input list="fooditems1" id="foodinput" placeholder="بحث أو اختيار المادة الغذائية.."><button type="reset" id="reset">مسح</button><br>
+	<input list="fooditems1" id="foodinput" placeholder="بحث/اختيار المادة الغذائية.."><button type="reset" id="reset">مسح</button><br>
 	
 	<p id="foodproteincontent"></p>
 	
