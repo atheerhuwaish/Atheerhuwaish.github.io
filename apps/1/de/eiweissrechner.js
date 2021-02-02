@@ -155,7 +155,7 @@ function proteincontentfunc(){
 		case "cheddarkäse" : 
 		return proteincontent = 24.25;	
 			
-		case "meiskorn" : 
+		case "maiskorn" : 
 		return proteincontent = 9.42;
 		
 		case "eier" : 
