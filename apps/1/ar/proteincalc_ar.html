@@ -56,14 +56,19 @@ footer p.note{text-align:right; font-weight: bold}
 
 footer p.note:not(:first-child){margin-top:1rem}
 
-footer #sources {font-size: 1rem}
+footer #sources {font-size: 1rem;}
 
 
 
 @media screen and (max-width: 599px){
 
-				body {max-width:100%}			
-
+				body {max-width:100%}
+		/*		
+				footer #sources li{-webkit-hyphens: manual;
+								-ms-hyphens: manual;
+								hyphens: manual;}
+	
+*/
 }
 
 </style>
@@ -72,7 +77,7 @@ footer #sources {font-size: 1rem}
 <body>
 <h1>حاسبة البروتين</h1>
 
-<h2 id="subtitle">لحاجة الجسم والغذاء النباتي</h2><a href="../proteincalc.html" class="language-switcher">English</a>
+<h2 id="subtitle">لحاجة الجسم والغذاء النباتي</h2><a href="../../en/apps/proteincalc.html" class="language-switcher">English</a>
 
     <datalist id="fooditems1">
 	
@@ -146,13 +151,13 @@ footer #sources {font-size: 1rem}
 
 
  <h3>المصادر:</h3>
- <ul id="sources">
+ <ul id="sources" dir="ltr">
 		<li>Standard Reference (SR Legacy)<br>
 			Survey (FNDDS)<br>
 			https://fdc.nal.usda.gov</li>
 		<li>https://examine.com/guides/protein-intake</li>
 		<li>https://pubmed.ncbi.nlm.nih.gov/19841581</li>
-		<li dir="ltr">https://www.healthline.com/nutrition<br>/how-much-protein-per-day</li>
+		<li>https://www.healthline.com/nutrition/how-much-protein-per-day</li>
 	 </ul>
 	 
 	 
