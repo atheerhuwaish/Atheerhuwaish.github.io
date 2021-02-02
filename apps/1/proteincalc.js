@@ -107,7 +107,7 @@ function proteincalculate (){
 
 			
 			
-			var dailyrequirementingram = Math.ceil(factor * bodyweight);
+			var dailyrequirementingram = Math.round(factor * bodyweight);
 			
 			proteinsubtotal= Math.floor(foodamount * proteincontent / dailyrequirementingram);
 				
