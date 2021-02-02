@@ -141,7 +141,7 @@ function proteincontentfunc(){
 		case "باقلاء عريضة (فول)" : 
 		return proteincontent = 26.12;	
 
-		case "كاجو" : 
+		case "كاجو/كاشو" : 
 		return proteincontent = 18.22;	
 
 		case "بذور الشيا" : 
