@@ -105,7 +105,7 @@ function proteincalculate (){
 
 			
 			
-			var dailyrequirementingram = parseInt(factor * bodyweight);	
+			var dailyrequirementingram = Math.round(factor * bodyweight);	
 			
 			
 			
