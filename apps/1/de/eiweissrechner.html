@@ -5,89 +5,115 @@
 <title>Eiweiß-Rechner</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing: border-box; padding: 0; margin: .6rem auto}
-body {position: relative; max-width: 35rem; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: -apple-system, Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
-input, select{height: 3rem;; font-size: 1.2rem;}
-input#foodinput {width: 75%; font-size: 1.2rem; display:inline-block; padding-left:.2rem}
+<style>*{box-sizing: border-box; padding: 0; margin: .6rem auto}
+
+html { max-width: 600px;}
+body {
+	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+	input, select{height: 3rem;; font-size: 1.2rem;
+	}
+input#foodinput {width: 75%; font-size: 1.2rem; display:inline-block;}
+
 input#bodyweight{ width:4rem;}
+
 input.proteincontent{border:none; width: 3.5rem; height: 1.5rem;}
-input.foodamount {border:none; width: 2.5rem; height: 1.5rem;}
-button{padding:1rem .5rem; font-size: 1.2rem; background:white; border-color:black; max-width:300px; border-radius:1rem}
+
+button{padding:1rem .5rem; font-size: 1.2rem; border-color:black; max-width:300px; border-radius:1rem}
+
 p{font-size: 1.2rem; margin:0; padding:0}
+
 li{list-style: none}
+
 h1{background-color: #4a5f44; color: white}
+
 h2{font-size: 1.2rem}
-#proteinsubtotal{background-color:white; color:blue}
-#proteinsubtotal::after{content: "%"}
+
+#proteinsubtotal, #dailyrequirementingram, .proteincontent{color:blue}
+
+#proteinsubtotal::after{content: "%";}
+
 footer{background-color: #667166; color: white; padding: 1rem}
+
 p#made{font-style: italic}
-#reset{margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem}
-#subtitle{text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
+
+#reset{
+	margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
+	}
+#subtitle {text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
+
 .language-switcher{text-align:right; width:13%; font-style:italic;}
+
 a{text-decoration:none; color:darkblue}
+
 input[type="radio"]{height:.7rem; margin-left: .4rem}
 label{margin-left:.1rem}
+
+#result{font-weight:700; text-decoration:underline;}
+
 footer p.note{text-align:left; font-weight: bold}
+
 footer p.note:not(:first-child){margin-top:1rem}
 
-@media screen and (max-width: 450px) {
-				body {max-width: 30rem;
-					margin: .2rem auto;
-					}
-				
-				h1{font-size:1.9rem}
+footer #sources {font-size: 1rem}
+
+
+
+@media screen and (max-width: 599px){
+
+				body {max-width:100%}			
+
 }
 
-@media screen and (max-width: 359px) {
-#female{display:block}
-}
-
-
-@media screen and (max-height: 750px)
-				* {margin: .2rem auto}
 </style>
 
 </head>
 <body>
-<h1>Eiweiß-Rechner</h1>
+	<h1>Eiweiß-Rechner</h1>
 
-<h2 id="subtitle">Für vegetarische Nahrungsmittel</h2><a href="../proteincalc.html" class="language-switcher">English</a>
+	<h2 id="subtitle">Für Körper & Vegetarisches Essen</h2><a href="../../en/apps/proteincalc.html" class="language-switcher">English</a>
 
     <datalist id="fooditems1">
 	
-	<option value="Brot">
-	<option value="Cheddarkäse">
-	<option value="Chiasamen">
-	<option value="Cornflakes">
-	<option value="Eier">
-	<option value="gebackene Bohnen">
-	<option value="Hafer">
-	<option value="Haselnüsse">
-	<option value="Hüttenkäse">
-	<option value="Kichererbsen">
-	<option value="Kidneybohnen">
-	<option value="Leinsamen">
-	<option value="Mandeln">
-	<option value="Rote Linsen">
-	<option value="Reis">
-	<option value="Seitan">
-    <option value="Sojabohnen">
-	<option value="Sojamilch">
-	<option value="Sojasauce">
-	<option value="Tofu">
-	<option value="Vollmilch">	
-	<option value="Vollmilch Joghurt">
-	<option value="Walnüsse">
-	<option value="Weizenmehl">
+	<option value="briekäse">
+	<option value="cashew">
+	<option value="chiasamen">
+	<option value="cheddarkäse">
+	<option value="dicke bohnen (favabohnen)">
+	<option value="eiskorn">
+	<option value="eier">
+	<option value="erdnüsse">
+	<option value="fester tofu">
+	<option value="grüne erbsen">
+	<option value="hafermehl">
+	<option value="haselnuss">
+	<option value="kichererbsen">
+	<option value="kidneybohnen">
+	<option value="leinsamen">
+	<option value="linsen">
+	<option value="mandeln">
+	<option value="mozzerella">
+	<option value="pistazien">
+	<option value="reis">
+	<option value="schwarze bohnen">
+	<option value="sojabohnen">
+	<option value="sojamilch">
+	<option value="sojasauce">
+	<option value="vollmilch">
+	<option value="vollmilch joghurt">
+	<option value="wiecher tofu">
+	<option value="weizen, weich, weiß">
+	<option value="weizen, hart, weiß">
+	<option value="weiße bohnen">
+	<option value="walnuss">
+
+	
 	</datalist>
-	<input list="fooditems1" id="foodinput" placeholder="Nahrungsmittel wählen/suchen.."><button type="reset" id="reset">CE</button><br>
+	<input list="fooditems1" id="foodinput" placeholder="Nahrungssmittel wählen/suchen.."><button type="reset" id="reset">CE</button><br>
 	
 	<p id="foodproteincontent"></p>
 		
 	Körpergewicht wählen: <input type='number' id='bodyweight' value='70' min='1' max='600'>kg
-	<br>
-	
+<br>
 <label for="physicalactivity">Körperaktivität/Sport:</label>
 <select name="factorvalueactivities" id="factorvalueactivities">
 	<option value="none">1.keine Körperaktivität</option>
@@ -108,16 +134,19 @@ footer p.note:not(:first-child){margin-top:1rem}
  <p id="food1"></p>
  
  <footer>
-<p class="note">Wichtiger Hinweis für Schwangere und stillende Mutter:<br>Frauen unabhängig von ihrer Körperaktivität haben ähnlichen Eiweißbedarf wie Sportler mit hoher Körperaktivität (Auswahl-Nr. 5) während der Schwangerschaft und stillende Mutter haben ähnlichen Eiweißbedarf wie Sportler mit relativ hoher Körperaktivität (Auswahl-Nr. 4).</p>
-<p class="note">Haftungsausschluss: Alle Informationen und Angaben ohne Gewähr.</p>
+	<p class="note">Wichtiger Hinweis für Schwangere und stillende Mutter:<br>Frauen unabhängig von ihrer Körperaktivität haben ähnlichen Eiweißbedarf wie Sportler mit hoher Körperaktivität (Auswahl-Nr. 5) während der Schwangerschaft und stillende Mutter haben ähnlichen Eiweißbedarf wie Sportler mit relativ hoher Körperaktivität (Auswahl-Nr. 4).</p>
+	<p class="note">Haftungsausschluss: Alle Informationen und Angaben ohne Gewähr.</p>
 
 
  <h3>Quellen:</h3>
- <ul>
- <li>https://fdc.nal.usda.gov</li>
- <li>https://www.nutrition.org.uk</li>
- <li>https://examine.com/guides/protein-intake</li>
- </ul>
+  <ul id="sources">
+		<li>Standard Reference (SR Legacy)<br>
+			Survey (FNDDS)<br>
+			https://fdc.nal.usda.gov</li>
+		<li>https://examine.com/guides/protein-intake</li>
+		<li>https://pubmed.ncbi.nlm.nih.gov/19841581</li>
+		<li>https://www.healthline.com/nutrition/<br>how-much-protein-per-day</li>
+	 </ul>
 <p id="made">Von  <a href="/">Atheer Huwaish</a></p>
 </footer>
 
