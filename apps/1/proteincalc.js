@@ -18,7 +18,6 @@ factorvalueactivitieselem.addEventListener("change", verifyweight);
 
 
 
-
 function factorvalueactivitiesfunc() {
 		switch (factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value) {
 		case "none" :  return factor = 1.1;
@@ -134,7 +133,7 @@ function proteincontentfunc(){
 
 		case "black beans" : 
 		return proteincontent = 21.6;
-
+		
 		case "brie cheese" : 
 		return proteincontent = 20.75;	
 
@@ -221,6 +220,25 @@ function proteincontentfunc(){
 		
 		case "whole milk yogurt" : 
 		return proteincontent = 3.47;
+		
+		case "bread, wheat" : 
+		return proteincontent = 10.67;
+
+		case "corn flakes" : 
+		return proteincontent = 7.5;
+
+		case "sesame" : 
+		return proteincontent = 20.45;
+		
+		case "bulgur" : 
+		return proteincontent = 12.29;
+		
+		case "peanus butter" : 
+		return proteincontent = 22.5;
+		
+		case "couscous" : 
+		return proteincontent = 12.76;
+		
 		
 		default: proteincontent = false;
 		}
