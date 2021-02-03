@@ -103,9 +103,10 @@ function proteincalculate (){
 			
 			foodamountelem.innerHTML = ` ${foodamount}g beinhalten `;
  
-			
+		
 			
 			var dailyrequirementingram = Math.round(factor * bodyweight);
+			
 			
 			proteinsubtotal= Math.floor(foodamount * proteincontent / dailyrequirementingram);
 			
@@ -119,8 +120,6 @@ function proteincalculate (){
 			lightgrayinputborder();
 
 }
-
-
 
 
 	
@@ -140,7 +139,7 @@ function proteincontentfunc(){
 		case "dicke bohnen (favabohnen)" : 
 		return proteincontent = 26.12;	
 
-		case "cashew" : 
+		case "cashew/kaschunuss" : 
 		return proteincontent = 18.22;	
 
 		case "chiasamen" : 
@@ -220,6 +219,21 @@ function proteincontentfunc(){
 		
 		case "vollmilch joghurt" : 
 		return proteincontent = 3.47;
+		
+		case "brot, weizen" : 
+		return proteincontent = 10.67;
+		
+		case "cornflakes" : 
+		return proteincontent = 7.5;
+
+		case "sesam" : 
+		return proteincontent = 20.45;
+		
+		case "bulgur" : 
+		return proteincontent = 12.29;
+				
+		case "couscous/kuskus" : 
+		return proteincontent = 12.76;
 		
 		default: proteincontent = false;
 		}
