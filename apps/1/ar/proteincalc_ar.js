@@ -21,17 +21,17 @@ factorvalueactivitieselem.addEventListener("change", verifyweight);
 
 function factorvalueactivitiesfunc() {
 		switch (factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value) {
-		case "none" :  return factor = 1.1;
+		case "none" :  return factor = 1;
 			
 		case	"rare" : return factor =1.2;
 			
-		case	"middle" : return factor = 1.3;
+		case	"middle" : return factor = 1.4;
 
-		case	"rel_high" :  return factor = 1.5;
+		case	"rel_high" :  return factor = 1.6;
 			
-		case	"high" :  return factor = 1.7;
+		case	"high" :  return factor = 1.8;
 			
-		case	"very_high" : return factor = 2.3;
+		case	"very_high" : return factor = 2.2;
 			
 		default : return factor = false;
 }
@@ -56,7 +56,7 @@ var bodyweightelem = document.querySelector("#bodyweight");
 bodyweightelem.addEventListener("input", verifyweight);
 	
 function verifyweight(){
-		if (bodyweightelem.value < 1  ||  bodyweightelem.value > 600 
+		if (bodyweightelem.value < 20  ||  bodyweightelem.value > 600 
 									  || bodyweightelem.value.length < 1 )
 			{food1.innerHTML ="الرجاء اختيار أو تصحيح وزن الجسم";
 			food1.style.color ="red";
@@ -147,7 +147,7 @@ function proteincontentfunc(){
 		case "بذور الشيا" : 
 		return proteincontent = 16.54;
 		
-		case "حمص" : 
+		case "حمص (حب قبل الطبخ)" : 
 		return proteincontent = 20.47;
 		
 		case "جبن شيدر" : 
@@ -221,6 +221,21 @@ function proteincontentfunc(){
 		
 		case "لبن حليب كامل الدسم" : 
 		return proteincontent = 3.47;
+		
+		case "خبز/ صمون قمح، حنطة" : 
+		return proteincontent = 10.67;
+		
+		case "رقائق الذرة" : 
+		return proteincontent = 7.5;
+
+		case "سمسم" : 
+		return proteincontent = 20.45;
+		
+		case "برغل" : 
+		return proteincontent = 12.29;
+				
+		case "كسكس" : 
+		return proteincontent = 12.76;
 		
 		default: proteincontent = false;
 		}
