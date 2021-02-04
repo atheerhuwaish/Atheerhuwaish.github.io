@@ -239,6 +239,12 @@ function proteincontentfunc(){
 		case "couscous" : 
 		return proteincontent = 12.76;
 		
+		case "pumpkin seeds" : 
+		return proteincontent = 29.49;
+				
+		case "quinoa" : 
+		return proteincontent = 14.12;
+		
 		
 		default: proteincontent = false;
 		}
