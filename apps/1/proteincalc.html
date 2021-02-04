@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="description" content="protein requirements for body and for meat alternatives">
 	<title>Protein Calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,7 +23,7 @@ button{padding:1rem .5rem; font-size: 1.2rem; border-color:black; max-width:300p
 
 p{font-size: 1.2rem; margin:0; padding:0}
 
-li{list-style: none}
+ul{list-style: none}
 
 h1{background-color: #4a5f44; color: white}
 
@@ -56,6 +57,9 @@ footer p.note:not(:first-child){margin-top:1rem}
 
 footer #sources {font-size: 1rem}
 
+#inlinenote{background-color:#eee9e1; margin-top:4rem; text-align:left; padding:1rem}
+
+ul#impnote {list-style: inside}
 
 
 
@@ -122,46 +126,52 @@ footer #sources {font-size: 1rem}
 	
 	<p id="foodproteincontent"></p>
 	
-	Choose the body weight: <input type='number' id='bodyweight' value='70' min='1' max='600'>kg
+	Choose the body weight: <input type='number' id='bodyweight' value='70' min='20' max='600'>kg
 <br>
-<label for="physicalactivity">Physical activity/Sport:</label>
+
+<label for="physicalactivity">Physical activity level:</label>
 <select name="factorvalueactivities" id="factorvalueactivities">
 	<option value="none">1.none</option>
-	<option value="rare">2.rare activity</option>
-	<option value="middle" selected>3.middle activity/sport</option>
+	<option value="rare" selected>2.little activity</option>
+	<option value="middle">3.middle activity</option>
 	<option value="rel_high">4.relatively high activity/sport</option>
 	<option value="high">5.high activity/sport</option>
 	<option value="very_high">6.very high for muscle building</option>
 </select>
-
+<br>
 
 	<!-- <br><span id="female">Female:</span> -->
 	<!-- <input type="radio" class="factorvaluefemale" id="pregnant" name="femalepossiblereq" value="pregnant"><label for="pregnant">Pregnant</label> -->
 	<!-- <input type="radio" class="factorvaluefemale" id="lactating" name="femalepossiblereq" value="lactating"><label for="lactating">Lactating</label> -->
 	<!-- <input type="radio" class="factorvaluefemale" id="no" name="femalepossiblereq" value="no" checked><label for="no">None</label> -->
-	<br>
+
 	<!-- <button id="foodbutton">Update protein requirements</button> -->
 	
 	<p id="food1"></p>
+	
+<div id="inlinenote">
+<em>Choose at least level 2 above if you are:</em>
+<ul id="impnote">
+<li>Pregnant or lactating women</li>
+<li>Above 65 years old</li></ul></div>
    
  <footer>
-	<p class="note">Important Note for pregnant and lactating women:<br>Women require regardless of their physical activity as much protein as sport people with high activity (option 5) while pregnant and as much as sport people with relatively high activity (option 4) while lactating.</p>
 	<p class="note">Disclaimer: All information is without liability.</p>
-
-
 	
 	 <h3>Sources:</h3>
-	 <ul id="sources">
+  <ul id="sources">
 		<li>Standard Reference (SR Legacy)<br>
 			Survey (FNDDS)<br>
 			https://fdc.nal.usda.gov</li>
-		<li>https://examine.com/guides/protein-intake</li>
 		<li>https://pubmed.ncbi.nlm.nih.gov/19841581</li>
-		<li>https://www.healthline.com/nutrition/<br>how-much-protein-per-day</li>
+		<li>https://www.dge.de/wissenschaft/referenzwerte/protein</li>
+		<li>https://examine.com/guides/protein-intake</li>
+		<li>How Much Protein Should You Eat per Day?<br>
+			https://www.healthline.com/nutrition</li>
 	 </ul>
 	 
 	 
-	<p id="made">By <a href="/">Atheer Huwaish</a></p>
+	<p id="made">By <a href="/1/en">Atheer Huwaish</a></p>
 </footer>
 
 
