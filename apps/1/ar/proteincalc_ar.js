@@ -56,7 +56,7 @@ var bodyweightelem = document.querySelector("#bodyweight");
 bodyweightelem.addEventListener("input", verifyweight);
 	
 function verifyweight(){
-		if (bodyweightelem.value < 20  ||  bodyweightelem.value > 600 
+		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 600 
 									  || bodyweightelem.value.length < 1 )
 			{food1.innerHTML ="الرجاء اختيار أو تصحيح وزن الجسم";
 			food1.style.color ="red";
