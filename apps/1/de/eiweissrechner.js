@@ -136,7 +136,7 @@ function proteincontentfunc(){
 		case "briekäse" : 
 		return proteincontent = 20.75;	
 
-		case "dicke bohnen (favabohnen)" : 
+		case "ackerbohne (dicke-, favabohne)" : 
 		return proteincontent = 26.12;	
 
 		case "cashew/kaschunuss" : 
@@ -234,6 +234,13 @@ function proteincontentfunc(){
 				
 		case "couscous/kuskus" : 
 		return proteincontent = 12.76;
+		
+		case "kürbiskerne" : 
+		return proteincontent = 29.49;
+				
+		case "quinoa" : 
+		return proteincontent = 14.12;
+		
 		
 		default: proteincontent = false;
 		}
