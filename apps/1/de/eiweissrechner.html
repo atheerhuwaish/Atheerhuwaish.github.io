@@ -55,11 +55,11 @@ footer p.note{text-align:left; font-weight: bold}
 
 footer p.note:not(:first-child){margin-top:1rem}
 
-footer #sources {font-size: 1rem}
+footer #sources {font-size: .9rem}
 
-#inlinenote{background-color:#eee9e1; margin-top:4rem; text-align:left; padding:1rem}
+#inlinenote{background-color:#eee9e1; margin-top:4rem; text-align:left; padding:.75rem; font-size: 1rem}
 
-ul#impnote {list-style: inside}
+ul#impnote {list-style: inside;}
 
 
 
@@ -128,7 +128,7 @@ ul#impnote {list-style: inside}
 	
 	<p id="foodproteincontent"></p>
 		
-	Körpergewicht wählen: <input type='number' id='bodyweight' value='70' min='20' max='600'>kg
+	Körpergewicht wählen: <input type='number' id='bodyweight' value='70' min='12' max='600'>kg
 <br>
 <label for="physicalactivity">Stufe der Körperaktivität:</label>
 <select name="factorvalueactivities" id="factorvalueactivities">
@@ -151,10 +151,11 @@ ul#impnote {list-style: inside}
  
  
 <div id="inlinenote">
-<em>Mindestens Stufe 2 oben wählen wenn Sie sind:</em>
+<em>Stufe 1 oben nicht wählen wenn Sie sind:</em>
 <ul id="impnote">
 <li>Schwangere oder stillende Mutter</li>
-<li>Über 65 Jahre alt</li></ul></div>
+<li>Über 65 Jahre alt</li></ul>
+Der Rechner ist nur für gesunde Erwachsene & Kinder ab 1 Jahr geeignet</div>
 
 
  <footer>
@@ -167,7 +168,7 @@ ul#impnote {list-style: inside}
 			Survey (FNDDS)<br>
 			https://fdc.nal.usda.gov</li>
 		<li>https://pubmed.ncbi.nlm.nih.gov/19841581</li>
-		<li>https://www.dge.de/wissenschaft/referenzwerte/protein</li>
+		<li>https://www.dge.de/wissenschaft/referenzwerte</li>
 		<li>https://examine.com/guides/protein-intake</li>
 		<li>How Much Protein Should You Eat per Day?<br>
 			https://www.healthline.com/nutrition</li>
