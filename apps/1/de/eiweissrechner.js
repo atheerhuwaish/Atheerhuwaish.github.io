@@ -29,7 +29,7 @@ function factorvalueactivitiesfunc() {
 
 		case	"rel_high" :  return factor = 1.6;
 			
-		case	"high" :  return factor = 1.8;
+		case	"high" :  return factor = 1.9;
 			
 		case	"very_high" : return factor = 2.2;
 			
@@ -56,9 +56,9 @@ var bodyweightelem = document.querySelector("#bodyweight");
 bodyweightelem.addEventListener("input", verifyweight);
 	
 function verifyweight(){
-		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 600 
+		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150 
 									  || bodyweightelem.value.length < 1 )
-			{food1.innerHTML ="bitte ein gültiges Körpergewicht eingeben";
+			{food1.innerHTML ="bitte ein Körpergewicht zwischen 12 und 150 eingeben";
 			food1.style.color ="red";
 			bodyweightelem.style.borderColor="red";
 			}
