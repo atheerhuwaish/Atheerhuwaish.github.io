@@ -29,7 +29,7 @@ function factorvalueactivitiesfunc() {
 
 		case	"rel_high" :  return factor = 1.6;
 			
-		case	"high" :  return factor = 1.8;
+		case	"high" :  return factor = 1.9;
 			
 		case	"very_high" : return factor = 2.2;
 			
@@ -56,9 +56,9 @@ var bodyweightelem = document.querySelector("#bodyweight");
 bodyweightelem.addEventListener("input", verifyweight);
 	
 function verifyweight(){
-		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 600 
+		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150
 									  || bodyweightelem.value.length < 1 )
-			{food1.innerHTML ="الرجاء اختيار أو تصحيح وزن الجسم";
+			{food1.innerHTML ="الرجاء اختيار وزن جسم بين 12 و150 كيلوغرام";
 			food1.style.color ="red";
 			bodyweightelem.style.borderColor="red";
 			}
@@ -236,6 +236,12 @@ function proteincontentfunc(){
 				
 		case "كسكس" : 
 		return proteincontent = 12.76;
+		
+		case "بذور اليقطين" : 
+		return proteincontent = 29.49;
+				
+		case "كينوا" : 
+		return proteincontent = 14.12;
 		
 		default: proteincontent = false;
 		}
