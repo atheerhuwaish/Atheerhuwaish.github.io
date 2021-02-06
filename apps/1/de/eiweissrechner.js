@@ -159,7 +159,7 @@ function proteincalculate (){
 			food1.innerHTML += " des täglichen Eiweißbedarfs (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
 //			var aftercookingelem = document.querySelector("#aftercooking")
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Kochen für Lebensmittel wählen, die beim Kochen Wasser aufsaugen, da sie danach bis zu etwa 2 mal weniger Eiweiß pro Gewicht haben würden, z.B. Bohnen und Linsen</span>";
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Kochen für Lebensmittel wählen, die beim Kochen Wasser aufsaugen, da sie danach bis zu etwa 70% weniger Eiweißgehalt haben würden, z.B. Bohnen und Linsen</span>";
 			
 			aftercookingelem.style.display="inline";
 			
