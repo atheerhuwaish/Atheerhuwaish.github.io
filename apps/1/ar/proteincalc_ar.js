@@ -27,7 +27,7 @@ function verifyfoodamount(){
 		if (foodamountelem.value < 10  ||  foodamountelem.value > 9999 
 									  || foodamountelem.value.length < 2
 									  || foodamountelem.value.length > 4	)
-			{food1.innerHTML =" الرجاء إدخال وزن المادة الغذائية بين 10 و 9999";
+			{food1.innerHTML =" الرجاء إدخال وزن المادة الغذائية بالأرقام بين 10 و 9999 وليس ١٠-٩٩٩٩ ";
 			food1.style.color ="red";
 			foodamountelem.style.borderColor="red";
 			
@@ -93,7 +93,7 @@ function verifyweight(){
 		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150 
 									  || bodyweightelem.value.length < 1 
 									  || bodyweightelem.value.length > 3)
-			{food1.innerHTML ="الرجاء إدخال وزن الجسم بين 12 و 150";
+			{food1.innerHTML =" الرجاء إدخال وزن الجسم بالأرقام بين 12 و 150 وليس ۱۲-١٥٠";
 			foodamountelem.style.display="none";
 			aftercookingelem.style.display="none";
 			resultelem.style.display="none";
@@ -143,7 +143,7 @@ function proteincalculate (){
 		//	var foodamountelem = document.querySelector("#foodamount");
 			foodamountelem.style.display="inline";
 			
-			food1.innerHTML = "غرام* يحتوي على ";
+			food1.innerHTML = "غرام* تحتوي على ";
  
 		
 			
@@ -159,7 +159,7 @@ function proteincalculate (){
 			food1.innerHTML += " من الحاجة اليومية للبروتين (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
 //			var aftercookingelem = document.querySelector("#aftercooking")
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>إدخال وزن المادة الغذائية قبل الطبخ إذا كانت تمتص الماء عند الطبخ حيث ينخفض محتوى البروتين فيها بنسبة قد تصل إلى 70% مثل البقوليات والعدس</span>";
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>إدخال وزن المادة الغذائية قبل الطبخ إذا كانت تمتص الماء عند الطبخ حيث قد ينخفض محتوى البروتين فيها إلى أقل من النصف مثل البقوليات والعدس</span>";
 			
 			aftercookingelem.style.display="inline";
 			
