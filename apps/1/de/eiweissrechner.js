@@ -16,9 +16,9 @@ var foodamountelem = document.querySelector("#foodamount");
 var foodamount= foodamountelem.value;
 
 
-factorvalueactivitieselem.addEventListener("change", proteincalculate);
+
 factorvalueactivitieselem.addEventListener("change", verifyweight);
-// factorvalueactivitieselem.addEventListener("change", factorvalueactivitiesfunc);
+
 
 
 foodamountelem.addEventListener("input", verifyfoodamount);
@@ -38,6 +38,8 @@ function verifyfoodamount(){
 				foodamountelem.style.borderColor="lightgray";
 			
 				proteincalculate();
+				
+				return true;
 				}
 }
 
@@ -72,8 +74,6 @@ function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
 
 
 
-// window.addEventListener("load", lightgrayinputborder);
-
 
 
 
@@ -107,7 +107,10 @@ function verifyweight(){
 				
 				foodamountelem.style.display="inline";
 			
+				if (verifyfoodamount() === true){
+				
 				proteincalculate();
+				}
 				}
 }
 	
@@ -140,7 +143,7 @@ function proteincalculate (){
 			foodamountelem.style.display="inline";
 			
 			
-		//	var foodamountelem = document.querySelector("#foodamount");
+
 			foodamountelem.style.display="inline";
 			
 			food1.innerHTML = "g* beinhalten ";
@@ -158,8 +161,8 @@ function proteincalculate (){
 			
 			food1.innerHTML += " des täglichen Eiweißbedarfs (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
-//			var aftercookingelem = document.querySelector("#aftercooking")
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Kochen für Lebensmittel wählen, die beim Kochen Wasser aufsaugen, da sie danach bis zu etwa 70% weniger Eiweißgehalt haben würden, z.B. Bohnen und Linsen</span>";
+
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Kochen für Lebensmittel wählen, die beim Kochen Wasser aufsaugen, da sie danach bis über die Hälfte weniger Eiweißgehalt haben würden, z.B. Bohnen und Linsen</span>";
 			
 			aftercookingelem.style.display="inline";
 			
