@@ -31,9 +31,9 @@ function factorvalueactivitiesfunc() {
 
 		case	"rel_high" :  return factor = 1.6;
 			
-		case	"high" :  return factor = 1.9;
+		case	"high" :  return factor = 1.8;
 			
-		case	"very_high" : return factor = 2.2;
+		case	"very_high" : return factor = 2;
 			
 		default : return factor = false;
 }
