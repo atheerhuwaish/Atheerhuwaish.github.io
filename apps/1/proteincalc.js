@@ -16,9 +16,9 @@ var foodamountelem = document.querySelector("#foodamount");
 var foodamount= foodamountelem.value;
 
 
-factorvalueactivitieselem.addEventListener("change", proteincalculate);
+
 factorvalueactivitieselem.addEventListener("change", verifyweight);
-// factorvalueactivitieselem.addEventListener("change", factorvalueactivitiesfunc);
+
 
 
 foodamountelem.addEventListener("input", verifyfoodamount);
@@ -38,6 +38,8 @@ function verifyfoodamount(){
 				foodamountelem.style.borderColor="lightgray";
 			
 				proteincalculate();
+				
+				return true;
 				}
 }
 
@@ -72,10 +74,6 @@ function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
 
 
 
-// window.addEventListener("load", lightgrayinputborder);
-
-
-
 
 function redinputborder(){foodinput.style.borderColor="red";}
 
@@ -106,8 +104,11 @@ function verifyweight(){
 				bodyweightelem.style.borderColor="lightgray";
 				
 				foodamountelem.style.display="inline";
-			
+				
+				if (verifyfoodamount() === true){
+				
 				proteincalculate();
+				}
 				}
 }
 	
@@ -140,7 +141,6 @@ function proteincalculate (){
 			foodamountelem.style.display="inline";
 			
 			
-		//	var foodamountelem = document.querySelector("#foodamount");
 			foodamountelem.style.display="inline";
 			
 			food1.innerHTML = "g* include ";
@@ -158,8 +158,8 @@ function proteincalculate (){
 			
 			food1.innerHTML += " of the daily protein requirement (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
-//			var aftercookingelem = document.querySelector("#aftercooking")
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Enter the weight of food before cooking for food that absorbs water  during cooking as it can have up to 70% less protein content, e.g. beans and lentils</span>";
+
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Enter the weight of food before cooking for food that absorbs water during cooking as it will have up to over 50% reduction in protein content, e.g. beans and lentils</span>";
 			
 			aftercookingelem.style.display="inline";
 			
