@@ -5,16 +5,43 @@ var mreset = document.getElementById("reset");
 var foodinput = document.getElementById("foodinput");
 var foodproteincontent =document.querySelector("#foodproteincontent");
 var factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
+var resultelem = document.querySelector("#result");
+
+var	aftercookingelem = document.querySelector("#aftercooking")
 
 factorvalueactivities= factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;
 var factor = factorvalueactivities;
-var foodamount = 100;
+var foodamountelem = document.querySelector("#foodamount");
+
+var foodamount= foodamountelem.value;
 
 
-
-factorvalueactivitieselem.addEventListener("change", factorvalueactivitiesfunc);
 factorvalueactivitieselem.addEventListener("change", proteincalculate);
 factorvalueactivitieselem.addEventListener("change", verifyweight);
+// factorvalueactivitieselem.addEventListener("change", factorvalueactivitiesfunc);
+
+
+foodamountelem.addEventListener("input", verifyfoodamount);
+
+function verifyfoodamount(){
+		if (foodamountelem.value < 10  ||  foodamountelem.value > 9999 
+									  || foodamountelem.value.length < 2
+									  || foodamountelem.value.length > 4	)
+			{food1.innerHTML =" bitte die Menge des Lebensmittels zwischen 10 und 9999 eingeben";
+			food1.style.color ="red";
+			foodamountelem.style.borderColor="red";
+			
+			}
+			
+				else 
+				{
+				foodamountelem.style.borderColor="lightgray";
+			
+				proteincalculate();
+				}
+}
+
+
 
 
 
@@ -39,9 +66,16 @@ function factorvalueactivitiesfunc() {
 
 
 function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
-						   bodyweightelem.style.borderColor="lightgray";}
+						   bodyweightelem.style.borderColor="lightgray"
+						   foodamountelem.style.borderColor="lightgray";}
 
-window.addEventListener("load", lightgrayinputborder);
+
+
+
+// window.addEventListener("load", lightgrayinputborder);
+
+
+
 
 function redinputborder(){foodinput.style.borderColor="red";}
 
@@ -57,8 +91,12 @@ bodyweightelem.addEventListener("input", verifyweight);
 	
 function verifyweight(){
 		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150 
-									  || bodyweightelem.value.length < 1 )
+									  || bodyweightelem.value.length < 1 
+									  || bodyweightelem.value.length > 3)
 			{food1.innerHTML ="bitte ein Körpergewicht zwischen 12 und 150 eingeben";
+			foodamountelem.style.display="none";
+			aftercookingelem.style.display="none";
+			resultelem.style.display="none";
 			food1.style.color ="red";
 			bodyweightelem.style.borderColor="red";
 			}
@@ -66,6 +104,8 @@ function verifyweight(){
 				else 
 				{
 				bodyweightelem.style.borderColor="lightgray";
+				
+				foodamountelem.style.display="inline";
 			
 				proteincalculate();
 				}
@@ -77,7 +117,8 @@ function verifyweight(){
 function proteincalculate (){
 	
 			factor= factorvalueactivitiesfunc();
-			
+			resultelem.style.display="none";
+			foodamountelem.style.display="none";
 			
 			foodproteincontent.innerHTML = "<br>Eiweißgehalt ist <span class='proteincontent'></span>%<br>"
 			var proteincontentelem = document.querySelector(".proteincontent");
@@ -93,29 +134,34 @@ function proteincalculate (){
 								else {food1.style.color ="black";}	
 				
 
-			food1.innerHTML = "<span id='result'></span><span id='foodamount'></span>";
 			var bodyweight = bodyweightelem.value;
 			
-			var result = document.querySelector("#result");
-			result.innerHTML = "Ergebnis:";
+			resultelem.style.display="inline";
+			foodamountelem.style.display="inline";
 			
-			var foodamountelem = document.querySelector("#foodamount");
 			
-			foodamountelem.innerHTML = ` ${foodamount}g beinhalten `;
+		//	var foodamountelem = document.querySelector("#foodamount");
+			foodamountelem.style.display="inline";
+			
+			food1.innerHTML = "g* beinhalten ";
  
 		
 			
 			var dailyrequirementingram = Math.round(factor * bodyweight);
 			
 			
-			proteinsubtotal= Math.floor(foodamount * proteincontent / dailyrequirementingram);
+			proteinsubtotal= Math.floor(foodamountelem.value * proteincontent / dailyrequirementingram);
 			
 			
 				
 			food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 			
-			food1.innerHTML += " des täglichen Eiweißbedarfs (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)";
-					
+			food1.innerHTML += " des täglichen Eiweißbedarfs (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
+			
+//			var aftercookingelem = document.querySelector("#aftercooking")
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Kochen für Lebensmittel wählen, die beim Kochen Wasser aufsaugen, da sie danach bis zu etwa 2 mal weniger Eiweiß pro Gewicht haben würden, z.B. Bohnen und Linsen</span>";
+			
+			aftercookingelem.style.display="inline";
 			
 			lightgrayinputborder();
 
@@ -249,6 +295,10 @@ function proteincontentfunc(){
 
 
 mreset.addEventListener ("click", function () {
+		resultelem.style.display="none";
+		aftercookingelem.style.display="none";
+		foodamountelem.value= 100;
+		foodamountelem.style.display="none";
 		food1.innerHTML = "";
 		foodinput.value = "";
 		foodproteincontent.innerHTML ="";
