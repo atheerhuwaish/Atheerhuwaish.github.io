@@ -12,8 +12,9 @@
 html { max-width: 600px;}
 body {
 	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
-	input, select{height: 3rem;; font-size: 1.2rem;
-	}
+
+input, select{height: 3rem;; font-size: 1.2rem; border-color:lightgray}
+
 input#foodinput {width: 75%; font-size: 1.2rem; display:inline-block;}
 
 input#bodyweight{ width:4rem;}
@@ -50,7 +51,6 @@ a{text-decoration:none; color:darkblue}
 input[type="radio"]{height:.7rem; margin-left: .4rem}
 label{margin-left:.1rem}
 
-#result{font-weight:700; text-decoration:underline;}
 
 footer #liabilitynote{font-size: 1rem; margin: 1.2rem auto}
 
@@ -60,6 +60,12 @@ footer #sources {font-size: .9rem}
 
 ul#impnote {list-style: inside; font-size: 1rem}
 
+#food1, #result, #foodamount  {font-size: 1.3rem}
+
+#result{font-weight:700; margin-top: 1.5rem; display:none}
+input#foodamount{width:4.5rem; display:none;}
+
+#aftercooking{font-size: .85rem}
 
 
 
@@ -149,7 +155,10 @@ ul#impnote {list-style: inside; font-size: 1rem}
 
 	<!-- <button id="foodbutton">Update protein requirements</button> -->
 	
-	<p id="food1"></p>
+	
+<p id="result">Result: </p><input id='foodamount' type="number" value="100" min="10" max="9999"><span id="food1"></span>
+ 
+	
 	
 <div id="inlinenote">
 <em>Avoid choosing level 1 above if you are:</em>
@@ -157,7 +166,9 @@ ul#impnote {list-style: inside; font-size: 1rem}
 <li>Pregnant or lactating woman</li>
 <li>Above 65 years old</li></ul>
 This calculator works only for healthy adults and children above 1 year old</div>
-   
+  
+<span id="aftercooking"></span>  
+  
  <footer>
 	
 	 <h3>Sources:</h3>
