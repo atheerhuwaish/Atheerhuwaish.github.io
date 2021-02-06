@@ -93,7 +93,7 @@ function verifyweight(){
 		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150 
 									  || bodyweightelem.value.length < 1 
 									  || bodyweightelem.value.length > 3)
-			{food1.innerHTML ="Please enter a body weight between 12 and 150";
+			{food1.innerHTML ="الرجاء إدخال وزن الجسم بين 12 و 150";
 			foodamountelem.style.display="none";
 			aftercookingelem.style.display="none";
 			resultelem.style.display="none";
