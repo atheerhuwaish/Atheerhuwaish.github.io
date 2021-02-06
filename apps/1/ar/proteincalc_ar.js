@@ -16,32 +16,7 @@ var foodamountelem = document.querySelector("#foodamount");
 var foodamount= foodamountelem.value;
 
 
-factorvalueactivitieselem.addEventListener("change", proteincalculate);
 factorvalueactivitieselem.addEventListener("change", verifyweight);
-// factorvalueactivitieselem.addEventListener("change", factorvalueactivitiesfunc);
-
-
-foodamountelem.addEventListener("input", verifyfoodamount);
-
-function verifyfoodamount(){
-		if (foodamountelem.value < 10  ||  foodamountelem.value > 9999 
-									  || foodamountelem.value.length < 2
-									  || foodamountelem.value.length > 4	)
-			{food1.innerHTML =" الرجاء إدخال وزن المادة الغذائية بالأرقام بين 10 و 9999 وليس ١٠-٩٩٩٩ ";
-			food1.style.color ="red";
-			foodamountelem.style.borderColor="red";
-			
-			}
-			
-				else 
-				{
-				foodamountelem.style.borderColor="lightgray";
-			
-				proteincalculate();
-				}
-}
-
-
 
 
 
@@ -72,10 +47,6 @@ function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
 
 
 
-// window.addEventListener("load", lightgrayinputborder);
-
-
-
 
 function redinputborder(){foodinput.style.borderColor="red";}
 
@@ -89,6 +60,8 @@ var bodyweightelem = document.querySelector("#bodyweight");
 	
 bodyweightelem.addEventListener("input", verifyweight);
 	
+	
+	
 function verifyweight(){
 		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150 
 									  || bodyweightelem.value.length < 1 
@@ -99,6 +72,7 @@ function verifyweight(){
 			resultelem.style.display="none";
 			food1.style.color ="red";
 			bodyweightelem.style.borderColor="red";
+			
 			}
 			
 				else 
@@ -106,12 +80,41 @@ function verifyweight(){
 				bodyweightelem.style.borderColor="lightgray";
 				
 				foodamountelem.style.display="inline";
-			
+				
+				if (verifyfoodamount() === true){
+				
 				proteincalculate();
+				}
 				}
 }
 	
 	
+
+
+
+foodamountelem.addEventListener("input", verifyfoodamount);
+
+function verifyfoodamount(){
+		if (foodamountelem.value < 10  ||  foodamountelem.value > 9999 
+									  || foodamountelem.value.length < 2
+									  || foodamountelem.value.length > 4	)
+			{food1.innerHTML =" الرجاء إدخال وزن المادة الغذائية بالأرقام بين 10 و 9999 وليس ١٠-٩٩٩٩ ";
+			food1.style.color ="red";
+			foodamountelem.style.borderColor="red";
+		
+			}
+			
+				else 
+				{
+				foodamountelem.style.borderColor="lightgray";
+			
+				proteincalculate();
+				
+				return true;
+				}
+}
+
+
 
 
 function proteincalculate (){
@@ -140,7 +143,7 @@ function proteincalculate (){
 			foodamountelem.style.display="inline";
 			
 			
-		//	var foodamountelem = document.querySelector("#foodamount");
+		
 			foodamountelem.style.display="inline";
 			
 			food1.innerHTML = "غرام* تحتوي على ";
@@ -158,7 +161,7 @@ function proteincalculate (){
 			
 			food1.innerHTML += " من الحاجة اليومية للبروتين (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
-//			var aftercookingelem = document.querySelector("#aftercooking")
+
 			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>إدخال وزن المادة الغذائية قبل الطبخ إذا كانت تمتص الماء عند الطبخ حيث قد ينخفض محتوى البروتين فيها إلى أقل من النصف مثل البقوليات والعدس</span>";
 			
 			aftercookingelem.style.display="inline";
