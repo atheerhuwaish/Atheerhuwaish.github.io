@@ -159,7 +159,7 @@ function proteincalculate (){
 				
 			food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 			
-			food1.innerHTML += " من الحاجة اليومية للبروتين (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
+			food1.innerHTML += " من الحاجة اليومية للبروتين (<span id='dailyrequirementingram'>" + dailyrequirementingram + "غرام</span>)"
 			
 
 			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>إدخال وزن المادة الغذائية قبل الطبخ إذا كانت تمتص الماء عند الطبخ حيث قد ينخفض محتوى البروتين فيها إلى أقل من النصف مثل البقوليات والعدس</span>";
