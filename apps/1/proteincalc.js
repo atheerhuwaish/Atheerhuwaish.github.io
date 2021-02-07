@@ -159,7 +159,7 @@ function proteincalculate (){
 			food1.innerHTML += " of the daily protein requirement (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
 
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Enter the weight of food before cooking for food that absorbs water during cooking as it will have up to over 50% reduction in protein content, e.g. beans and lentils</span>";
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Enter the weight of food in raw state before soaking or cooking for foods that absorb liquids as they will have much less protein content, e.g. beans and lentils</span>";
 			
 			aftercookingelem.style.display="inline";
 			
