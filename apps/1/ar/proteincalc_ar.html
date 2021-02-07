@@ -7,11 +7,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+@font-face {
+  font-family: NotoNaskhArabicUI;
+  src: url(NotoNaskhArabic/NotoNaskhArabicUI-Regular.ttf);
+}
+
+@font-face {
+  font-family: NotoNaskhArabicUI;
+  src: url(NotoNaskhArabic/NotoNaskhArabicUI-Bold.ttf);
+   font-weight: bold;
+}
+
+
 *{box-sizing: border-box; padding: 0; margin: .6rem auto}
 
 html { max-width: 600px;}
 body {
-	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: NotoNaskhArabicUI;}
 
 input, select{height: 3rem;; font-size: 1.2rem; border-color:lightgray}
 
@@ -70,8 +83,9 @@ input#foodamount{width:4.5rem; display:none;}
 
 
 @media screen and (max-width: 599px){
-
-				body {max-width:100%}
+				
+							
+				body {max-width:100%;}
 				
 				h1 {font-size: 1.9rem}
 	
