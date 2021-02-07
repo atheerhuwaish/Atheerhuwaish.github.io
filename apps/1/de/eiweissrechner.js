@@ -162,7 +162,7 @@ function proteincalculate (){
 			food1.innerHTML += " des täglichen Eiweißbedarfs (<span id='dailyrequirementingram'>" + dailyrequirementingram + "g</span>)"
 			
 
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Einweichen und Kochen für Lebensmittel wählen, die Flüssigkeit aufsaugen, da sie danach viel weniger Eiweißgehalt haben, z.B. Bohnen und Linsen</span>";
+			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Einweichen und Kochen für Lebensmittel eingeben, die Flüssigkeit aufsaugen, da sie danach viel weniger Eiweißgehalt haben, z.B. Bohnen und Linsen</span>";
 			
 			aftercookingelem.style.display="inline";
 			
