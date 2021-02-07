@@ -1,19 +1,18 @@
-var datalist = document.getElementById("fooditems1");
-var food1 = document.getElementById("food1");
-var datalist = document.getElementById("fooditems1");
-var mreset = document.getElementById("reset");
-var foodinput = document.getElementById("foodinput");
-var foodproteincontent =document.querySelector("#foodproteincontent");
-var factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
-var resultelem = document.querySelector("#result");
+let datalist = document.getElementById("fooditems1");
+let food1 = document.getElementById("food1");
+let mreset = document.getElementById("reset");
+let foodinput = document.getElementById("foodinput");
+let foodproteincontent =document.querySelector("#foodproteincontent");
+let factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
+let resultelem = document.querySelector("#result");
 
-var	aftercookingelem = document.querySelector("#aftercooking")
+let	aftercookingelem = document.querySelector("#aftercooking")
 
 factorvalueactivities= factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;
-var factor = factorvalueactivities;
-var foodamountelem = document.querySelector("#foodamount");
+let factor = factorvalueactivities;
+let foodamountelem = document.querySelector("#foodamount");
 
-var foodamount= foodamountelem.value;
+let foodamount= foodamountelem.value;
 
 
 factorvalueactivitieselem.addEventListener("change", verifyweight);
@@ -41,9 +40,8 @@ function factorvalueactivitiesfunc() {
 
 
 function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
-						   bodyweightelem.style.borderColor="lightgray"
-						   foodamountelem.style.borderColor="lightgray";}
-
+								bodyweightelem.style.borderColor="lightgray"
+								foodamountelem.style.borderColor="lightgray";}
 
 
 
@@ -56,16 +54,17 @@ foodinput.addEventListener("input", verifyweight);
 
 
 	
-var bodyweightelem = document.querySelector("#bodyweight");
+let bodyweightelem = document.querySelector("#bodyweight");
 	
 bodyweightelem.addEventListener("input", verifyweight);
 	
 	
 	
 function verifyweight(){
-		if (bodyweightelem.value < 12  ||  bodyweightelem.value > 150 
-									  || bodyweightelem.value.length < 1 
-									  || bodyweightelem.value.length > 3)
+		if (bodyweightelem.value < 12  
+			||  bodyweightelem.value > 150 
+			|| bodyweightelem.value.length < 1 
+			|| bodyweightelem.value.length > 3)
 			{food1.innerHTML =" الرجاء إدخال وزن الجسم بالأرقام بين 12 و 150 وليس ۱۲-١٥٠";
 			foodamountelem.style.display="none";
 			aftercookingelem.style.display="none";
@@ -95,9 +94,10 @@ function verifyweight(){
 foodamountelem.addEventListener("input", verifyfoodamount);
 
 function verifyfoodamount(){
-		if (foodamountelem.value < 10  ||  foodamountelem.value > 9999 
-									  || foodamountelem.value.length < 2
-									  || foodamountelem.value.length > 4	)
+		if (foodamountelem.value < 10  
+			||  foodamountelem.value > 9999 
+			|| foodamountelem.value.length < 2
+			|| foodamountelem.value.length > 4	)
 			{food1.innerHTML =" الرجاء إدخال وزن المادة الغذائية بالأرقام بين 10 و 9999 وليس ١٠-٩٩٩٩ ";
 			food1.style.color ="red";
 			foodamountelem.style.borderColor="red";
@@ -124,8 +124,8 @@ function proteincalculate (){
 			foodamountelem.style.display="none";
 			
 			foodproteincontent.innerHTML = "<br>محتوى البروتين هو <span class='proteincontent'></span>%<br>"
-			var proteincontentelem = document.querySelector(".proteincontent");
-			var proteincontent = proteincontentfunc();
+			let proteincontentelem = document.querySelector(".proteincontent");
+			let proteincontent = proteincontentfunc();
 			proteincontentelem.innerHTML = proteincontent;
 					
 				
@@ -137,7 +137,7 @@ function proteincalculate (){
 								else {food1.style.color ="black";}	
 				
 
-			var bodyweight = bodyweightelem.value;
+			let bodyweight = bodyweightelem.value;
 			
 			resultelem.style.display="inline";
 			foodamountelem.style.display="inline";
@@ -150,17 +150,19 @@ function proteincalculate (){
  
 		
 			
-			var dailyrequirementingram = Math.round(factor * bodyweight);
+			let dailyrequirementingram = Math.round(factor * bodyweight);
 			
 			
 			proteinsubtotal= Math.floor(foodamountelem.value * proteincontent / dailyrequirementingram);
 			
-			
+					
 				
-			food1.innerHTML += "<span id='proteinsubtotal'>" + proteinsubtotal + "</span>";
 			
-			food1.innerHTML += " من الحاجة اليومية للبروتين (<span id='dailyrequirementingram'>" + dailyrequirementingram + "غرام</span>)"
+			food1.insertAdjacentHTML("beforeend", `<span id='proteinsubtotal'>${proteinsubtotal}</span>`);
 			
+			food1.insertAdjacentHTML("beforeend", ` من الحاجة اليومية للبروتين (<span id='dailyrequirementingram'>${dailyrequirementingram}غرام</span>)`);
+			
+						
 
 			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>إدخال وزن المادة الغذائية قبل النقع والطبخ إذا كانت تمتص السوائل حيث ينخفض محتوى البروتين فيها كثيرا بعد الطبخ مثل البقوليات والعدس</span>";
 			
@@ -298,7 +300,7 @@ function proteincontentfunc(){
 
 
 
-mreset.addEventListener ("click", function () {
+mreset.addEventListener ("click", () => {
 		resultelem.style.display="none";
 		aftercookingelem.style.display="none";
 		foodamountelem.value= 100;
