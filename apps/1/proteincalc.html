@@ -10,7 +10,7 @@
 *{box-sizing: border-box; padding: 0; margin: .6rem auto}
 
 body {
-	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#dae5e1; font-family: Helvetica, Arial, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color:#e7e8e9; line-height: 1.2; font-family: Helvetica, Arial, "Segoe UI", Oxygen-Sans, Cantarell, Roboto, BlinkMacSystemFont, Ubuntu, "Helvetica Neue", sans-serif;}
 
 input, select{height: 3rem;; font-size: 1.2rem; border-color:lightgray}
 
@@ -26,7 +26,7 @@ p{font-size: 1.2rem; margin:0; padding:0}
 
 ul{list-style: none}
 
-h1{background-color: #4a5f44; color: white}
+h1{background-color: #556655; color: white}
 
 h2{font-size: 1.2rem}
 
@@ -34,12 +34,11 @@ h2{font-size: 1.2rem}
 
 #proteinsubtotal::after{content: "%";}
 
-footer{background-color: #667166; color: white; padding: 1rem}
+footer{background-color: #556355; color: white; padding: 1rem}
 
 p#made{font-style: italic}
 
-#reset{
-	margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
+#reset{ line-height: 1rem; margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
 	}
 #subtitle {text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
 
@@ -50,34 +49,37 @@ a{text-decoration:none; color:darkblue}
 input[type="radio"]{height:.7rem; margin-left: .4rem}
 label{margin-left:.1rem}
 
+select{ border: 1px solid gray }
 
 footer #liabilitynote{font-size: 1rem; margin: 1.2rem auto}
 
 footer #sources {font-size: .9rem}
 
-#inlinenote{background-color:#eee9e1; margin-top:1.5rem; text-align:left; padding:.75rem; font-size: 1rem}
+#inlinenote{border: 1px solid lightgray; margin-top:1.5rem; text-align:left; padding:1rem; font-size: 1rem}
 
 ul#impnote {list-style: inside; font-size: 1rem}
 
 #food1, #result, #foodamount  {font-size: 1.3rem}
 
 #result{font-weight:700; margin-top: 1.5rem; display:none}
+	
 input#foodamount{width:4.5rem; display:none;}
 
-#aftercooking{font-size: .85rem}
+#aftercooking{font-size: .9rem}
 
 
 
 @media screen and (max-width: 599px){
 
-				body {max-width:100%}
+				body {max-width:100%;}
 				
 				h1 {font-size: 1.9rem}
+	
+				#aftercooking{font-size: .8rem}
 				
 				input#foodinput::placeholder {font-size: .9rem}
 
 }
-
 </style>
 
 </head>
