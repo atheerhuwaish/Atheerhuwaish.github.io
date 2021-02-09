@@ -19,7 +19,6 @@ let foodamount= foodamountelem.value;
 factorvalueactivitieselem.addEventListener("change", verifyweight);
 
 
-
 foodamountelem.addEventListener("input", verifyfoodamount);
 
 function verifyfoodamount(){
@@ -147,7 +146,7 @@ function proteincalculate (){
 
 			foodamountelem.style.display="inline";
 			
-			food1.innerHTML = "g* beinhalten ";
+			food1.innerHTML = "<span id='gincludes'>g* beinhalten </span>";
  
 		
 			
@@ -159,7 +158,7 @@ function proteincalculate (){
 			
 			food1.insertAdjacentHTML("beforeend", `<span id='proteinsubtotal'>${proteinsubtotal}</span>`);
 			
-			food1.insertAdjacentHTML("beforeend", ` des täglichen Eiweißbedarfs (<span id='dailyrequirementingram'>${dailyrequirementingram} g</span>)`);
+			food1.insertAdjacentHTML("beforeend", `<span id='ofdailyreq'> des täglichen Eiweißbedarfs </span><span id='dailyrequirementingram'>(${dailyrequirementingram} g)</span>`);
 			
 			
 
