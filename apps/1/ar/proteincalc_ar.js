@@ -146,7 +146,7 @@ function proteincalculate (){
 		
 			foodamountelem.style.display="inline";
 			
-			food1.innerHTML = "<span class='ofdailyreq'>غرام* تحتوي على </span>";
+			food1.innerHTML = "<span id='gincludes'>غرام* تحتوي على </span>";
  
 		
 			
@@ -160,7 +160,7 @@ function proteincalculate (){
 			
 			food1.insertAdjacentHTML("beforeend", `<span id='proteinsubtotal'>${proteinsubtotal}</span>`);
 			
-			food1.insertAdjacentHTML("beforeend", `<span class='ofdailyreq'> من الحاجة اليومية للبروتين </span><span id='dailyrequirementingram'>(${dailyrequirementingram}غرام)</span>`);
+			food1.insertAdjacentHTML("beforeend", `<span id='ofdailyreq'> من الحاجة اليومية للبروتين </span><span id='dailyrequirementingram'>(${dailyrequirementingram}غرام)</span>`);
 			
 						
 
