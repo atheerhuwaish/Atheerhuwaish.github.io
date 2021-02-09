@@ -1,333 +1,224 @@
-let datalist = document.getElementById("fooditems1");
-let food1 = document.getElementById("food1");
-let mreset = document.getElementById("reset");
-let foodinput = document.getElementById("foodinput");
-let foodproteincontent =document.querySelector("#foodproteincontent");
-let factorvalueactivitieselem = document.querySelector("#factorvalueactivities");
-let resultelem = document.querySelector("#result");
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Eiweißbedarf für Körper und für vegetarische Nahrungsmittel rechnen">
+<title>Eiweiß-Rechner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-let	aftercookingelem = document.querySelector("#aftercooking")
+<style>
+*{box-sizing: border-box; padding: 0; margin: .6rem auto}
+body {
+	position: relative; width: 100vh; max-width: 600px; font-size: 1.2rem; margin: 0 auto; text-align:center; background-color: #DCD7DC; line-height: 1.2; font-family: Helvetica, Arial, "Segoe UI", Oxygen-Sans, Cantarell, Roboto, BlinkMacSystemFont, Ubuntu, "Helvetica Neue", sans-serif;}
 
-factorvalueactivities= factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value;
-let factor = factorvalueactivities;
-let foodamountelem = document.querySelector("#foodamount");
+input, select{height: 3rem;; font-size: 1.2rem; border-color:lightgray}
 
-let foodamount= foodamountelem.value;
+input#foodinput {width: 75%; font-size: 1.2rem; display:inline-block;}
 
+input#bodyweight{ width:4rem;}
 
+input.proteincontent{border:none; width: 3.5rem; height: 1.5rem;}
 
-factorvalueactivitieselem.addEventListener("change", verifyweight);
+button{padding:1rem .5rem; font-size: 1.2rem; border-color:black; max-width:300px; border-radius:1rem}
 
+p{font-size: 1.2rem; margin:0; padding:0}
 
-foodamountelem.addEventListener("input", verifyfoodamount);
+ul{list-style: none}
 
-function verifyfoodamount(){
-		if (foodamountelem.value < 10  
-			||  foodamountelem.value > 9999 
-			|| foodamountelem.value.length < 2
-			|| foodamountelem.value.length > 4	)
-			{food1.innerHTML =" bitte die Menge des Lebensmittels zwischen 10 und 9999 eingeben";
-			food1.style.color ="red";
-			foodamountelem.style.borderColor="red";
-			
-			}
-			
-				else 
-				{
-				foodamountelem.style.borderColor="lightgray";
-			
-				proteincalculate();
-				
-				return true;
-				}
-}
+h1{background-color: #556655; color: white}
 
+h2{font-size: 1.2rem}
 
+#proteinsubtotal, #dailyrequirementingram, .proteincontent{color:blue}
 
+#proteinsubtotal::after{content: "%";}
 
+footer{background-color: #556355; color: white; padding: 1rem}
 
+p#made{font-style: italic}
 
-function factorvalueactivitiesfunc() {
-		switch (factorvalueactivitieselem.options[factorvalueactivitieselem.selectedIndex].value) {
-		case "none" :  return factor = 1;
-			
-		case	"rare" : return factor =1.2;
-			
-		case	"middle" : return factor = 1.4;
-
-		case	"rel_high" :  return factor = 1.6;
-			
-		case	"high" :  return factor = 1.8;
-			
-		case	"very_high" : return factor = 2;
-			
-		default : return factor = false;
-}
-}
-
-
-function lightgrayinputborder(){foodinput.style.borderColor="lightgray";
-							   bodyweightelem.style.borderColor="lightgray"
-							   foodamountelem.style.borderColor="lightgray";}
-
-
-
-
-
-
-
-function redinputborder(){foodinput.style.borderColor="red";}
-
-
-foodinput.addEventListener("input", verifyweight);
-
-
-
-	
-let bodyweightelem = document.querySelector("#bodyweight");
-	
-bodyweightelem.addEventListener("input", verifyweight);
-	
-function verifyweight(){
-		if (bodyweightelem.value < 12  
-			||  bodyweightelem.value > 150 
-			|| bodyweightelem.value.length < 1 
-			|| bodyweightelem.value.length > 3)
-			{food1.innerHTML ="bitte ein Körpergewicht zwischen 12 und 150 eingeben";
-			foodamountelem.style.display="none";
-			aftercookingelem.style.display="none";
-			resultelem.style.display="none";
-			food1.style.color ="red";
-			bodyweightelem.style.borderColor="red";
-			}
-			
-				else 
-				{
-				bodyweightelem.style.borderColor="lightgray";
-				
-				foodamountelem.style.display="inline";
-			
-				if (verifyfoodamount() === true){
-				
-				proteincalculate();
-				}
-				}
-}
-	
-	
-
-
-function proteincalculate (){
-	
-			factor= factorvalueactivitiesfunc();
-			resultelem.style.display="none";
-			foodamountelem.style.display="none";
-			
-			foodproteincontent.innerHTML = "<br>Eiweißgehalt ist <span class='proteincontent'></span>%<br>"
-			let proteincontentelem = document.querySelector(".proteincontent");
-			let proteincontent = proteincontentfunc();
-			proteincontentelem.innerHTML = proteincontent;
-					
-				
-			if (!proteincontent) {redinputborder();	
-								food1.style.color ="red";
-								foodproteincontent.innerHTML = "";	
-								return food1.innerHTML ="Nahrungsmittel nicht gefunden, bitte korrigieren, eingeben oder CE wählen und nochmals versuchen";
-								}
-								else {food1.style.color ="black";}	
-				
-
-			let bodyweight = bodyweightelem.value;
-			
-			resultelem.style.display="inline";
-			foodamountelem.style.display="inline";
-			
-			
-
-			foodamountelem.style.display="inline";
-			
-			food1.innerHTML = "<span class='ofdailyreq'>g* beinhalten </span>";
- 
-		
-			
-			let dailyrequirementingram = Math.round(factor * bodyweight);
-			
-			
-			proteinsubtotal= Math.floor(foodamountelem.value * proteincontent / dailyrequirementingram);
-			
-			
-			food1.insertAdjacentHTML("beforeend", `<span id='proteinsubtotal'>${proteinsubtotal}</span>`);
-			
-			food1.insertAdjacentHTML("beforeend", `<span class='ofdailyreq'> des täglichen Eiweißbedarfs </span><span id='dailyrequirementingram'>(${dailyrequirementingram} g)</span>`);
-			
-			
-
-			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Gewicht vor dem Einweichen und Kochen für Lebensmittel eingeben, die Flüssigkeit aufsaugen, da sie danach viel weniger Eiweißgehalt haben, z.B. Bohnen und Linsen</span>";
-			
-			aftercookingelem.style.display="inline";
-			
-			lightgrayinputborder();
-
-}
-
-
-	
-function proteincontentfunc(){	
-	
-		switch (foodinput.value.toLowerCase()) {
-
-		case "mandeln" : 
-		return proteincontent = 21.15;
-
-		case "schwarze bohnen" : 
-		return proteincontent = 21.6;
-
-		case "briekäse" : 
-		return proteincontent = 20.75;	
-
-		case "ackerbohne (dicke-, favabohne)" : 
-		return proteincontent = 26.12;	
-
-		case "cashew/kaschunuss" : 
-		return proteincontent = 18.22;	
-
-		case "chiasamen" : 
-		return proteincontent = 16.54;
-		
-		case "kichererbsen" : 
-		return proteincontent = 20.47;
-		
-		case "cheddarkäse" : 
-		return proteincontent = 24.25;	
-			
-		case "maiskorn" : 
-		return proteincontent = 9.42;
-		
-		case "eier" : 
-		return proteincontent = 12.56;
-
-		case "walnuss" : 
-		return proteincontent = 15.23;
-
-		case "fester tofu" : 
-		return proteincontent = 10.92;
-		
-		case "leinsamen" : 
-		return proteincontent = 18.29;
-
-		case "grüne erbsen" : 
-		return proteincontent = 5.42;
-		
-		case "haselnuss" : 
-		return proteincontent = 14.95;
-		
-		case "kidneybohnen" : 
-		return proteincontent = 23.58;
-		
-		case "linsen" : 
-		return proteincontent = 24.63;
-
-		case "mozzerella" : 
-		return proteincontent = 22.17;	
-
-		case "hafermehl" : 
-		return proteincontent = 14.66;
-
-		case "erdnüsse" : 
-		return proteincontent = 25.8;	
-
-		case "pistazien" : 
-		return proteincontent = 20.16;	
-		
-		case "reis" : 
-		return proteincontent = 7.23;
-		
-		case "sojabohnen" : 
-		return proteincontent = 36.49;
-		
-		case "sojamilch" : 
-		return proteincontent = 2.47;
-
-		case "sojasauce" : 
-		return proteincontent = 10.51;
-
-		case "wiecher tofu" : 
-		return proteincontent = 6.38;
-		
-		case "weizen, weich, weiß" : 
-		return proteincontent = 10.69;
-
-		case "weizen, hart, weiß" : 
-		return proteincontent = 11.31;
-
-		case "weiße bohnen" : 
-		return proteincontent = 21.11;
-		
-		case "vollmilch" : 
-		return proteincontent = 3.15;
-		
-		case "vollmilch joghurt" : 
-		return proteincontent = 3.47;
-		
-		case "brot, weizen" : 
-		return proteincontent = 10.67;
-		
-		case "cornflakes" : 
-		return proteincontent = 7.5;
-
-		case "sesam" : 
-		return proteincontent = 20.45;
-		
-		case "bulgur" : 
-		return proteincontent = 12.29;
-				
-		case "couscous/kuskus" : 
-		return proteincontent = 12.76;
-		
-		case "kürbiskerne" : 
-		return proteincontent = 29.49;
-				
-		case "quinoa" : 
-		return proteincontent = 14.12;
-		
-		
-		default: proteincontent = false;
-		}
+#reset{ line-height: 1rem; margin-left:.3rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; display:inline-block; background-color:white; border-color: black; margin-bottom:-1rem; padding-bottom:1rem
 	}
+#subtitle {text-align:left; width: 75%; font-size: 1rem; display:inline-block; color: darkgreen; font-style: italic}
 
+.language-switcher{text-align:right; width:13%; font-style:italic;}
 
+a{text-decoration:none; color:darkblue}
 
-mreset.addEventListener ("click", () => {
-		resultelem.style.display="none";
-		aftercookingelem.style.display="none";
-		foodamountelem.value= 100;
-		foodamountelem.style.display="none";
-		food1.innerHTML = "";
-		foodinput.value = "";
-		foodproteincontent.innerHTML ="";
-		lightgrayinputborder()
-})
+input[type="radio"]{height:.7rem; margin-left: .4rem}
+label{margin-left:.1rem}
 
-
-
-
-function fooddetailsclick (){
-		if ( foodinput.value.length > 0 ) {
-		lightgrayinputborder();
-		factorvalueactivitiesfunc();
-		verifyweight();
-		}
-		else if  (foodinput.value.length <= 0) {redinputborder()}
-}
+select{ border: 1px solid gray }
 	
-function fooddetailskey (event) {
-		if ( foodinput.value.length > 0 && event.which === 13 ) {
-		lightgrayinputborder();
-		factorvalueactivitiesfunc();
-		verifyweight();
-		}
-		else if (foodinput.value.length <= 0) {redinputborder()}
+footer #liabilitynote{font-size: 1rem; margin: 1.2rem auto}
+
+footer #sources {font-size: .9rem}
+
+#inlinenote{border: 1px solid lightgray; margin-top:1.5rem; text-align:left; padding:.75rem; font-size: 1rem}
+
+ul#impnote {list-style: inside; font-size: 1rem}
+
+#food1, #result, #foodamount  {font-size: 1.3rem}
+
+#result{font-weight:700; margin-top: 1.5rem; display:none}
+input#foodamount{width:4.5rem; display:none;}
+
+
+#aftercooking{font-size: .9rem}
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+
+body{background-color: #222624 !important; 
+color: white !important}
+
+p, span#food1{color:white}
+
+#subtitle{color: #bbcac7;}
+
+#foodproteincontent span, #proteinsubtotal, #dailyrequirementingram {color:#aabbee}
+
+.ofdailyreq{color: white}
+
+a {color: #99bbdd}
+
+select, input {background-color: black; color: white}
+
 }
 
 
-foodinput.addEventListener ("keyup", fooddetailskey);
+
+
+
+
+@media screen and (max-width: 599px){
+
+				body {max-width:100%}
+				
+				h1 {font-size: 1.9rem}
+	
+				#aftercooking{font-size: .8rem}
+				
+				input#foodinput::placeholder {font-size: .9rem}
+
+}
+
+</style>
+
+</head>
+<body>
+	<h1>Eiweiß-Rechner</h1>
+
+	<h2 id="subtitle">Für Eiweißbedarf ohne Fleisch</h2><a href="../proteincalc.html" class="language-switcher">English</a>
+
+    <datalist id="fooditems1">
+	
+	<option value="Ackerbohne (Dicke-, Favabohne)">
+	<option value="Briekäse">
+	<option value="Brot, Weizen">
+	<option value="Bulgur">
+	<option value="Cashew/Kaschunuss">
+	<option value="Chiasamen">
+	<option value="Cheddarkäse">
+	<option value="Cornflakes">
+	<option value="Couscous/Kuskus">
+	<option value="Eier">
+	<option value="Erdnüsse">
+	<option value="fester Tofu">
+	<option value="grüne Erbsen">
+	<option value="Hafermehl">
+	<option value="Haselnuss">
+	<option value="Kichererbsen">
+	<option value="Kidneybohnen">
+	<option value="Kürbiskerne">
+	<option value="Leinsamen">
+	<option value="Linsen">
+	<option value="Maiskorn">
+	<option value="Mandeln">
+	<option value="Mozzerella">
+	<option value="Pistazien">
+	<option value="Quinoa">
+	<option value="Reis">
+	<option value="schwarze Bohnen">
+	<option value="Sesam">
+	<option value="Sojabohnen">
+	<option value="Sojamilch">
+	<option value="Sojasauce">
+	<option value="Vollmilch">
+	<option value="Vollmilch Joghurt">
+	<option value="wiecher Tofu">
+	<option value="Weizen, weich, weiß">
+	<option value="Weizen, hart, weiß">
+	<option value="weiße Bohnen">
+	<option value="Walnuss">
+
+	
+	</datalist>
+	<input list="fooditems1" id="foodinput" placeholder="Nahrungsmittel wählen/suchen.."><button type="reset" id="reset">CE</button><br>
+	
+	<p id="foodproteincontent"></p>
+		
+	Körpergewicht wählen: <input type='number' id='bodyweight' value='70' min='12' max='150'>kg
+<br>
+<label for="physicalactivity">Stufe der Sportaktivität:</label>
+<select name="factorvalueactivities" id="factorvalueactivities">
+	<option value="none">1.keine Sportaktivität</option>
+	<option value="rare" selected>2.wenige Sportaktivität</option>
+	<option value="middle">3.mittlere Sportaktivität</option>
+	<option value="rel_high">4.hohe Sportaktivität</option>
+	<option value="high">5.sehr hohe Sportaktivität</option>
+	<option value="very_high">6.sehr hoch zum Muskelaufbau</option>
+</select>
+
+ <!-- <br><span id="female">Female:</span> -->
+<!-- <input type="radio" class="factorvaluefemale" id="pregnant" name="femalepossiblereq" value="pregnant"><label for="pregnant">Pregnant</label> -->
+<!-- <input type="radio" class="factorvaluefemale" id="lactating" name="femalepossiblereq" value="lactating"><label for="lactating">Lactating</label> -->
+<!-- <input type="radio" class="factorvaluefemale" id="no" name="femalepossiblereq" value="no" checked><label for="no">None</label> -->
+
+	<br>
+	<!-- <button id="foodbutton">Eiweißbedarf aktuallisieren</button>   -->
+	
+<p id="result">Ergebnis: </p><input id='foodamount' type="number" value="100" min="10" max="9999"><span id="food1"></span>
+ 
+ 
+<div id="inlinenote">
+<em>Stufe 1 oben nicht wählen wenn Sie sind:</em>
+<ul id="impnote">
+<li>Schwangere oder stillende Mutter</li>
+<li>Über 65 Jahre alt</li></ul>
+Der Rechner ist nur für gesunde Erwachsene & Kinder über 1 Jahr geeignet</div>
+
+<span id="aftercooking"></span>
+
+
+ <footer>
+	
+ <h3>Quellen:</h3>
+  <ul id="sources">
+		<li>Standard Reference (SR Legacy)<br>
+			Survey (FNDDS)<br>
+			https://fdc.nal.usda.gov</li>
+		<li>https://pubmed.ncbi.nlm.nih.gov/19841581</li>
+		<li>https://www.dge.de/wissenschaft/referenzwerte</li>
+		<li>DGE veröffentlicht Positionspapier zur Proteinzufuhr im Sport<br>
+			https://www.dge.de/presse</li>
+		<li>Ackerbohne und Co.-So gesund ist Pflanzen-Eiweiß<br>
+			https://www.ndr.de/ratgeber/gesundheit</li>
+		<li>https://examine.com/guides/protein-intake</li>
+		<li>How Much Protein Should You Eat per Day?<br>
+			https://www.healthline.com/nutrition</li>
+	</ul>
+	 
+	 <p id="liabilitynote">Haftungsausschluss: Alle Informationen und Angaben ohne Gewähr.</p>
+
+<p id="made">Von  <a href="/">Atheer Huwaish</a></p>
+</footer>
+
+<script src="eiweissrechner.js">
+</script>
+
+</body>
+</html>
