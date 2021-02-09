@@ -144,7 +144,7 @@ function proteincalculate (){
 			
 			foodamountelem.style.display="inline";
 			
-			food1.innerHTML = "g* include ";
+			food1.innerHTML = "<span id='gincludes'>g* include </span>";
  
 		
 			
@@ -157,7 +157,7 @@ function proteincalculate (){
 				
 			food1.insertAdjacentHTML("beforeend", `<span id='proteinsubtotal'>${proteinsubtotal}</span>`);
 			
-			food1.insertAdjacentHTML("beforeend", ` of the daily protein requirement (<span id='dailyrequirementingram'>${dailyrequirementingram} g</span>)`);
+			food1.insertAdjacentHTML("beforeend", ` <span id='ofdailyreq'>of the daily protein requirement </span><span( id='dailyrequirementingram'>(${dailyrequirementingram} g)</span>`);
 			
 
 			aftercookingelem.innerHTML = "<hr>* <span id='aftercooking'>Enter the weight of food in raw state before soaking or cooking for foods that absorb liquids as they will have much less protein content, e.g. beans and lentils</span>";
