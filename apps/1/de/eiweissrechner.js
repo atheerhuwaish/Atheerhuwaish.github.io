@@ -311,13 +311,7 @@ mreset.addEventListener ("click", () => {
 
 
 
-function fooddetailsclick (){
-		if ( foodinput.value.length > 0 ) {
-		lightgrayinputborder();
-		factorvalueactivitiesfunc();
-		verifyweight();
-		}
-		else if  (foodinput.value.length <= 0) {redinputborder()}
+/*
 }
 	
 function fooddetailskey (event) {
@@ -330,4 +324,6 @@ function fooddetailskey (event) {
 }
 
 
+
 foodinput.addEventListener ("keyup", fooddetailskey);
+*/
