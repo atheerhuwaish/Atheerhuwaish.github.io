@@ -12,15 +12,12 @@
  	<li>Eiweis-Rechner</li>
 	<a href="https://atheerhuwaish.github.io/apps/1/proteincalc" target="_blank">Protein Calculator</a>
 
-<h4>Webdesign von Websites &amp; Onlineshops</h4>
+<h4>Webdesign</h4>
 <li>Responsive Website Vorlage (2-spaltig)<br>
 <a href="https://atheerhuwaish.github.io" rel="nofollow">2-column responsive template</a>.<br></li>
 
 <li>Responsive Website Vorlage (3-spaltig)<br>
 <strong>3-column responsive template</strong>.<br></li>
-
-<li>Wordpress E-Commerce Website<br>
-<a href="https://taharrur.com" target="_blank" rel="nofollow">Website with Storefront & WooCommerce</a>.<br></li>
 
 <li><a href="https://github.com/atheerhuwaish" target="_blank" rel="nofollow">Mein Github-Konto (my account on Github)</a>.<br><br></li>
 </ul>
