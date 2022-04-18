@@ -1,4 +1,6 @@
+/*
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+*/
 
 
 *{	padding:0;
@@ -63,7 +65,8 @@ nav li{padding:0.4%;
 	list-style: none;}
 
 
-h1,h2,h3,h4,nav,aside{font-family: 'Playfair Display', "Times New Roman", Times, serif}
+header,h1,h2{font-family: Arial, Helvetica, sans-serif}
+h3,h4,nav,aside{font-family: 'Playfair Display', "Times New Roman", Times, serif}
 
 
 aside.aside1{order:3;}
